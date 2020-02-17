@@ -50,14 +50,20 @@ sudo systemctl restart httpd
 ```
 
 ## Vérification du fonctionnement de ModSecurity
-Pour tester si ModeSecurity fonctionne, analyser les logs d'Apache :
+Pour tester si ModeSecurity fonctionne :
+- analyser les logs d'Apache :
 ```
 # sudo tail /var/log/httpd/error_log
 
 [Mon Feb 17 21:25:57.988920 2020] [:notice] [pid 22943] ModSecurity: APR compiled version="1.4.8"; loaded version="1.4.8"
 [Mon Feb 17 21:25:57.988923 2020] [:notice] [pid 22943] ModSecurity: PCRE compiled version="8.32 "; loaded version="8.32 2012-11-30"
 [Mon Feb 17 21:25:57.988926 2020] [:notice] [pid 22943] ModSecurity: LUA compiled version="Lua 5.1"
+```
+- Tenter une injection SQL sur le formulaire de votre site. Vous allez recevoir un message de ce genre :
+```
+Forbidden
 
+You don't have permission to access /login2.php on this server.
 ```
 ## Liens
 - Documentations officielles:
