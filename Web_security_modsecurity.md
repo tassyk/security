@@ -59,7 +59,7 @@ Pour tester si ModeSecurity fonctionne :
 [Mon Feb 17 21:25:57.988923 2020] [:notice] [pid 22943] ModSecurity: PCRE compiled version="8.32 "; loaded version="8.32 2012-11-30"
 [Mon Feb 17 21:25:57.988926 2020] [:notice] [pid 22943] ModSecurity: LUA compiled version="Lua 5.1"
 ```
-- Tenter une injection SQL (`1 or '1'='1' -- `)sur le formulaire de votre site ou tenter d'exploiter une faille XSS avec cette requête javascript (`<script><b onmouseover=alert('Wufff!')>click me!</b></script>`). Vous allez recevoir un message de ce genre :
+- Tenter une injection SQL (`1 or '1'='1' -- `) sur le formulaire de votre site ou tenter d'exploiter une faille XSS avec cette requête javascript (`<script><b onmouseover=alert('Wufff!')>click me!</b></script>`). Vous allez recevoir un message de ce genre :
 ```
 Forbidden
 
