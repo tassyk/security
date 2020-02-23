@@ -35,7 +35,6 @@ sudo rpm --import https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 3. Installez le serveur et le client MariaDB puis démarrez le service.
 ```
 sudo yum install mariadb-server mariadb-client
-
 # démarrage du service
 sudo systemctl enable mariadb
 sudo systemctl start mariadb
@@ -49,6 +48,7 @@ L'installation crée les fichiers et réertoires ci-dessous :
 - **/var/lib/mysql/** : le dossier contenant les données du serveur (les bases de données).
 
 ## Sécurisation du serveur Mariadb
+
 ### Définition du mot de root et suppression des utilisateurs et bases de test.
 **[mysql_secure_installation](https://mariadb.com/kb/en/mysql_secure_installation/)** est un programme conçu pour sécuriser le serveur Mysql/Mariadb. Il permet de définir le mot de passe root, supprime l'utilisateur anonyme, interdit le login root à distance, supprime la base de données test. Lancer cette commande pour commencer le processus :
 ```
@@ -85,10 +85,9 @@ sudo yum install MariaDB-cracklib-password-check
 mysql -u root -p
 INSTALL SONAME 'cracklib_password_check';
 ```
-Pour vérifier, tentez de créer un utilisateur avec un mot de passe faible. Vous allez tomber sur un message d'erreur:
+3. Pour vérifier, tentez de créer un utilisateur avec un mot de passe faible. Vous allez tomber sur un message d'erreur:
 ```
 MariaDB [mysql]> CREATE USER 'myuser'@locahost IDENTIFIED BY 'mypassword';
-
 # Message d'erreur
 ERROR 1819 (HY000): Your password does not satisfy the current policy requirements
 ```
@@ -100,7 +99,7 @@ Localement, MariaDB/Mysql écoute par défaut sur les adresses **locahost**, **1
 ```
 mysql -u root -p ou mysql --user=root --password
 ```
-**NB**: S'assurez-vous d'avoir installé la bonne version de Maraidb :
+  **NB**: S'assurez-vous d'avoir installé la bonne version de Maraidb :
 ```
 MariaDB [(none)]> select version();
 ```
@@ -161,16 +160,18 @@ mysql> create database mydb;
 ```
 3. Créez un utilisateur (administrateur de cette base) :
 ```
-CREATE USER 'myuser' IDENTIFIED BY 'mypassword';
+CREATE USER 'myuser'@locahost IDENTIFIED BY 'mypassword';
 ```
 4. Donnez tous les droits sur cette base de données à l'utilisateur :
 ```
-mysql> GRANT USAGE ON mydb.* TO 'myuser'@localhost IDENTIFIED BY 'mypassword';
+mysql> GRANT ALL ON mydb.* TO 'myuser'@localhost IDENTIFIED BY 'mypassword';
 ```
 5. Quittez
 ```
 mysql> quit;
 ```
+
+## Sauvegarde des bases de données
 
 
 ## Liens
