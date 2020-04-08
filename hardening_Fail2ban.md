@@ -104,6 +104,7 @@ sudo fail2ban-client | more
 - Fail2ban
   - [Tuto Fail2ban Microlinux](https://www.microlinux.fr/fail2ban-centos-7/)
   - [Tuto Fail2ban Tecmint](https://www.tecmint.com/use-fail2ban-to-secure-linux-server/)
+  - [Tuto Fail2ban Ubuntu](https://doc.ubuntu-fr.org/fail2ban)
 
 - IDS: 
   - [Liste IDS Wikipédia](https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_d%C3%A9tection_d%27intrusion#Syst%C3%A8mes_de_d%C3%A9tection_d'intrusion_h%C3%B4tes)
