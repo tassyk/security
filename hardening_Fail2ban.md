@@ -47,6 +47,7 @@ L'installation de fail2ban crée les fichiers et répertoires ci-dessous:
 - jail.d
 - paths-common.conf
 - paths-fedora.conf
+
 Par défaut, fail2ban lit ses configurations et les banissements (jails) respectivement dans les fichiers `fail2ban.conf` et `jail.conf`. Il est recommandé de ne pas les modifier directement. Il faut les costumiser de deux manières :
 1. en créant des fichiers `fail2ban.local` et `jail.local`
 2. ou en créant des fichiers dans de configuration `fail2ban.d` et les jails (banissements) dans `jail.d`.
@@ -101,18 +102,13 @@ sudo fail2ban-client | more
 
 ## Sources
 - Fail2ban
-https://www.microlinux.fr/fail2ban-centos-7/
-https://www.tecmint.com/use-fail2ban-to-secure-linux-server/
+  - [Tuto Fail2ban Microlinux](https://www.microlinux.fr/fail2ban-centos-7/)
+  - [Tuto Fail2ban Tecmint](https://www.tecmint.com/use-fail2ban-to-secure-linux-server/)
 
-- IDS: https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_d%C3%A9tection_d%27intrusion#Syst%C3%A8mes_de_d%C3%A9tection_d'intrusion_h%C3%B4tes
-
-
-
-## Denyhost
-https://www.it-connect.fr/proteger-son-acces-ssh-avec-denyhosts%EF%BB%BF/
-https://linoxide.com/tools/install-denyhosts-centos-7/
-https://www.cyberciti.biz/faq/rhel-linux-block-ssh-dictionary-brute-force-attacks/
-
-
-# fail2ban vs denyhosts
-https://qastack.fr/server/128962/denyhosts-vs-fail2ban-vs-iptables-best-way-to-prevent-brute-force-logons
+- IDS: 
+  - [Liste IDS Wikipédia](https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_d%C3%A9tection_d%27intrusion#Syst%C3%A8mes_de_d%C3%A9tection_d'intrusion_h%C3%B4tes)
+  - Autre HIDS: Denyhost
+    - [Tuto Denyhost www.it-connect.fr](https://www.it-connect.fr/proteger-son-acces-ssh-avec-denyhosts%EF%BB%BF/)
+    - [Tuto Denyhost linoxide.co](https://linoxide.com/tools/install-denyhosts-centos-7/)
+    - [Tuto Denyhost www.cyberciti.biz](https://www.cyberciti.biz/faq/rhel-linux-block-ssh-dictionary-brute-force-attacks/)
+  -  [fail2ban vs denyhosts](https://qastack.fr/server/128962/denyhosts-vs-fail2ban-vs-iptables-best-way-to-prevent-brute-force-logons)
