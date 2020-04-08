@@ -44,6 +44,7 @@ sudo service auditd restart
 On peut définir les règles d'auditd de deux manières:
 - à l'aide de la commande `auditctl`
 - dans le fichier `/etc/audit/audit.rules`.
+
 Les deux syntaxes restent les mêmes (mis à part l'ajout de auditctl devant). Mais la première méthode n'est pas persistente.
 
 # Syntaxe des règles
