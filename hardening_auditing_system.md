@@ -41,11 +41,12 @@ sudo service auditd restart
 
 
 # Définition des règles
-On peut définir les règles d'auditd de deux manières:
+On peut définir les règles d'auditd de différentes manières:
 - à l'aide de la commande `auditctl`
-- dans le fichier `/etc/audit/audit.rules`.
+- dans le fichier `/etc/audit/audit.rules`
+- dans un fichier avec l'extention `rules` dans le répertoire `/etc/audit/rules.d`. Ces règles sont automatiquement chargées dans `/etc/audit/audit.rules`.
 
-Les deux syntaxes restent les mêmes (mis à part l'ajout de auditctl devant). Mais la première méthode n'est pas persistente.
+Les deux syntaxes restent les mêmes (mis à part l'ajout de auditctl devant). La première méthode n'est pas persistente. Cependant la troisième méthode est plus recommandées.
 
 # Syntaxe des règles
 ## Règles pour système de fichier
@@ -120,15 +121,11 @@ Où:
 - `--loginuid-immutable`: rend l'UID du login immutable
 
 ## Utilisation des règles
-Comme évoqué plus, la commande `auditctl` permet de définir les règles. Mais elles ne sont pas persistentes. Pour les rendre permanentes, on définit plutôt les règles dans le fichier `/etc/audit/audit.rules`. Mais la syntaxe reste la même que `auditctl` (sans le mot `auditctl` bien sûr).
+Comme évoqué plus, la commande `auditctl` permet de définir les règles. Mais elles ne sont pas persistentes. Pour les rendre permanentes, on définit plutôt les règles dans le fichier `/etc/audit/audit.rules` ou dans le répertoire `/etc/audit/rules.d`. Mais la syntaxe reste la même que `auditctl` (sans le mot `auditctl` bien sûr).
 Pour plus d'info sur les règles, voir `man audit.rules`
-- Comme cas d'utilisation, éditer le fichier est ajouter les règles suivantes:
+- Comme cas d'utilisation, éditer le fichier `/etc/audit/audit.rules` ou créer un fichier dans le répertoire `/etc/audit/rules.d`et ajouter les règles suivantes:
 
 ```
--D
--b 8192
--f 1
-
 # Modification du fichier passwd
 -w /etc/passwd -p wa -k passwd_changes
 
@@ -195,8 +192,8 @@ Auditd génère les logs dans le fichier `/var/log/audit/audit.log`. Pour compre
 
 
 # Sources
-- Redhat auditd doc: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-starting_the_audit_service
+- [Redhat auditd documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-starting_the_audit_service)
 - tuto:
-  - https://www.digitalocean.com/community/tutorials/how-to-write-custom-system-audit-rules-on-centos-7
-  - https://www.tecmint.com/linux-system-auditing-with-auditd-tool-on-centos-rhel/
-- Documentation du projet: https://github.com/linux-audit/audit-documentation/wiki
+  - [Auditd digitalocean](https://www.digitalocean.com/community/tutorials/how-to-write-custom-system-audit-rules-on-centos-7)
+  - [Auditd Tecmint](https://www.tecmint.com/linux-system-auditing-with-auditd-tool-on-centos-rhel/)
+- [Documentation du projet](https://github.com/linux-audit/audit-documentation/wiki)
