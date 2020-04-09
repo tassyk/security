@@ -197,4 +197,5 @@ Auditd génère les logs dans le fichier `/var/log/audit/audit.log`. Pour compre
 - tuto:
   - [Auditd digitalocean](https://www.digitalocean.com/community/tutorials/how-to-write-custom-system-audit-rules-on-centos-7)
   - [Auditd Tecmint](https://www.tecmint.com/linux-system-auditing-with-auditd-tool-on-centos-rhel/)
+  - [Automatisation via Ansible](https://github.com/tassyk/ansible-auditd)
 - [Documentation du projet](https://github.com/linux-audit/audit-documentation/wiki)
