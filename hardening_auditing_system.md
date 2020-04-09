@@ -62,6 +62,7 @@ Où:
   - changement d'attribut: `a`
   - exécution: `x`
 - `-k` définit la clé de la règle (un nom pour identifier la règle)
+
 Exemple: Pour surveiller les changgements et écriture du fichier hosts
 
 ```
