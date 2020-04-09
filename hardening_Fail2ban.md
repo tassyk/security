@@ -65,10 +65,13 @@ Pour contrer les connexions frauduleuses sur SSH, créer un fichier `ssh.local` 
 
 [DEFAULT]
 bantime = 86400
-ignoreip = 78.197.22.147 163.172.63.88
+ignoreip = 127.0.0.1
 
 [sshd]
+port = ssh
 enabled = true
+maxretry = 3
+logpath = %(sshd_log)s
 ```
 Où:
 - `[DEFAULT]`: dans cette section, on définit les paramètres par défaut à tous les services qu'on souhaite protéger dans ce fichier.
@@ -76,6 +79,9 @@ Où:
   - `ignoreip`: indique les IP qui sont ignorer par fail2ban (pour éviter de banir ses propres ip!)
 - `[sshd]`: dans cette section, on définit les paramètres pour le service sshd.
   - `enabled`: active la protection pour sshd
+  - `port`: spécifie le port de SSH (ici ssh, mais on peut mettre autre chose comme 22, 2222, ...)
+  - `maxretry`: spécifie le nombre d'essaie d'authentification autorisé
+  - `logpath`: spécifie le chemin du fichier où envoyer les log de failban (ici, la valeur par défaut, mais on peut mettre par exemple /var/log/auth.log ou autre chose)
 
 ## Exploitation des résultats de fail2ban
 - `sudo fail2ban-client status` affiche les status des jails
