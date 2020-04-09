@@ -82,6 +82,14 @@ Où:
   - `port`: spécifie le port de SSH (ici ssh, mais on peut mettre autre chose comme 22, 2222, ...)
   - `maxretry`: spécifie le nombre d'essaie d'authentification autorisé
   - `logpath`: spécifie le chemin du fichier où envoyer les log de failban (ici, la valeur par défaut, mais on peut mettre par exemple /var/log/auth.log ou autre chose)
+  
+ **Remarque sur la destination des log :** 
+ - si on souhaite envoyer les logs plutôt, on peut créer un fichier `.local` dans le répertoire de configuration de fail2ban et y spécifier le paramètre `logtarget` comme ceci:
+ ```
+ #cat /etc/fail2ban/fail2ban.d/fail2ban.local
+ [DEFAULT]
+ logtarget = SYSLOG
+ ```
 
 ## Exploitation des résultats de fail2ban
 - `sudo fail2ban-client status` affiche les status des jails
