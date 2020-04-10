@@ -34,7 +34,7 @@ max_log_file_action = ROTATE
 Démarrer le service après la configuration
 
 ```
-sudo service auditd restart
+sudo systemctl restart auditd
 # Si erreur, utiliser
 sudo service auditd restart
 ```
