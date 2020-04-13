@@ -119,18 +119,35 @@ Pour plus d'informations sur ce fichier, voir `man aide.conf`
 
 ### Configurations personnalisées
 A travers le fichier de configuration, on remarque qu'AIDE surveille tout le système de fichier. Cependant, rien ne nous oblige à surveiller tous les fichiers, d'autant plus que le contrôle peut devenir très fastidieux si les fichiers changent très souvent sur le serveur.
-On peut modifier ce fichier de configuration ou en créer un pour définir ses propres contrôles. Et dans ce cas, l'option **-c** de la commande ci-dessous spécifie à AIDE le fichier à utiliser
+On peut modifier ce fichier de configuration ou en créer un pour définir ses propres contrôles. Et dans ce cas, l'option **-c** de la commande ci-dessous spécifie à AIDE le fichier à utiliser :
+-  Pour vérifier que la configuration est correcte :
 ```
- sudo aide -c /etc/fichier.conf
+sudo aide -c /etc/aide_perso.conf --config-check
+```
+- Pour initialiser une base avec ce nouveau fichier de configuraton :
+```
+sudo aide -c /etc/aide_perso.conf --init
+```
+- Pour vérifier l'intégrité du système via ce nouveau fichier de configuration :
+```
+sudo aide -c /etc/aide_perso.conf --check
+```
+- Pour mettre à jour la base avec ce nouveau fichier de configuration :
+```
+sudo aide -c /etc/aide_perso.conf --update
 ```
 
 ## Vérification automatique
 Comme vu plus haut, l'option **--check** permet de vérifier l'état d'intégrité du système. L'idéal serait d'automatiser cette vérification en créant une tâche dans le cron :
 ```
-05 4 * * * root /usr/sbin/aide --check
+05 4 * * * root /usr/sbin/aide --check [-c config_file]
 ```
-Ensuite, si on dispose d'un serveur smtp, on peut envoyer une notification par mail.
+Ensuite, si on dispose d'un serveur smtp, on peut envoyer une notification par mail:
+```
+05 4 * * * root /usr/sbin/aide --check [-c config_file] | /bin/mail -s "Aide check $(date)" email@domain.com
+```
 
 ## Liens
 - [AIDE Redhat doc](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-using-aide)
 - [Tuto AIDE it-connect](https://www.it-connect.fr/aide-utilisation-et-configuration-dune-solution-de-controle-dintegrite-sous-linux/)
+- [Tuto sbarjatiya.com](https://www.sbarjatiya.com/notes_wiki/index.php/Configuring_basic_AIDE_server)
