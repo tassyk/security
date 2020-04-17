@@ -171,7 +171,13 @@ Auditd fournit un ensemble d'outils permettant d'interagir les résultats d'audi
 sudo ausearch -ua 1000 -i
 #Evenement sur la clé hosts_file_changes
 sudo ausearch -k  hosts_file_changes | less
+# Tentatives de login ratées
+sudo ausearch -m USER_LOGIN -sv no
+sudo ausearch -ua user -m USER_LOGIN -sv no -i  # pour user
+# Modifications sur les comptes, les groupes, ...
+sudo ausearch -m ADD_USER,DEL_USER,USER_CHAUTHTOK,ADD_GROUP,DEL_GROUP,CHGRP_ID,ROLE_ASSIGN,ROLE_REMOVE  -i
 ```
+Pour plus d'info sur `ausearch`, voir document de Redhat [Searching the Audit Log Files](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-searching_the_audit_log_files)
 
 - `aureport`: permet de créer un rapport d'audit
 
