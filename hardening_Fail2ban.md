@@ -114,11 +114,53 @@ sudo fail2ban-client set YOURJAILNAMEHERE unbanip IPADDRESSHERE
 sudo fail2ban-client | more
 ```
 
+## Quelques mots sur les filtres
+Les filtres sont des expressions régulières permettant de parser (analyser) un type de logs afin de chercher des événements particuliers. Le répertoire **filtre.d** contient un ensemble de filtres pour la plupart des applications et services très connus. Ce qui dispense de dépenser son énergie pour en créer. Mais il est tout à fait possible de définir ses propres filtres.
 
+### Définition d'un filtre
+Considérons la ligne de log ci-dessous :
+```
+Jan 10 07:02:37 homebrou sshd[18419]: Failed password for root from 222.76.213.151 port 55236 ssh2
+```
+On peut chercher l'événement **Failed password for root from 222.76.213.151** dans cette ligne à l'aide du filtre ci-dessous:
+```
+Failed [-/\w]+ for .* from <HOST>
+```
+A l'aide de l'utilitaire `fail2ban-regex` de Fail2ban, on peut tester si notre filtre est bon ou pas. La syntaxe de la commande est :
+```
+fail2ban-regex <fichier-de-log | string-représentant-une-ligne-de-log> <chemin-du-filtre | string-regex> [<chemin-du-filtre | string-ignoregex]
+```
+Pour notre exemple, on peut donc écrire ceci :
+```
+sudo fail2ban-regex 'Jan 10 07:02:37 homebrou sshd[18419]: Failed password for root from 222.76.213.151 port 55236 ssh2' 'Failed [-/\w]+ for .* from <HOST>'
+```
+
+Quand le test est concluant, on peut alors créer un filtre nommé **myssh-filter** dans le répertoire des filtres pour chercher de tels événements :
+```
+# cat /etc/fail2ban/filter.d/myssh-filter.conf
+
+[Definition]
+failregex =  Failed [-/\w]+ for .* from <HOST>
+ignoreregex =
+```
+
+### Utilisation d'un filtre
+Une fois que le filtre est créé, on peut l'utiliser en définissant un jail dans lequel on spécifie ce filtre comme suit :
+```
+[myssh]
+enabled = true
+filter = myssh-filter
+port = 22 
+logpath = /var/log/secure
+maxretry = 5
+findtime = 120
+bantime = 300
+```
 
 ## Sources
 - Fail2ban
-  - [Fail2ban Main page)(https://www.fail2ban.org/wiki/index.php/Main_Page)
+  - [Fail2ban Main page](https://www.fail2ban.org/wiki/index.php/Main_Page)
+  - [Fail2ban Github](https://github.com/fail2ban/fail2ban)
   - [Tuto Fail2ban Microlinux](https://www.microlinux.fr/fail2ban-centos-7/)
   - [Tuto Fail2ban Tecmint](https://www.tecmint.com/use-fail2ban-to-secure-linux-server/)
   - [Tuto Fail2ban Ubuntu](https://doc.ubuntu-fr.org/fail2ban)
