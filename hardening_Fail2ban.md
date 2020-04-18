@@ -157,7 +157,7 @@ findtime = 120
 bantime = 300
 ```
 
-**Remarque sur les filtres multi ligne :**
+**Remarque sur les filtres multi lignes :**
 
 On peut utiliser plusieurs expressions régulières dans un filtre. Dans ce cas, chaque expression est écrite sur une ligne. Si on applique à notre exemple de log ci-dessous, on peut utiliser ce filtre ci-dessous :
 ```
