@@ -8,7 +8,7 @@ Auteur: TK
 # Mise en place de Fail2ban
 
 ## Introduction
-Fail2ban est un outil de détection d'intrusion de la catégorie `HDIS (Host-based Intrusion Detection System)`. Il permet de bloquer des attaques par force brute sur bon nombre de services comme SSH, FTP, ... sur une machine (hôte). Il analyse les fichiers de log pour détecter les accès frauduleux ou suspects sur l'hôte puis s'appuie sur le firewall local (Iptables, Firewalld) pour banir les IP suspectes.
+Fail2ban est un outil de détection d'intrusion de la catégorie `HDIS (Host-based Intrusion Detection System)`. Il permet de bloquer des attaques par force brute sur bon nombre de services comme SSH, FTP, ... sur une machine (hôte). A l'aide des filtres, il analyse les fichiers de log pour détecter les événements suspects sur l'hôte puis déclenche une action grâce au firewall local (Iptables, Firewalld) pour banir les IP/hôtes suspects.
 A l"heure actuelle, il est plus évolué et offre plus de possibilités que ces concurrents `Denyhost` ou encore `SSHGuard`.
 
 ## Installation de Fail2ban
@@ -39,14 +39,14 @@ sudo systemctl start fail2ban
 
 ## Configuration de fail2ban
 L'installation de fail2ban crée les fichiers et répertoires ci-dessous:
-- action.d
-- fail2ban.conf
-- fail2ban.d
-- filter.d
-- jail.conf
-- jail.d
-- paths-common.conf
-- paths-fedora.conf
+- action.d : répertoire des actions (fichiers contenant des règles de firewall par exemple)
+- fail2ban.conf : fichier de configuration principal de l'outil
+- fail2ban.d : répertoire des fichiers de configuration utilisateurs
+- filter.d : répertoire pour les filtres (se sont des fichiers contenant des expressions régulières)
+- jail.conf : fichier de configuration principal relatifs aux jails 
+- jail.d : répertoire pour les jails (chaque service surveillé constitue un jail)
+- paths-common.conf : fichier de configuration définissant les chemins des fichiers de log commons
+- paths-fedora.conf : fichier de configuration définissant certains chemins des fichiers de log spéficiques
 
 Par défaut, fail2ban lit ses configurations et les banissements (jails) respectivement dans les fichiers `fail2ban.conf` et `jail.conf`. Il est recommandé de ne pas les modifier directement. Il faut les costumiser de deux manières :
 1. en créant des fichiers `fail2ban.local` et `jail.local`
@@ -81,10 +81,10 @@ Où:
   - `enabled`: active la protection pour sshd
   - `port`: spécifie le port de SSH (ici ssh, mais on peut mettre autre chose comme 22, 2222, ...)
   - `maxretry`: spécifie le nombre d'essaie d'authentification autorisé
-  - `logpath`: spécifie le chemin du fichier où envoyer les log de failban (ici, la valeur par défaut, mais on peut mettre par exemple /var/log/auth.log ou autre chose)
+  - `logpath`: spécifie le chemin du fichier où trouver les logs du service à surveiller (ici, la valeur par défaut, mais on peut mettre par exemple /var/log/auth.log ou autre chose selon le service)
   
  **Remarque sur la destination des log :** 
- - si on souhaite envoyer les logs plutôt, on peut créer un fichier `.local` dans le répertoire de configuration de fail2ban et y spécifier le paramètre `logtarget` comme ceci:
+ - si on souhaite envoyer les journaux d'événement de fail2ban plutôt vers Syslog, on peut créer un fichier `.local` dans le répertoire de configuration de fail2ban et y spécifier le paramètre `logtarget` comme ceci:
  ```
  #cat /etc/fail2ban/fail2ban.d/fail2ban.local
  [DEFAULT]
@@ -92,6 +92,8 @@ Où:
  ```
 
 ## Exploitation des résultats de fail2ban
+Fail2ban fournit un utilitaire, `fail2ban-client` très complet. Il permet de réaliser l'ensemble des configurations possible avec les fichiers de configuration (fail2ban.conf, jail.conf), mais aussi d'exploiter les résultats.
+
 - `sudo fail2ban-client status` affiche les status des jails
   - jail sshd: `fail2ban-client status sshd`
 - `sudo tail -f /var/log/fail2ban.log`: analyse les logs pour voir les jails
@@ -116,9 +118,12 @@ sudo fail2ban-client | more
 
 ## Sources
 - Fail2ban
+  - [Fail2ban Main page)(https://www.fail2ban.org/wiki/index.php/Main_Page)
   - [Tuto Fail2ban Microlinux](https://www.microlinux.fr/fail2ban-centos-7/)
   - [Tuto Fail2ban Tecmint](https://www.tecmint.com/use-fail2ban-to-secure-linux-server/)
   - [Tuto Fail2ban Ubuntu](https://doc.ubuntu-fr.org/fail2ban)
+  - [Tuto Fail2ban Buzut](https://buzut.net/installer-et-parametrer-fail2ban/)
+  - [Options de configuration des jails](https://www.systutorials.com/docs/linux/man/5-jail.conf/)
   - [Installation via Ansible](https://github.com/tassyk/ansible-fail2ban)
 
 - IDS: 
