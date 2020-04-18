@@ -157,6 +157,15 @@ findtime = 120
 bantime = 300
 ```
 
+**Remarque sur les filtres multi ligne :**
+On peut utiliser plusieurs expressions régulières dans un filtre. Dans ce cas, chaque expression est écrite sur une ligne. Si on applique à notre exemple de log ci-dessous, on peut utiliser ce filtre ci-dessous :
+```
+failregex = Authentication failure for .* from <HOST>
+            Failed [-/\w]+ for .* from <HOST>
+            ROOT LOGIN REFUSED .* FROM <HOST>
+            [iI](?:llegal|nvalid) user .* from <HOST>
+```
+
 ## Sources
 - Fail2ban
   - [Fail2ban Main page](https://www.fail2ban.org/wiki/index.php/Main_Page)
