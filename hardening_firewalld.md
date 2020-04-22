@@ -226,10 +226,10 @@ sudo firewall-cmd --zone=zone-name --set-target=<default|ACCEPT|REJECT|DROP> --p
 
 
 ## Sources
-- Doc Redhat : https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-using_firewalls
-- Doc officiel : http://www.firewalld.org/
+- [Doc Firewalld Redhat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-using_firewalls)
+- [Site officiel Firewalld](http://www.firewalld.org/)
 - Tutorials:
-  - Fédora: https://doc.fedora-fr.org/wiki/Parefeu_-_firewall_-_FirewallD
-  - digitalocean: https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-using-firewalld-on-centos-7
-  - it-connect: https://www.it-connect.fr/centos-7-utilisation-et-configuration-de-firewalld/
-  - thegeekdiary: https://www.thegeekdiary.com/5-useful-examples-of-firewall-cmd-command/
+  - [Fédora: Parefeu_-_firewall_-_FirewallD](https://doc.fedora-fr.org/wiki/Parefeu_-_firewall_-_FirewallD)
+  - [digitalocean: how-to-set-up-a-firewall-using-firewalld-on-centos-7](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-using-firewalld-on-centos-7)
+  - [it-connect: centos-7-utilisation-et-configuration-de-firewalld](https://www.it-connect.fr/centos-7-utilisation-et-configuration-de-firewalld/)
+  - [thegeekdiary: 5-useful-examples-of-firewall-cmd-command](https://www.thegeekdiary.com/5-useful-examples-of-firewall-cmd-command/)
