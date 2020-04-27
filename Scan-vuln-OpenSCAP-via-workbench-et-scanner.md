@@ -251,7 +251,7 @@ oscap-vm image /var/lib/libvirt/images/rhel6.qcow2 oval eval \
 com.redhat.rhsa-RHEL6.xml
 ```
 > Note :
-> Cette commande s'appuie sur bash, guestmount, mktemp et umount pour bien fonctionner
+> Cette commande s'appuie sur bash, guestmount, mktemp et umount pour bien fonctionner. Pour disposer de guestmount, installer le paquet libguestfs et libguestfs-tools: `sudo yum install -y libguestfs libguestfs-tools`
 > Pour plus d'info, cf `man oscap-vm`.
 
 #### Scan de systèmes de fichiers arbitarires via oscap-chroot
