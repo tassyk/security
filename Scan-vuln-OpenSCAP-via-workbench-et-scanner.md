@@ -263,6 +263,13 @@ oscap-chroot CHROOT_PATH xccdf eval [options] INPUT_CONTENT
 # Evaluation of OVAL content
 oscap-chroot image CHROOT_PATH oval eval [options] INPUT_CONTENT
 ```
+Pour un cas d'utilisation de `oscap-chroot`, on peut utiliser l'exemple ci-dessous :
+```
+cd /tmp#
+wget https://www.redhat.com/security/data/oval/Red_Hat_Enterprise_Linux_6.xml
+# mount any VFS to /mnt/scan-target - container, VM storage, etc...
+oscap-chroot /mnt/scan-target oval eval --results /tmp/results.xml --report /tmp/report.html Red_Hat_Enterprise_Linux_6.xml# firefox /tmp/report.html
+```
 
 
 ## Terminologies
@@ -292,3 +299,4 @@ oscap-chroot image CHROOT_PATH oval eval [options] INPUT_CONTENT
   - [Redhat Vulnerability Scanning](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/vulnerability-scanning_scanning-the-system-for-configuration-compliance-and-vulnerabilities)
   - [Tuto userver-world.info sur OpenSCAP](https://www.server-world.info/en/note?os=CentOS_7&p=openscap)
   - [the-practical-linux-hardening-guide](https://github.com/trimstray/the-practical-linux-hardening-guide/blob/master/README.md)
+  - [Security Compliance for Containers and VMs with OpenSCAP: Exemple oscap chroot](https://martin.preisler.me/wp-content/uploads/2016/12/USENIX-LISA-2016-Security-Compliance-for-Containers-and-VMs-with-OpenSCAP.pdf)
