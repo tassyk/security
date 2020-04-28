@@ -13,8 +13,8 @@ Création: 27/04/2020
 - **[Scan via OpenSCAP Daemon](##Scan-via-OpenSCAP-Daemon)**
   - [Installation d'OpenSCAP Daemon](#Installation-de-OpenSCAP-Daemon)
   - [Réalisation d'un scan via OpenSCAP Daemon](#Réalisation-d'un-scan-via-OpenSCAP-Daemon)
-    - [Description de la commande oscapd-cli d'OpenSCAP Daemon](Description-de-la-commande-oscapd-cli-d'OpenSCAP-Daemon)
-    - [Scan en mode interactif via OpenSCAP Daemon](#Scan-en-mode-interactif-via-OpenSCAP-Daemon)
+    - [Interaction avec OpenSCAP Daemon](#Intercation-OpenSCAP-Daemon)
+    - [Scan en mode interactif via oscapd-cli](#Scan-en-mode-interactif-via-OpenSCAP-Daemon)
     - [Résultat de scan d'OpenSCAP Daemon](#Résultat-de-scan)
 
 - **[Scan via SCAP Timony ou OpenSCAP Foreman](#Scan-via-SCAP-Timony-ou-OpenSCAP-Foreman)**
@@ -73,8 +73,8 @@ sudo systemctl status oscapd
 >* `sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm`
 
 ### Réalisation d'un scan via OpenSCAP Daemon
-#### Description de la commande oscapd-cli d'OpenSCAP Daemon
-L'outil fournit une CLI (Ligne de commande) `oscapd-cli` qui permet de gérer les différents scan (création, plannification, visulation des résultats, ...). La commande peut être utilisée en mode interactif grâce à l'option `-i`. Sa syntaxe est la suivante :
+#### Interaction avec OpenSCAP Daemon
+OpenSCAP Daemon fournit une CLI (Ligne de commande) `oscapd-cli` qui permet de gérer les différents scan (création, plannification, visulation des résultats, ...). La commande peut être utilisée en mode interactif grâce à l'option `-i`. Sa syntaxe est la suivante :
 ```
 oscapd-cli [-h] {eval,scan,task,task-create,status,result}
 ```
@@ -87,7 +87,9 @@ OpenSCAP Daemon
 - result : Affiche les détails des scans précédents
 > Note: `man oscapd-cli` fournit plus d'information
 
-#### Scan en mode interactif via OpenSCAP Daemon
+L'interaction avec l'outil peut se également via son API REST (cf section `REST API` dans la [Documentation d'OpenSCAP Daemon](https://github.com/OpenSCAP/openscap-daemon/blob/master/README.md)). Pour cette note, nous allons utiliser `oscapd-cli`.
+
+#### Scan en mode interactif via oscapd-cli
 L'option `-i` lance le scan en mode interactif :
 ```
 sudo oscapd-cli task-create -i
