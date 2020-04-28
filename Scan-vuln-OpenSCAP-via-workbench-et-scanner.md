@@ -127,7 +127,7 @@ sudo oscap xccdf eval \
 --results-arf arf-report-ssg-centos7-xccdf.xml \
 /usr/share/xml/scap/ssg/content/ssg-centos7-xccdf.xml
 ```
-> arf permet d'obtenir tous les résultats de scan.
+> Note : Le format `ARF` est très intéressant dans certains cas car contient tous les résultats d'un scan. Pour le visualiser efficacement, il faut un outil spécial comme OpenSCAP ou [OVAL visualization](https://github.com/OpenSCAP/OVAL-visualization-as-graph/blob/master/docs/GUIDE.md)
 
 A la fin du scan, on voit les échecs et les réussites du scan. Le rapport `report-ssg-centos7-xccdf.html` est généré contenant les détails du résultat du scan.
 
@@ -292,6 +292,7 @@ oscap-chroot /mnt/scan-target oval eval --results /tmp/results.xml --report /tmp
   - [OpenSCAP Tools](https://www.open-scap.org/tools/)
   - [Documentation & User Manuals](https://www.open-scap.org/resources/documentation/)
   - [Github OpenSCAP Security Guide Project](https://github.com/ComplianceAsCode/content/wiki)
+  - [OVAL visualization](https://github.com/OpenSCAP/OVAL-visualization-as-graph/blob/master/docs/GUIDE.md)
   - [Acronymes](https://www.open-scap.org/resources/acronyms/)
   - [Atomic Docker Scan](http://www.projectatomic.io/)
 - Tutoriels :
