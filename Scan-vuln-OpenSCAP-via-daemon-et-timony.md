@@ -135,12 +135,7 @@ sudo oscapd-cli result 1 ID_résultat arf > oscapd-scan-report.arf
 > - Pour plus d'informations sur l'outil, reportez vous à la [documentation](https://github.com/OpenSCAP/openscap-daemon/blob/master/README.md) ou au fichier `/usr/share/doc/openscap-daemon/README.md`
 >
 > Bugs:
-> - Si vous rencontrez l'erreur [(UnicodeEncodeError: 'ascii' codec can't encode character u'\u2026...)](https://bugzilla.redhat.com/show_bug.cgi?id=1601901), ajoutez, dans `/bin/oscapd-cli`, après `import io`, ce bout de code:
->> ```
->    import io
->    reload(sys)
->    sys.setdefaultencoding('utf8')
->```
+> - Si vous rencontrez l'erreur (UnicodeEncodeError: 'ascii' codec can't encode character u'\u2026...) regardez [ce lien](https://bugzilla.redhat.com/show_bug.cgi?id=1601901).
 
 ## Scan via OpenSCAP ScapTimony (foreman openscap)
 ScapTimony est remplacé par ce nouveau projet [foreman_openscap](https://github.com/theforeman/foreman_openscap)
