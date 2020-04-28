@@ -116,8 +116,8 @@ sudo oscapd-cli task 1 enable
 ```
 > Note :
 > - `oscapd-cli task --help` explique comment utiliser cette commande
-> - `sudo oscapd-cli task 1 info` affiche les informations sur le scan. ou `sudo systemctl status -l oscapd` peut être utile aussi.
-> - les résultats de la tâche sont localisés dans le répertoire `/var/lib/oscapd/results/1/1`
+> - `sudo oscapd-cli task 1 info` affiche les informations sur le scan. `sudo systemctl status -l oscapd` ou `sudo journalctl -u oscapd` ou `udo grep oscapd /var/log/messages` peut être utile aussi.
+> - les tâches sont répertoiriés dans `/var/lib/oscapd/tasks/` et les résultats `/var/lib/oscapd/results`
 
 #### Résultat de scan d'OpenSCAP Daemon
  Pour voir tous les résultats de cette tâche, on utilise l'action `result` de la commande `oscapd-cli` :
@@ -131,9 +131,16 @@ On peut générer un rapport pour un résultat donné de cette tâche. Pour cela
 sudo oscapd-cli result 1 ID_résultat report > oscapd-scan-report.html
 sudo oscapd-cli result 1 ID_résultat arf > oscapd-scan-report.arf
 ```
-> Note : Pour plus d'informations sur l'outil, reportez vous à la [documentation](https://github.com/OpenSCAP/openscap-daemon/blob/master/README.md) ou au fichier `/usr/share/doc/openscap-daemon/README.md
-`
-
+> Note :
+> - Pour plus d'informations sur l'outil, reportez vous à la [documentation](https://github.com/OpenSCAP/openscap-daemon/blob/master/README.md) ou au fichier `/usr/share/doc/openscap-daemon/README.md`
+>
+> Bugs:
+> - Si vous rencontrez l'erreur [(UnicodeEncodeError: 'ascii' codec can't encode character u'\u2026...)](https://bugzilla.redhat.com/show_bug.cgi?id=1601901), ajoutez, dans `/bin/oscapd-cli`, après `import io`, ce bout de code:
+> ```
+import io
+reload(sys)
+sys.setdefaultencoding('utf8')
+  ```
 
 ## Scan via OpenSCAP ScapTimony (foreman openscap)
 ScapTimony est remplacé par ce nouveau projet [foreman_openscap](https://github.com/theforeman/foreman_openscap)
