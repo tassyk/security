@@ -53,7 +53,8 @@ Dans une une précédente note, nous avons découvert `SCAP Workbench` et `OpenS
 >* (optional) [*Atomic*](http://www.projectatomic.io) >= 1.4
 >* (optional) [*docker*](http://www.docker.com)
 
-OpenSCAP Daemon peut s'installer de différente manières: par source, via un conteneur, via rpm. Nous allons faire l'installation avec la dernière méthode en utilisant les commandes ci-dessous :
+OpenSCAP Daemon peut s'installer de différente manières: par source, via un conteneur, via rpm.
+- Pour l'installation via rpm, utilisez les commandes ci-dessous :
 ```
 # Installation des dépendances
 sudo yum update -y
@@ -71,6 +72,13 @@ sudo systemctl status oscapd
 > Note :
 >* le paquet dans le dépôt EPEL. S'il n'est pas déjà installé, il faut utiliser la commande (pour CentOs 7) :
 >* `sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm`
+
+- Pour l'installation depuis la source, utilisez les commandes suivantes :
+```
+git clone https://github.com/OpenSCAP/openscap-daemon.git
+cd openscap-daemon
+sudo python setup.py install
+```
 
 ### Réalisation d'un scan via OpenSCAP Daemon
 #### Interaction avec OpenSCAP Daemon
