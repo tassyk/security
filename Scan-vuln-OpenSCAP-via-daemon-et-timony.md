@@ -61,13 +61,6 @@ sudo yum update -y
 sudo yum install -y openscap python dbus-python python-flask
 # installation de l'outil
 sudo yum install openscap-daemon
-# installer une politique de sécurité (ici, scap-security-guide)
-sudo yum install scap-security-guide
-# démarrer le service
-sudo systemctl start oscapd
-sudo systemctl enable oscapd
-# vérifier le status
-sudo systemctl status oscapd
 ```
 > Note :
 >* le paquet dans le dépôt EPEL. S'il n'est pas déjà installé, il faut utiliser la commande (pour CentOs 7) :
@@ -78,6 +71,17 @@ sudo systemctl status oscapd
 git clone https://github.com/OpenSCAP/openscap-daemon.git
 cd openscap-daemon
 sudo python setup.py install
+```
+
+Dans tous les cas, il faut installer une politique de sécurité et démarrer le service :
+```
+# installer une politique de sécurité (ici, scap-security-guide)
+sudo yum install scap-security-guide
+# démarrer le service
+sudo systemctl start oscapd
+sudo systemctl enable oscapd
+# vérifier le status
+sudo systemctl status oscapd
 ```
 
 ### Réalisation d'un scan via OpenSCAP Daemon
@@ -95,7 +99,9 @@ OpenSCAP Daemon
 - result : Affiche les détails des scans précédents
 > Note: `man oscapd-cli` fournit plus d'information
 
-L'interaction avec l'outil peut se également via son API REST (cf section `REST API` dans la [Documentation d'OpenSCAP Daemon](https://github.com/OpenSCAP/openscap-daemon/blob/master/README.md)). Pour cette note, nous allons utiliser `oscapd-cli`.
+L'interaction avec l'outil peut se fair également via son API REST (cf section `REST API` dans la [Documentation d'OpenSCAP Daemon](https://github.com/OpenSCAP/openscap-daemon)).
+> Note :
+Pour cette note, nous allons utiliser `oscapd-cli`.
 
 #### Scan en mode interactif via oscapd-cli
 L'option `-i` lance le scan en mode interactif :
@@ -169,7 +175,7 @@ ScapTimony est remplacé par ce nouveau projet [foreman_openscap](https://github
   - [Site officiel d'OpenSCAP](https://www.open-scap.org/)
   - [OpenSCAP Tools](https://www.open-scap.org/tools/)
   - [Documentation & User Manuals](https://www.open-scap.org/resources/documentation/)
-  - [OpenSCAP Daemon](https://github.com/OpenSCAP/openscap-daemon/blob/master/README.md)
+  - [OpenSCAP Daemon](https://github.com/OpenSCAP/openscap-daemon)
   - [Foreman Openscap](https://github.com/theforeman/foreman_openscap)
   - [Foreman OpenSCAP manual]()
   - [Github OpenSCAP Security Guide Project](https://github.com/ComplianceAsCode/content/wiki)
