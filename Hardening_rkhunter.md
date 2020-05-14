@@ -23,7 +23,9 @@ Ensuite, il faut mettre la base de données et les propriétés du système de f
 sudo rkhunter --update
 sudo rkhunter --propupd
 ```
-> Note : cette opération peut prendre quelques minutes
+> Note :
+> - si certaines bases n'ont pas pu êtres installées, cf `/var/log/rkhunter/rkhunter.log`, pour voir les commandes d'installation.
+> - cette opération peut prendre quelques minutes
 
 ## Recherche des rootkits
 On peut analyser le système à l'aide de la commande ci-dessous :
