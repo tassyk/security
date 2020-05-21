@@ -183,14 +183,6 @@ docker exec -ti nginx /bin/bash
 17:27:54.642576524: Notice A shell was spawned in a container with an attached terminal (user=root nginx (id=ee20039ffc1b) shell=bash parent=docker-runc-cur cmdline=bash terminal=34818 container_id=ee20039ffc1b image=nginx)
 ```
 
-```
-fd.name=/dev/ptmx and proc.name=sshd
-- rule: sshd_config_open
-  desc: sshd_config is opened
-  condition: evt.type=open and fd.name contains sshd_config
-  output: "SSH is open by (user=%user.name prog=%proc.name)"
-  priority: WARNING
-```
 
 ## Liens
 - Documentations :
