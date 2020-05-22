@@ -142,7 +142,7 @@ Les listes sont utilisées soit :
   condition: proc.name in (sudo_procs)
 ```
 
-- ou dans un règle (rule) :
+- ou dans une règle (rule) :
 
 ```
 - rule: The program "sudo" is run in a container
