@@ -80,7 +80,10 @@ Falco peut être configuré à l'aide du fichier `/etc/falco/falco.yaml`. La con
 - `log_level` : Niveau de log
 - `syslog_output` : résulat de sortie vers syslog/rsyslog
 - `file_output` : résultat de sortie vers un fichier
-Je vous laisse explorer tous les paramètres au besoin.
+- `webserver` : paramètres du serveur web pour les audits de kubernetes
+> Note : En l'absence de Kubernetes, il faut désactiver le `webserver`.en mettant `enabled : false`
+
+Je vous laisse explorer tous les autres paramètres au besoin.
 
 ## Construction des règles
 Falco s'appuie sur les [règles](https://falco.org/docs/rules/) pour effectuer des actions.
@@ -164,24 +167,55 @@ Le fichier `falco_rules.yaml` contient plusieurs exemples de règles. Mais en tr
 
 - rule: run_shell_in_container
   desc: a shell was spawned by a non-shell program in a container. Container entrypoints are excluded.
-  condition: container and proc.name = bash and spawned_process and proc.pname exists and not proc.pname in (bash, docker)
+  condition: evt.type = execve and evt.dir=< and container and proc.name = bash and spawned_process and proc.pname exists and not proc.pname in (bash, docker)
   output: "Shell spawned in a container other than entrypoint (user=%user.name container_id=%container.id container_name=%container.name shell=%proc.name parent=%proc.pname cmdline=%proc.cmdline)"
   priority: WARNING
 ```
+- Exemple 2 : Surveillance du fichier sshd_config
+```
+- rule: sshd_config_open
+  desc: sshd_config is opened
+  condition: (evt.type=open or evt.type=openat) and evt.is_open_read=true and fd.filename="sshd_config"
+  output: "SSH is open by (user=%user.name pid=%proc.pid prog=%proc.cmdline)"
+  priority: INFO
 
-## Analyse des résultats
+- rule: hosts_file_write
+  desc: sshd is writting
+  condition: (evt.type=open or evt.type=openat) and evt.is_open_write=true and fd.filename="sshd_config" and fd.num>=0
+  output: "SSH is writen by (user=%user.name pid=%proc.pid prog=%proc.cmdline)"
+  priority: INFO
+```
+> Note : pour les besoins de performance, `evt.type` est requis pour chaque règle. Sinon Falco affiche un message d'avertissemnt.
+
+## Utilisation de Falco
 La commande `falco` permet d'analyser entre autres les résultats. Pour plus de détails sur l'utilisation de la commande , cf `sudo falco --help`.
 On peut faire quelques tests afin de voir si les règles détectent les événements surveillé. Pour cela :
-- Ajouter la règle `run_shell_in_container`, ci-dessus dans un fichier de règles (`falco_rules.local.yaml`) :
+- Ajouter la règles des deux exemples ci-dessus dans un fichier de règles (`falco_rules.local.yaml`) :
 - taper la commande `sudo falco -r /etc/falco/falco_rules.local.yaml` pour utiliser les règles de ce fichier.
-- sur un autre terminal, exécuter `bash` sur un conteneur (ex: nginx) à l'aide de la commande :
-```
-docker exec -ti nginx /bin/bash
-```
-- sur l'autre terminal, vous devriez voir le message ci-dessous :
-```
-17:27:54.642576524: Notice A shell was spawned in a container with an attached terminal (user=root nginx (id=ee20039ffc1b) shell=bash parent=docker-runc-cur cmdline=bash terminal=34818 container_id=ee20039ffc1b image=nginx)
-```
+- Test docker :
+  - sur un autre terminal, exécuter `bash` sur un conteneur (ex: nginx) à l'aide de la commande :
+  ```
+  docker exec -ti nginx /bin/bash
+  ```
+  - sur l'autre terminal, vous devriez voir le message ci-dessous :
+  ```
+  17:27:54.642576524: Notice A shell was spawned in a container with an attached terminal (user=root nginx (id=ee20039ffc1b) shell=bash parent=docker-runc-cur cmdline=bash terminal=34818 container_id=ee20039ffc1b image=nginx)
+  ```
+- Test sshd_config
+  - éditer/afficher le contenu du fichier `/etc/ssh/sshd_config`
+  ```
+   sudo vi /etc/ssh/sshd_config
+   # ou
+   sudo cat /etc/ssh/sshd_config
+  ```
+  - sur l'autre terminal, on aura le message
+  ```
+   17:29:21.467238411: Notice SSH is open by (user=root pid=2815 prog=cat /etc/ssh/sshd_config)
+  ```
+  - Et si on modifie le contenu, on aura le message ci-dessous :
+  ```
+  17:38:31.516379794: Notice SSH is writen by (user=root pid=2841 prog=vi /etc/ssh/sshd_config)
+  ```
 
 
 ## Liens
