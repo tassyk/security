@@ -216,7 +216,9 @@ On peut faire quelques tests afin de voir si les règles détectent les événem
   ```
   17:38:31.516379794: Notice SSH is writen by (user=root pid=2841 prog=vi /etc/ssh/sshd_config)
   ```
-
+> Note :
+> - Pour les besoins de test, nous avons défini nos propres règles. Mais les règles prédéfinies dans Falco peuvent être largement suffisantes pour couvrir un ensemble de besoin. Cependant, rien n'empêche de les personnaliser ou de définir ses propres règles.
+> - L'option `-r` est utilisée pour spécifier un fichier de règle à choisir. Si elle est omise, c'est tous les fichiers de règles qui sont concernées.
 
 ## Liens
 - Documentations :
