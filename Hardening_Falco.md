@@ -112,10 +112,10 @@ Chaque fichier de règle est un fichier `YAML` qui contient trois types d'élém
  Par exemple, la règle ci-dessous permet de détecter l'exécution d'un shell dans un conteneur qui tourne sur la machine :
 ```
 - rule: shell_in_container
- desc: notice shell activity within a container
- condition: container.id != host and proc.name = bash
- output: shell in a container (user=%user.name container_id=%container.id container_name=%container.name shell=%proc.name parent=%proc.pname cmdline=%proc.cmdline)
- priority: WARNING
+  desc: notice shell activity within a container
+  condition: container.id != host and proc.name = bash
+  output: shell in a container (user=%user.name container_id=%container.id container_name=%container.name shell=%proc.name parent=%proc.pname cmdline=%proc.cmdline)
+  priority: WARNING
 ```
 #### Macro
 Les macros sont des bouts de conditions qui peuvent être utilisées dans une règle. Exemple :
@@ -146,10 +146,10 @@ Les listes sont utilisées soit :
 
 ```
 - rule: The program "sudo" is run in a container
-   desc: An event will trigger every time you run sudo in a container
-   condition: evt.type = execve and evt.dir=< and container.id != host and proc.name in (sudo_procs)
-   output: "Sudo run in container (user=%user.name %container.info parent=%proc.pname cmdline=%proc.cmdline)"
-   priority: ERROR
+  desc: An event will trigger every time you run sudo in a container
+  condition: evt.type = execve and evt.dir=< and container.id != host and proc.name in (sudo_procs)
+  output: "Sudo run in container (user=%user.name %container.info parent=%proc.pname cmdline=%proc.cmdline)"
+  priority: ERROR
 ```
 > Note: Pour cet exemple, dans condition, on pouvait mettre aussi directement le macro `privileges_procs` à la place de `proc.name in (sudo_procs)`
 
