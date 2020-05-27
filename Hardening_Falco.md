@@ -17,8 +17,8 @@ Création: 10/05/2020
   - [Fichiers de règles](#Fichiers-des-règles)
   - [Eléments de règles](#Eléments-des-règles)
     - [Rules](#Rules)
-    - [Macro] (#Macro)
-    - [List] (#List)
+    - [Macro](#Macro)
+    - [List](#List)
   - [Exemples de règles](#Exemples-de-règles)
 - **[Utilisation de Falco](#Utilisation-de-Falco)**
 - **[Liens](#Liens)**
