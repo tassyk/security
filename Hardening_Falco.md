@@ -6,6 +6,24 @@ Création: 10/05/2020
 ---
 
 # Audit - Détection via Falco
+
+---
+- **[Introduction](#Introduction)**
+- **[Installation de Falco](#Installation-de-Falco)**
+  - [Installation via RPM](Installation-via-RPM)
+  - [Installation via script](#Installation-via-script)
+- **[Configuration de Falco](#Configuration-de-Falco)**
+- **[Construction des règles](#Construction-des-règles)**
+  - [Fichiers de règles](#Fichiers-des-règles)
+  - [Eléments de règles](#Eléments-des-règles)
+    - [Rules](#Rules)
+    - [Macro] (#Macro)
+    - [List] (#List)
+  - [Exemples de règles](#Exemples-de-règles)
+- **[Utilisation de Falco](#Utilisation-de-Falco)**
+- **[Liens](#Liens)**
+---
+
 ## Introduction
 [Falco](https://falco.org/#resources) est un outil opensource pour l'audit et la détection de comportements anormaux sur un sytème (Linux, Conteneurs, kubernetes) en exécution. Il est capable de détecter les appels systèmes, les comportements anormaux dans les flux réseaux, les écritures et modifications sur des fichiers sensibles du système et de ses ressources (conteneurs, applications, filesystem, ...) en se basant sur des [règles](https://falco.org/docs/rules/). Il est le moteur de détection des menaces de prédilection pour Kubernetes. Il peut être installé de différentes manières : sous forme de paquet (deb/rpm) sur une machine linux, sous forme de conteneur Docker, sur un cluster kubernetes, ou à partir de la source, à l'aide des scripts (Linux) ou [Ansible](https://falco.org/docs/installation/#ansible) et [Puppet](https://falco.org/docs/installation/#puppet).
 
@@ -41,7 +59,7 @@ sudo yum -y install falco
 sudo service falco start
 # ou sudo systemctl start falco
 ```
-### L'installation à l'aide du script install_falco
+### L'installation via script
 Le script `install_falco` permet d'installer Falco sur une machine Linux de manière plus simple. L'installation se fait comme suit :
 1. Téléchargement du script
 ```
@@ -88,7 +106,7 @@ Je vous laisse explorer tous les autres paramètres au besoin.
 ## Construction des règles
 Falco s'appuie sur les [règles](https://falco.org/docs/rules/) pour effectuer des actions.
 
-### Fichiers des règles
+### Fichiers de règles
 L'installation de Falco génère les fichiers et répertoires de règles ci-dessous :
 ```
 - falco_rules.yaml : contient un ensemble de règles prédéfinies pour couvrir un maximum de situations
@@ -99,7 +117,7 @@ L'installation de Falco génère les fichiers et répertoires de règles ci-dess
 ```
 > Note : Par défaut, `falco_rules.yaml` est toujours lu en premier avant `falco_rules.local.yaml` et il n'est pas recommandé de le modifier. Mais il est possible de changer l'ordre dans le fichier de configuration.
 
-### Eléments des règles
+### Eléments de règles
 Chaque fichier de règle est un fichier `YAML` qui contient trois types d'éléments :
 #### Rules
  Les  rules définissent les conditions et paramètres de la règle. Ils peuvent contenir plusieurs keys dont les plus plus indispensables sont :
@@ -154,7 +172,7 @@ Les listes sont utilisées soit :
 > Note: Pour cet exemple, dans condition, on pouvait mettre aussi directement le macro `privileges_procs` à la place de `proc.name in (sudo_procs)`
 
 ### Exemples de règles
-Le fichier `falco_rules.yaml` contient plusieurs exemples de règles. Mais en trouve aussi dans [la documentation](https://falco.org/docs/examples/) :
+Le fichier [falco_rules.yaml](https://github.com/falcosecurity/falco/blob/master/rules/falco_rules.yaml) contient plusieurs exemples de règles. Mais en trouve aussi dans [la documentation](https://falco.org/docs/examples/) :
 
 - Exemple 1 : détécter les événements d'exécution de shell dans un conteneur
 
@@ -225,6 +243,7 @@ On peut faire quelques tests afin de voir si les règles détectent les événem
   - [Falco](https://falco.org/#resource)
   - [Github Falco](https://github.com/falcosecurity/falco)
   - [Documentation Falco](https://falco.org/docs/)
+  - [Règles falco_rules.yaml](https://github.com/falcosecurity/falco/blob/master/rules/falco_rules.yaml)
 - Tutoriels :
   - [Installation Falco](https://falco.org/docs/installation/)
   - [Audit kubernetes with Falco](https://kubernetes.io/docs/tasks/debug-application-cluster/falco/)
