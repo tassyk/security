@@ -32,6 +32,13 @@ On peut analyser le système à l'aide de la commande ci-dessous :
 ```
 sudo rkhunter --check --sk
 ```
+## Ajout d'exception
+L'outil peut révéler des `warning` lors du scan du système sur certains fichiers. Si on juge qu'ils sont légitimes, alors on peut créer des exceptions pour ceux-ci. Pour ce faire :
+- Editer le fichier `/etc/rkhunter.conf` et ajouter les exceptions. Exemples :
+```
+ALLOWDEVFILE=/dev/shm/pulse-shm-*
+SCRIPTWHITELIST=/usr/bin/ldd
+```
 
 ## Sources
 - Documentation
@@ -39,3 +46,6 @@ sudo rkhunter --check --sk
 - Tutorials
   - [server-world.info](https://www.server-world.info/en/note?os=CentOS_7&p=rkhunter)
   - [www.theurbanpenguin.com/](https://www.theurbanpenguin.com/install-rkhunter-on-centos-7/)
+  - [rkhunter Ubuntu](https://doc.ubuntu-fr.org/rkhunter)
+
+T@ss!&$0u.07T&SK09
