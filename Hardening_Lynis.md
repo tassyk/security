@@ -52,7 +52,7 @@ Cette commande scanne le système et affiche les défauts de configuration sur l
 ...
 ```
 > Note :
-> - avant chaque scan, on peut mettre à jour l'outil avec la commande `lynis --check-update`
+> - avant chaque scan, on peut mettre à jour l'outil avec la commande `sudo lynis update check`
 > - les informations sont affichées dans `stdout` par défaut. Mais pour plus de détails, voir le rapport `/var/log/lynis-report.dat`
 
 
