@@ -59,6 +59,7 @@ Cette commande scanne le système et affiche les défauts de configuration sur l
 ## Sources
 - Documentation
   - [Doc cisofy](https://cisofy.com/lynis/)
+  - [Lynis security controle](https://cisofy.com/lynis/controls/file-integrity/)
 - Tutorials
   - [cisofy Get started](https://cisofy.com/documentation/lynis/get-started/)
   - [server-world.info](https://www.server-world.info/en/note?os=CentOS_7&p=lynis)
