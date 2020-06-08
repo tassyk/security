@@ -8,7 +8,7 @@ Création: 10/05/2020
 # Audit - Analyse système via Sysdig
 
 ## Introduction
-[Sysdig](https://github.com/draios/sysdig/wiki) est un outil d'audit et d'analyse d'un système (VM, Conteneurs). Il permet d'analyser les activiés des utilisateurs, des processus, l'utilisation des CPU , ... sur une machine, mais aussi les flux réseaux, les connexions entrantes et sortantes, pour ne citer que ça. Il peut être utilisé même pour les investigations forensiques. D'autres outils comme [Falco](https://falco.org/#resources) utilisent les filtres de Sysdig. Pour interagir avec l'outil, on utilise la commande `sysdig`.
+[Sysdig](https://github.com/draios/sysdig/wiki) est un outil d'audit et d'analyse d'un système (VM, Conteneurs). Il permet d'analyser les activités des utilisateurs, des processus, l'utilisation des CPU , ... sur une machine, mais aussi les flux réseaux, les connexions entrantes et sortantes, pour ne citer que ça. Il peut être utilisé même pour les investigations forensiques. D'autres outils comme [Falco](https://falco.org/#resources) utilisent les filtres de Sysdig. Pour interagir avec l'outil, on utilise la commande `sysdig`.
 
 ## Notions à connaître
 Pour mieux comprendre Sysdig, certains éléments sont à connaître :
