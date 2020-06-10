@@ -1,15 +1,14 @@
 ---
-Title: Tools
+Title: Security Tools
 Type: Doc
 Nature: Notes
 Création: 15/05/2020
 ---
 
-# Tools
+# Security Tools
 ---
 **Sommaire**
 
-- **System**
 - **[Security](#Security)**
   - [Hacking OS distro](#Hacking-OS-distro)
   - [SIEM - Log analyzer](#SIEM---Log-analyzer)
@@ -19,19 +18,17 @@ Création: 15/05/2020
   - [Hardening](#Hardening)
   - [Detection](#Detection)
   - [Docker security](#Docker-security)
-  - [Autres](#Autres)
+  - [Others](#Others)
+    - [Monitoring](#Monitoring)
 - **[Liens](#Liens)**
 ---
-## System
-- [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/blob/master/README.md) : open source, community-driven framework for managing your `zsh` configuration
-- [Fish](https://fishshell.com/) : smart and user-friendly command line
-shell for Linux, macOS, and the rest of the family
 
 ## Security
 ### Hacking OS distro
 - [Kali](https://www.kali.org/) : Offensive security
 - [Parrot](https://parrotlinux.org/) : All-in-one framework for Cyber Security, Software Development and Privacy Defense
 - [REMnux Distro](https://remnux.org/docs/distro/tools/) :  Forensics distro
+- [Caine](https://www.caine-live.net/) : Computer Forensics Linux Live Distro
 
 
 ### SIEM - Log analyzer
@@ -55,9 +52,13 @@ shell for Linux, macOS, and the rest of the family
 - [Nikto](https://cirt.net/nikto2) : Open Source (GPL) web server scanner
 - [Vega](https://subgraph.com/vega/) : Open Source web server vulnerability scanner (XSS, SQL injcetion and more)
 - [WPScan](https://wpscan.org/) : WordPress Security Scanner
+- [typo3scan](https://github.com/whoot/Typo3Scan) : TypO3 Security Scanner
 - [SQLmap](http://sqlmap.org/) : Sql injection scanner
 - [Metasploit](https://www.metasploit.com/) : Pentest framework
-
+- [HTTrack](https://www.httrack.com/) : HTTrack est un aspirateur de sites web facile d'utilisation et libre (GPL, logiciel libre).
+- [wafw00f](https://github.com/enablesecurity/wafw00f/wiki) : WAFW00F can detect a number of Web Application firewalls
+- [VScan](https://github.com/xvass/vscan) : vulnerability scanner tool is using nmap and nse scripts to find vulnerabilities
+- [Trape](https://github.com/jofpin/trape) : OSINT Tool - People tracker on the Internet: Learn to track the world, to avoid being traced
 
 ### Forensics
 - [Volatility](https://www.volatilityfoundation.org/) : Extraction of digital artifacts from volatile memory (RAM) samples framework
@@ -69,6 +70,16 @@ shell for Linux, macOS, and the rest of the family
 - [Autopsy](https://www.sleuthkit.org/autopsy/) :  GUI-based program that allows you to efficiently analyze hard drives and smart phones.
 - [Online EMailTracer](http://www.cyberforensics.in/OnlineEmailTracer/index.aspx) : tool to track email sender’s identity.
 - [MX Toolbox](https://mxtoolbox.com/) : list MX records for a domain in priority order
+- [MailXaminer](https://www.mailxaminer.com/) : SysTools Email Examiner Software to Analyze Emails for Investigators with Speed, Accuracy & Ease
+- [MISP](https://www.misp-project.org/tools/) : Malwares sharing plateforme
+- [TheHive](https://thehive-project.org/) : Open Source and Free Security Incident Response Platform (can be integrated with MISP)
+- [Cortex](https://github.com/TheHive-Project/CortexDocs) : Powerful Observable Analysis and Active Response Engine (from thehive-project.org )
+- [Snadfly Security](https://www.sandflysecurity.com/pricing/) : Sandfly is an agentless compromise and intrusion detection system for Linux (with UI). It automates security investigation and forensic evidence collection on Linux.
+- [DFIR ORC](https://dfir-orc.github.io/) : ANSSI DFIR ORC “Outil de Recherche de Compromission” is a modular and scalable tool to collect artefacts on Microsoft Windows systems, in a decentralized manner.
+- [EventID](http://eventid.net/) : Online  windows events Searcher
+- [Browser History Capturer](https://www.foxtonforensics.com/browser-history-capturer/) : BHC is free forensic tool to capture web browser history.
+- [Browser History Examiner](https://www.foxtonforensics.com/browser-history-examiner/) : Like BHC with more features (capturing, analysing and reporting (local and remote host)). (Free Trial)
+- [SQLite viewer software](https://www.foxtonforensics.com/sqlite-database-examiner/) : Free tool for inspecting the contents of SQLite databases.
 
 ### Hardening
 - [SElinux](https://doc.fedora-fr.org/wiki/SELinux), [ApparMor](https://doc.ubuntu-fr.org/apparmor) : renforcement permissions Linux
@@ -79,6 +90,10 @@ shell for Linux, macOS, and the rest of the family
 - [checksec](https://github.com/slimm609/checksec.sh),
 - [winchecksec](https://github.com/trailofbits/winchecksec) et [otool]() : Vérificateurs de la présence de drapeaux de sécurité sur un logiciel
 - [SSLtest](https://www.ssllabs.com/ssltest/) : SSL verificator
+- [RKhunter](http://rkhunter.sourceforge.net/) : Rootkit Hunter is a common open source program or tool used for scanning rootkits, botnets, malwares, etc
+- [Chkrootkit](http://www.chkrootkit.org/) : Check Rootkit is a common open source program or tool used for scanning rootkits, botnets, malwares, etc
+- [BotHunter]()
+- [arpwatch](https://linux.die.net/man/8/arpwatch) : ARP monitoring software
 
 ### Detection
 - [Yara](https://virustotal.github.io/yara/) : Identification et détection des IOC des malwares
@@ -87,20 +102,37 @@ shell for Linux, macOS, and the rest of the family
 - [Fail2ban](https://www.fail2ban.org/wiki/index.php/Main_Page) : détection d'intrusion et blocage d'IP malveillantes
 - [Snort](https://www.snort.org/) : open source intrusion prevention system
 - [ModSecurity](https://modsecurity.org/) : Open source Web Application Firewall (WAF)
-- [MISP](https://www.misp-project.org/tools/) : Malwares sharing plateforme
 - [Sysdig](https://github.com/draios/sysdig/wiki) : Audit and analysis tool
+- [Snadfly Security](https://www.sandflysecurity.com/pricing/) : Sandfly is an agentless compromise and intrusion detection system for Linux (with UI). It automates security investigation and forensic evidence collection on Linux.
 
 ### Docker security
 - [Dagda](https://github.com/eliasgranderubio/dagda) : Scan de vulnérabilités docker
 - [Atomic](http://www.projectatomic.io/) : Hôte pour les conteneurs mais aussi outil de scan
 - [Trivy](https://github.com/aquasecurity/trivy/blob/master/README.md) : docker Vulnerability scanner
-- [Harbor](https://goharbor.io/) : registry  et scanneur de vulnérabilités docker
+- [Harbor](https://goharbor.io/) : registry  et scanneur de vulnérabilités docker et kubernetes
 - [Portus](http://port.us.org/features/6_security_scanning.html) : scanneur de vulnérabilités docker
 - [Anchore](https://anchore.com/) : scanneur de vulnérabilités docker (Entreprise/Opensource)
 
-## Autres
-- [sha512.fr](https://www.sha512.fr/) : codage sha512, bcrypt, ... en ligne
-- [haveibeenpwned](https://haveibeenpwned.com/) : vérificateur de mot de passe ou email compromis en ligne
+### Password
+- [Keepass](https://keepass.info/) : Free, open source, light-weight and easy-to-use password manager
+- [Dashlane password-generator](https://www.dashlane.com/fr/features/password-generator) : générateur de mot de passe online
+- [password strength test](https://www.my1login.com/resources/password-strength-test/) : Online password checker
+- [1password password-generator](https://1password.com/fr/password-generator/) : générateur de mot de passe online
+- [haveibeenpwned](https://haveibeenpwned.com/) : vérificateur de mot de passe ou email compromis online
+- [dnschecker](https://dnschecker.org/all-tools.php) : tools help solving DNS problems
+- [pass](https://www.passwordstore.org/) : the standard unix password manager
+- [John the Ripper](https://www.openwall.com/john/) : fast password cracker
+- [Medusa](http://foofus.net/goons/jmk/medusa/medusa.html) : speedy, massively parallel, modular, login brute-forcer
+
+## Others
+- [sha512.fr](https://www.sha512.fr/) : codage sha512, bcrypt, ... online
+- [Wappalyzer](https://www.wappalyzer.com/) : Identify technology on websites (Browser extension)
+- [FoxyProxy](https://getfoxyproxy.org/) : Proxy switcher (Browsers extension)
+
+### Monitoring
+- [CheckMK](https://checkmk.com/) : infrastructure & application monitoring
+- [Shinken](http://www.shinken-monitoring.org/) : open source monitoring framework written in Python
+- [GLPI](https://glpi-project.org/fr/) : GLPI est un outil ITSM , puissant et tout intégré pour la gestion de votre parc et de votre centre de services
 
 
 ## Liens
