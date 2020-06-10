@@ -190,3 +190,4 @@ yara malwareSearch.yar tmp/
 - Tutoriels
   - [Get Started](https://yara.readthedocs.io/en/stable/gettingstarted.html)
   - [Installing yara from source code | securitasdato](http://securitasdato.blogspot.com/2018/04/installing-yara-from-source-code-on.html)
+  - [Yara rule for Webshell-shell](https://github.com/DarkenCode/yara-rules/blob/master/malware/Webshell-shell.yar)
