@@ -61,7 +61,7 @@ Le fichier `jail.conf` propose des protections contre la plupart des services co
 ### Protection SSH
 Pour contrer les connexions frauduleuses sur SSH, créer un fichier `ssh.local` dans `jail.d` et ajouter ces contenus:
 ```
-# /etc/fail2ban/jail.d/sshd.local
+# cat /etc/fail2ban/jail.d/sshd.local
 
 [DEFAULT]
 bantime = 86400
@@ -82,7 +82,26 @@ Où:
   - `port`: spécifie le port de SSH (ici ssh, mais on peut mettre autre chose comme 22, 2222, ...)
   - `maxretry`: spécifie le nombre d'essaie d'authentification autorisé
   - `logpath`: spécifie le chemin du fichier où trouver les logs du service à surveiller (ici, la valeur par défaut, mais on peut mettre par exemple /var/log/auth.log ou autre chose selon le service)
-  
+
+On peut aussi définir un jail pour le service apache (httpd) pour bloquer les accès frauduleux sur le serveur web :
+```
+# cat /etc/fail2ban/jail.d/httpd.local
+
+[apache-auth]
+port     = http,https
+logpath  = %(apache_error_log)s
+
+[apache-badbots]
+port     = http,https
+logpath  = %(apache_access_log)s
+bantime  = 48h
+maxretry = 1
+
+[apache-noscript]
+port     = http,https
+logpath  = %(apache_error_log)s
+```
+
  **Remarque sur la destination des log :** 
  - si on souhaite envoyer les journaux d'événement de fail2ban plutôt vers Syslog, on peut créer un fichier `.local` dans le répertoire de configuration de fail2ban et y spécifier le paramètre `logtarget` comme ceci:
  ```
