@@ -194,6 +194,7 @@ failregex = Authentication failure for .* from <HOST>
   - [Tuto Fail2ban Tecmint](https://www.tecmint.com/use-fail2ban-to-secure-linux-server/)
   - [Tuto Fail2ban Ubuntu](https://doc.ubuntu-fr.org/fail2ban)
   - [Tuto Fail2ban Buzut](https://buzut.net/installer-et-parametrer-fail2ban/)
+  - [Tuto Fail2ban Ubuntu | Protection apache](https://www.digitalocean.com/community/tutorials/how-to-protect-an-apache-server-with-fail2ban-on-ubuntu-14-04)
   - [Options de configuration des jails](https://www.systutorials.com/docs/linux/man/5-jail.conf/)
   - [Installation via Ansible](https://github.com/tassyk/ansible-fail2ban)
 
