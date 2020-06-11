@@ -83,9 +83,22 @@ Où:
   - `maxretry`: spécifie le nombre d'essaie d'authentification autorisé
   - `logpath`: spécifie le chemin du fichier où trouver les logs du service à surveiller (ici, la valeur par défaut, mais on peut mettre par exemple /var/log/auth.log ou autre chose selon le service)
 
-On peut aussi définir un jail pour le service apache (httpd) pour bloquer les accès frauduleux sur le serveur web :
+ **Remarque sur la destination des log :** 
+ - si on souhaite envoyer les journaux d'événement de fail2ban plutôt vers Syslog, on peut créer un fichier `.local` dans le répertoire de configuration de fail2ban et y spécifier le paramètre `logtarget` comme ceci:
+ ```
+ #cat /etc/fail2ban/fail2ban.d/fail2ban.local
+ [DEFAULT]
+ logtarget = SYSLOG
+ ```
+
+### Protection du service Apache
+On peut aussi définir un jail pour contrôler d'autres services. Par exemple, pour bloquer les accès frauduleux vers le serveur web apache (httpd)  :
 ```
 # cat /etc/fail2ban/jail.d/httpd.local
+[DEFAULT]
+bantime = 24h
+ignoreself = True
+ignoreip = 127.0.0.1
 
 [apache-auth]
 port     = http,https
@@ -101,14 +114,22 @@ maxretry = 1
 port     = http,https
 logpath  = %(apache_error_log)s
 ```
-
- **Remarque sur la destination des log :** 
- - si on souhaite envoyer les journaux d'événement de fail2ban plutôt vers Syslog, on peut créer un fichier `.local` dans le répertoire de configuration de fail2ban et y spécifier le paramètre `logtarget` comme ceci:
- ```
- #cat /etc/fail2ban/fail2ban.d/fail2ban.local
- [DEFAULT]
- logtarget = SYSLOG
- ```
+## Notification par mail
+Si la machine dispose d'un service SMTP, alors Fail2ban peut être configuré pour envoyer des notifications via mail en cas détection. Pour cela, ajouter les lignes ci-dessous au niveau de la section **DEFAULT** de chaque jail :
+```
+# cat /etc/fail2ban/jail.d/httpd.local
+[DEFAULT]
+...
+mta = sendmail
+destemail = emal@adress
+sender = fail2ban
+action = %(action_mwl)s
+```
+Où :
+- `mta` : spécifie le service de mail (sendmail)
+- `destemail` : spécifie le destinataire
+- `sender` : (optionnel) spécifie l'expéditeur
+- `action` : spécifie l'action d'envoie de mail (%(action_mwl)s, ici, pour inclure les logs). Mais on peut choisir aussi `%(action_mw)s` pour ne pas inclure les logs.
 
 ## Exploitation des résultats de fail2ban
 Fail2ban fournit un utilitaire, `fail2ban-client` très complet. Il permet de réaliser l'ensemble des configurations possible avec les fichiers de configuration (fail2ban.conf, jail.conf), mais aussi d'exploiter les résultats.
