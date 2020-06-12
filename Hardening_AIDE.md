@@ -67,7 +67,7 @@ Le fichier est riche en informations :
 @@define DBDIR /var/lib/aide
 @@define LOGDIR /var/log/aide
 ```
-- Les différets paramètres pour construire les règles :
+- Les différets [paramètres](https://linux.die.net/man/5/aide.conf) pour construire les règles :
 ```
 # These are the default rules.
 #p:      permissions
