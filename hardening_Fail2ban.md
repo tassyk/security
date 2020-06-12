@@ -83,13 +83,14 @@ Où:
   - `maxretry`: spécifie le nombre d'essaie d'authentification autorisé
   - `logpath`: spécifie le chemin du fichier où trouver les logs du service à surveiller (ici, la valeur par défaut, mais on peut mettre par exemple /var/log/auth.log ou autre chose selon le service)
 
- **Remarque sur la destination des log :** 
+ **Remarque sur la gestion des log :** 
  - si on souhaite envoyer les journaux d'événement de fail2ban plutôt vers Syslog, on peut créer un fichier `.local` dans le répertoire de configuration de fail2ban et y spécifier le paramètre `logtarget` comme ceci:
  ```
  #cat /etc/fail2ban/fail2ban.d/fail2ban.local
  [DEFAULT]
  logtarget = SYSLOG
  ```
+- si par contre, si on envoie les logs vers un autre fichier (ex: /var/log/fail2ban/fail2ban.log), il ne faut pas oublier d'indiquer ce chemin dans le fichier de rotation `/etc/logrotate.d/fail2ban`
 
 ### Protection du service Apache
 On peut aussi définir un jail pour contrôler d'autres services. Par exemple, pour bloquer les accès frauduleux vers le serveur web apache (httpd)  :
