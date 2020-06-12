@@ -198,7 +198,7 @@ auditctl -w /etc/resolv.conf -p wa -k dns_changes
 ```
 
 ## Comprendre les logs générés par auditd
-Auditd génère les logs dans le fichier `/var/log/audit/audit.log`. Pour comprendre ces logs, je vous renvoie à la [documentation de Redhat]((https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-starting_the_audit_service)), dans la section [6.6. Understanding Audit Log Files](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-understanding_audit_log_files)
+Auditd génère les logs dans le fichier `/var/log/audit/audit.log`. Pour comprendre ces logs, je vous renvoie à la [documentation de Redhat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-starting_the_audit_service), dans la section [6.6. Understanding Audit Log Files](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-understanding_audit_log_files)
 
 
 # Sources
