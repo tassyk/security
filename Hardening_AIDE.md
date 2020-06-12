@@ -7,7 +7,7 @@ Date de création: 13/04/2020
 
 # Mise en place d'AIDE
 ## Introduction
-AIDE (Advanced Intrusion Detection Environment) est une solution de monitoring (contrôle) d'intégrité des systèmes de fichiers. A l'image de [Auditd](https://github.com/tassyk/security/blob/master/hardening_auditing_system.md), il surveille un système de fichiers afin de détecter les différentes modifications qui y sont apportées.
+[AIDE](https://aide.github.io/) (Advanced Intrusion Detection Environment) est une solution de monitoring (contrôle) d'intégrité des systèmes de fichiers. A l'image de [Auditd](https://github.com/tassyk/security/blob/master/hardening_auditing_system.md), il surveille un système de fichiers afin de détecter les différentes modifications qui y sont apportées.
 A travers cet article, nous allons montrer comment mettre en place cette solution sur un serveur Centos7 afin de contrôler l'intégrité des fichiers du système.
 
 ## Installation de l'AIDE
