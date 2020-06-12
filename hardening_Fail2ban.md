@@ -90,7 +90,7 @@ Où:
  [DEFAULT]
  logtarget = SYSLOG
  ```
-- si par contre, si on envoie les logs vers un autre fichier (ex: /var/log/fail2ban/fail2ban.log), il ne faut pas oublier d'indiquer ce chemin dans le fichier de rotation `/etc/logrotate.d/fail2ban`
+- si par contre, si on envoie les logs vers un autre fichier (ex: `/var/log/fail2ban/fail2ban.log`), il ne faut pas oublier d'indiquer ce chemin dans le fichier de rotation `/etc/logrotate.d/fail2ban`
 
 ### Protection du service Apache
 On peut aussi définir un jail pour contrôler d'autres services. Par exemple, pour bloquer les accès frauduleux vers le serveur web apache (httpd)  :
