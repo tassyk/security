@@ -248,3 +248,8 @@ On peut faire quelques tests afin de voir si les règles détectent les événem
   - [Installation Falco](https://falco.org/docs/installation/)
   - [Audit kubernetes with Falco](https://kubernetes.io/docs/tasks/debug-application-cluster/falco/)
   - [Introduction to sysdig falco](https://blog.rapid7.com/2016/06/06/introduction-to-sysdig-falco/)
+- Autres solutions de monitoring d'intégrité
+  - [Auditd](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-starting_the_audit_service)
+  - [Tripwire FIM](https://www.tripwire.com/solutions/file-integrity-and-change-monitoring)
+  - [Falco](https://falco.org/#resources)
+  - [Samhain](https://www.la-samhna.de/samhain/)
