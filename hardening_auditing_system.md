@@ -202,9 +202,16 @@ Auditd génère les logs dans le fichier `/var/log/audit/audit.log`. Pour compre
 
 
 # Sources
-- [Redhat auditd documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-starting_the_audit_service)
-- tuto:
+- Documentations :
+  - [Documentation du projet](https://github.com/linux-audit/audit-documentation/wiki)
+  - [Redhat auditd documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-starting_the_audit_service)
+- tutoriels:
   - [Auditd digitalocean](https://www.digitalocean.com/community/tutorials/how-to-write-custom-system-audit-rules-on-centos-7)
   - [Auditd Tecmint](https://www.tecmint.com/linux-system-auditing-with-auditd-tool-on-centos-rhel/)
   - [Automatisation via Ansible](https://github.com/tassyk/ansible-auditd)
-- [Documentation du projet](https://github.com/linux-audit/audit-documentation/wiki)
+- Autres solutions de monitoring d'intégrité 
+  - [AIDE](https://aide.github.io/)
+  - [Tripwire FIM](https://www.tripwire.com/solutions/file-integrity-and-change-monitoring)
+  - [Falco](https://falco.org/#resources)
+  - [Samhain](https://www.la-samhna.de/samhain/)
+
