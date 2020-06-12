@@ -148,6 +148,16 @@ Ensuite, si on dispose d'un serveur smtp, on peut envoyer une notification par m
 ```
 
 ## Liens
-- [AIDE Redhat doc](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-using-aide)
-- [Tuto AIDE it-connect](https://www.it-connect.fr/aide-utilisation-et-configuration-dune-solution-de-controle-dintegrite-sous-linux/)
-- [Tuto sbarjatiya.com](https://www.sbarjatiya.com/notes_wiki/index.php/Configuring_basic_AIDE_server)
+- Documentations :
+  - [AIDE](https://aide.github.io/)
+  - [AIDE Redhat doc](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-using-aide)
+- Tutoriels :
+  - [Tuto AIDE it-connect](https://www.it-connect.fr/aide-utilisation-et-configuration-dune-solution-de-controle-dintegrite-sous-linux/)
+  - [Tuto sbarjatiya.com](https://www.sbarjatiya.com/notes_wiki/index.php/Configuring_basic_AIDE_server)
+  - [Rapid7 AIDE on Ubuntu](https://blog.rapid7.com/2017/06/30/how-to-install-and-configure-aide-on-ubuntu-linux/)
+- Autres solutions de monitoring d'intégrité 
+  - [Auditd](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-starting_the_audit_service)
+  - [Tripwire FIM](https://www.tripwire.com/solutions/file-integrity-and-change-monitoring)
+  - [Falco](https://falco.org/#resources)
+  - [Samhain](https://www.la-samhna.de/samhain/)
+
