@@ -160,7 +160,7 @@ Pour plus d'info sur les règles, voir `man audit.rules`
 sudo systemctl restart auditd
 ```
 
-**NB:** Exemple de règles auditd recommandées par l'ANSSI: https://www.ssi.gouv.fr/uploads/2019/03/linux_configuration-en-v1.2.pdf
+**NB:** Exemple de règles auditd recommandées par l'ANSSI: voir [Linux Configuration](https://www.ssi.gouv.fr/uploads/2019/03/linux_configuration-en-v1.2.pdf), section [6.7.3 System monitoring with Auditd](https://www.ssi.gouv.fr/uploads/2019/03/linux_configuration-en-v1.2.pdf#subsection.6.7.3)
 
 ## Commandes fournies par auditd
 Auditd fournit un ensemble d'outils permettant d'interagir les résultats d'audit:
