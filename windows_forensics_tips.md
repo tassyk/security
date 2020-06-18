@@ -16,10 +16,13 @@ Création: 20/05/2020
 ## Investigation numérique Offline
 Les investigations dans ce cas peuvent être réalisées via des outils comme `FTK, Volatility, ...`
 
-### Dump mémoires
-- Réalisation de dump mémoires: via FTK ou Dumpit
+### Dumps mémoires, disk, logs
+- `FTK imager` permet de dumper (réaliser une copie) une mémoire RAM, un disk, des registres, partition NTFS (MTF - Master File Table).... Il permet aussi d'extraire des logs
 - calcul de condensat ou hash des dumps (intégrité) : `[sha512sum | sha256sum | md5sum ] memdump.mem`
-> Note : Les formats peuvent être RAW, MEM, DMP, les formats Forensic (AFF, SMART, EWF), ...
+> Note :
+> - Les formats peuvent être RAW, MEM, DMP, les formats Forensic (AFF, SMART, EWF), ...
+
+- `Dumpit` : est outil qui permet aussi de dumper une mémoire
 
 ### Analyse mémoires
 - Informations à analyser : connexions réseaux, des clés de registre, des mots de passe ou encore des processus en cours d’exécution, ...
@@ -93,13 +96,16 @@ volatility -f memdump.mem –-profile=Win7SP1x86 svcscan
 volatility -f memdump.mem –-profile=Win7SP1x86 cmdscan
 # scanener via yara rules : yarascan
 ```
+### Analyse de la copie de disque
+- via `Autopsy`
+> Autopsy est une interface graphique de l’outil open source The Sleuth Kit. Il permet d'analyser, de parser les données du disque, de générer une timeline et un rapport, ...
 
 ## Investigation numérique Online
 Les investigations dans ce cas peuvent être réalisées via des outils comme `les commandes systèmes, la suite sysinternals, la suite NirSoft, wireshark, ...`
 
 ### Analyse des processus et DLL
 - via `ProcessExplorer` (sysinternals)
-> Note : disposé d'une interface graphique, il n'analyse pas que les processus, mais aussi les info de réseau, CPU, Disk, DLL, ... Il a également plusieurs fonctionnalités telles que l'affichage des signatures, scan via virustotal, Kill Process Tree, ...(cf `click droit`). Il peut être utiliser pour les opération de diagnostique et de troubleshooting
+> Note : disposé d'une interface graphique, il analyse à la fois les processus, les info de réseau, CPU, Disk, DLL, ... Il a également plusieurs fonctionnalités telles que l'affichage des signatures, scan via virustotal, Kill Process Tree, ...(cf `click droit`). Il peut être utiliser pour les opération de diagnostique et de troubleshooting
 
 - via `ProcessMonitor`  (sysinternals)
 > Disposé d'une interface graphique, il capture les opérations I/O (Input / Output) qu'il soit au niveau du file system, registry, ou le réseau network. Il peut être utiliser pour les opération de diagnostique et de troubleshooting
@@ -116,7 +122,10 @@ Les investigations dans ce cas peuvent être réalisées via des outils comme `l
 
 - via `DiskView` (sysinternals)
 
-### Analyse des fichiers, répertoires et registres
+- via `Mft2Csv`
+> Outil qui permet convertir la MFT (Master File Table) de la partition du disque NTFS en CSV (exploitablse). la MFT enregistre toutes les informations relatives à un fichier. On peut extraire la MFT via `FTK imager`
+
+### Analyse des fichiers, répertoires
 - via `RootkitRevealer` (sysinternals)
 > Détecte les virus dans le registre.
 
@@ -144,6 +153,15 @@ Les investigations dans ce cas peuvent être réalisées via des outils comme `l
 - via `findlinks` (sysinternals)
 > Affiche les liens symboliques vers un fichier
 
+### Analyse des registres
+> notamment, les registres users (Ntuser.dat), base sam, softwares
+
+- via `Regedit` (Windows)
+> Editeur de registre windows
+
+- via `RegRipper`
+> Cet outil permet d'analyser un dump de redistre
+
 ### Analyse des informations réseaux
 - via `ShareEnum` (sysinternals)
 > Détecte les domaines utilisateurs pour les fichiers partagés.
@@ -158,19 +176,28 @@ Les investigations dans ce cas peuvent être réalisées via des outils comme `l
 - via `Autoruns` (sysinternals)
 > Permet d'afficher et des gérer les services qui sont lancés automatiquement.
 
+- via `services.msc` (Windows)
+> Gestionnaire de service windows
+
+### Analyse des logs
+- via `Event Viewer` (Windows)
+> Outil windows permettant d'analyser les logs d'événements windows. [www.eventid.net](www.eventid.net): ce site permet d'obtenir plus d’informations sur un évènement donné. [Event Log Explorer](https://eventlogxp.com/download.php) est un logiciel payant (version d'essai disponible) qui permet aussi d'explorer les logs
+
+
 
 ## Liens
 - Usefull Tools
-  - Dump: FTK,
-  - Analyse: [Volatility](https://github.com/volatilityfoundation/volatility/wiki/Command-Reference), [Sysinternals](https://docs.microsoft.com/fr-fr/sysinternals/downloads/), [Encase](https://www.guidancesoftware.com/encase-forensic), [The Sleuth Kit](https://www.sleuthkit.org/sleuthkit/), [NirSoft utilities](https://www.nirsoft.net/)
-  - fichiers cachés: ADS Spy (lads), QuickStego (stégano), snow
+  - Dump: FTK, Dumpit
+  - Analyse: [Volatility](https://github.com/volatilityfoundation/volatility/wiki/Command-Reference), [Sysinternals](https://docs.microsoft.com/fr-fr/sysinternals/downloads/), [Encase](https://www.guidancesoftware.com/encase-forensic), [The Sleuth Kit](https://www.sleuthkit.org/sleuthkit/), [NirSoft utilities](https://www.nirsoft.net/), [Mft2Csv](https://github.com/jschicht/Mft2Csv), ADS Spy (lads), QuickStego (stégano), snow, [RegRipper](https://github.com/keydet89/RegRipper2.8)
 - Forensics resources
   - [Menez une investigation numérique Forensic | Openclassroom](https://openclassrooms.com/fr/courses/1750151-menez-une-investigation-d-incident-numerique-forensic)
   - [Windows Internals Book 7th Edition Tools](https://github.com/zodiacon/WindowsInternals)
   - [Sysinternals Learning Resources | video and podcast](https://docs.microsoft.com/en-us/sysinternals/learn/)
   - [Volatility](https://www.volatilityfoundation.org/)
   - [NirSoft utilities](https://www.nirsoft.net/)
+  - [SANS windows forensic analysis Poster](https://www.sans.org/security-resources/posters/windows-forensic-analysis/170/download)
 - Forensics tutorials :
   - [howtogeek | sysinternals lessons](https://www.howtogeek.com/school/sysinternals-pro/)
   - [Systol | Sysinternals, outils mal connus pour Windows](https://www.scriptol.fr/logiciel/sysinternals.php)
+  - [tech2tech | Nirsoft](https://www.tech2tech.fr/tag/nirsoft/)
   - [How to hide files](https://www.bleepingcomputer.com/tutorials/windows-alternate-data-streams/)
