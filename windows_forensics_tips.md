@@ -172,6 +172,9 @@ Les investigations dans ce cas peuvent être réalisées via des outils comme `l
 - via `WhoIs` (sysinternals)
 > Résoud les noms de domaines
 
+- via `SmartSniff` (NirSoft)
+> Sniffeur de paquets TCP dans un réseau
+
 ### Analyse des services
 - via `Autoruns` (sysinternals)
 > Permet d'afficher et des gérer les services qui sont lancés automatiquement.
@@ -183,7 +186,9 @@ Les investigations dans ce cas peuvent être réalisées via des outils comme `l
 - via `Event Viewer` (Windows)
 > Outil windows permettant d'analyser les logs d'événements windows. [www.eventid.net](www.eventid.net): ce site permet d'obtenir plus d’informations sur un évènement donné. [Event Log Explorer](https://eventlogxp.com/download.php) est un logiciel payant (version d'essai disponible) qui permet aussi d'explorer les logs
 
-
+### Analyse des secrets
+- via `Password-Recovery tools` (Nirsoft)
+> suite d'outils permettant de retrouver un password perdu sur un ensemble d'application (Systèmes, navigateurs, Mail, Wifi)
 
 ## Liens
 - Usefull Tools
@@ -200,4 +205,5 @@ Les investigations dans ce cas peuvent être réalisées via des outils comme `l
   - [howtogeek | sysinternals lessons](https://www.howtogeek.com/school/sysinternals-pro/)
   - [Systol | Sysinternals, outils mal connus pour Windows](https://www.scriptol.fr/logiciel/sysinternals.php)
   - [tech2tech | Nirsoft](https://www.tech2tech.fr/tag/nirsoft/)
+  - [Blog Nirsoft | nirsoft tips](https://blog.nirsoft.net/category/nirsoft-tips/)
   - [How to hide files](https://www.bleepingcomputer.com/tutorials/windows-alternate-data-streams/)
