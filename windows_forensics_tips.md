@@ -16,7 +16,7 @@ Création: 20/05/2020
 ## Investigation numérique Offline
 Les investigations dans ce cas peuvent être réalisées via des outils comme `FTK, Volatility, ...`
 
-### Dumps mémoires, disk, logs
+### Dumps mémoires, disk, logs, mail
 - `FTK imager` permet de dumper (réaliser une copie) une mémoire RAM, un disk, des registres, partition NTFS (MTF - Master File Table).... Il permet aussi d'extraire des logs
 - calcul de condensat ou hash des dumps (intégrité) : `[sha512sum | sha256sum | md5sum ] memdump.mem`
 > Note :
@@ -100,6 +100,19 @@ volatility -f memdump.mem –-profile=Win7SP1x86 cmdscan
 - via `Autopsy`
 > Autopsy est une interface graphique de l’outil open source The Sleuth Kit. Il permet d'analyser, de parser les données du disque, de générer une timeline et un rapport, ...
 
+### Analyse des mails
+> Avec Outlook, les emails de chaque utilisateur sont stockés dans un fichier `.PST(Personal Storage Table)` en activité, ou `.OST ` hors connexion. Cf `C:\users\username\AppData\Local\Microsoft\Outlook`. On peut extraire ces fichiers de mail avec `FTK Imager`.
+
+- Visualisation du mail (.OST/.PST) via un `viewer` : `Free OST Viewer Tool,` `pff-tools (Sous Linux)`
+> On peut visualiser ces fichiers via `Free OST Viewer Tool`, extraire le mail au format `.MSG`. Sous Linux, on peut aussi utiliser l'outil `pff-tools`
+
+- Analyse de l'entête et extraction des pièces jointes :
+> - Pour obtenir les informations de l'entête, il faudra d’abord convertir le .`MSG` en fichier `.EML` via un outil comme `msgconvert (Linux)`
+> - Pour l'installer : `sudo apt install libemail-outlook-message-perl libemail-sender-perl`
+> - Pour convertir en `.EML`: `msgconvert your_mail.msg``
+> - Ainsi on peut ouvrir `msgconvert your_mail.eml` avec un éditeur de texte.
+> - La pièce jointe est codée en `base64`. On peut copier/coller cette chaîne dans un fichier (ex: pj.b64) puis le décoder pour récupérer la pièce jointe : `base64 -d pj.b64 >> pj.decoded`
+
 ## Investigation numérique Online
 Les investigations dans ce cas peuvent être réalisées via des outils comme `les commandes systèmes, la suite sysinternals, la suite NirSoft, wireshark, ...`
 
@@ -115,6 +128,8 @@ Les investigations dans ce cas peuvent être réalisées via des outils comme `l
 - via `ListDlls` (sysinternals)
 > Liste les DLL appelés par un programme
 
+- via `tasklist` (cmd Windows)
+> Commande Windows pour lister les processus
 
 ### Analyse des disques
 - via `Diskmon` (sysinternals)
@@ -124,6 +139,12 @@ Les investigations dans ce cas peuvent être réalisées via des outils comme `l
 
 - via `Mft2Csv`
 > Outil qui permet convertir la MFT (Master File Table) de la partition du disque NTFS en CSV (exploitablse). la MFT enregistre toutes les informations relatives à un fichier. On peut extraire la MFT via `FTK imager`
+
+- via `scandisk` (cmd windows)
+> Commande interne Windows pour vérifier les volumes pour détecter des erreurs
+
+- via `diskcomp` (cmd Windows)
+> Compare le contenu de deux disques
 
 ### Analyse des fichiers, répertoires
 - via `RootkitRevealer` (sysinternals)
@@ -190,10 +211,29 @@ Les investigations dans ce cas peuvent être réalisées via des outils comme `l
 - via `Password-Recovery tools` (Nirsoft)
 > suite d'outils permettant de retrouver un password perdu sur un ensemble d'application (Systèmes, navigateurs, Mail, Wifi)
 
+### Analyse des mails
+- via `Outlook, Exchange, ...`
+> En mode Online, on peut analyser aussi l'entête d'un mail via l'outil de messagerie `Outlook, Exchange` (dans les options).
+
+- via `mxtoolbox, Email Dossier, MailXaminer`
+> On peut obtenir des informations sur un mail via d'autres outils comme [mxtoolbox](https://mxtoolbox.com/), [Email Dossier](https://centralops.net/co/EmailDossier.aspx), [MailXaminer](https://www.mailxaminer.com/)
+
+- Analyse des pièces jointes : `pdfid, pdf-parser, oledump`
+> Après avoir récupérer les pj du mail, on peut les analyser via des outils comme : [pdfid](https://github.com/Rafiot/pdfid), `pdf-parser`, [oledump](https://github.com/DidierStevens/DidierStevensSuite/blob/master/oledump.py)
+>
+```
+# fichiers pdf
+pdfid.py invoice.pdf # via pdfid
+pdfparser.py invoice.pdf # via pdf-parser
+# fichiers Office
+oledump.py invoice.docm # afficher les éléments du fichier
+oledump.py -s A3 -v invoice.docm # afficher le contenu d'un macro
+```
+
 ## Liens
 - Usefull Tools
   - Dump: FTK, Dumpit
-  - Analyse: [Volatility](https://github.com/volatilityfoundation/volatility/wiki/Command-Reference), [Sysinternals](https://docs.microsoft.com/fr-fr/sysinternals/downloads/), [Encase](https://www.guidancesoftware.com/encase-forensic), [The Sleuth Kit](https://www.sleuthkit.org/sleuthkit/), [NirSoft utilities](https://www.nirsoft.net/), [Mft2Csv](https://github.com/jschicht/Mft2Csv), ADS Spy (lads), QuickStego (stégano), snow, [RegRipper](https://github.com/keydet89/RegRipper2.8)
+  - Analyse: [Volatility](https://github.com/volatilityfoundation/volatility/wiki/Command-Reference), [Sysinternals](https://docs.microsoft.com/fr-fr/sysinternals/downloads/), [Encase](https://www.guidancesoftware.com/encase-forensic), [The Sleuth Kit](https://www.sleuthkit.org/sleuthkit/), [NirSoft utilities](https://www.nirsoft.net/), [Mft2Csv](https://github.com/jschicht/Mft2Csv), ADS Spy (lads), QuickStego (stégano), snow, pdf-parser, [RegRipper](https://github.com/keydet89/RegRipper2.8), [pdfid](https://github.com/Rafiot/pdfid), [oledump](https://github.com/DidierStevens/DidierStevensSuite/blob/master/oledump.py), [mxtoolbox](https://mxtoolbox.com/), [Email Dossier](https://centralops.net/co/EmailDossier.aspx), [MailXaminer](https://www.mailxaminer.com/), [www.eventid.net](www.eventid.net), [Event Log Explorer](https://eventlogxp.com)
 - Forensics resources
   - [Menez une investigation numérique Forensic | Openclassroom](https://openclassrooms.com/fr/courses/1750151-menez-une-investigation-d-incident-numerique-forensic)
   - [Windows Internals Book 7th Edition Tools](https://github.com/zodiacon/WindowsInternals)
@@ -201,9 +241,12 @@ Les investigations dans ce cas peuvent être réalisées via des outils comme `l
   - [Volatility](https://www.volatilityfoundation.org/)
   - [NirSoft utilities](https://www.nirsoft.net/)
   - [SANS windows forensic analysis Poster](https://www.sans.org/security-resources/posters/windows-forensic-analysis/170/download)
+  - [Commandes Windows](https://docs.microsoft.com/fr-fr/windows-server/administration/windows-commands/windows-commands)
+  - [PowerForensics](https://powerforensics.readthedocs.io/en/latest/)
 - Forensics tutorials :
   - [howtogeek | sysinternals lessons](https://www.howtogeek.com/school/sysinternals-pro/)
   - [Systol | Sysinternals, outils mal connus pour Windows](https://www.scriptol.fr/logiciel/sysinternals.php)
   - [tech2tech | Nirsoft](https://www.tech2tech.fr/tag/nirsoft/)
   - [Blog Nirsoft | nirsoft tips](https://blog.nirsoft.net/category/nirsoft-tips/)
   - [How to hide files](https://www.bleepingcomputer.com/tutorials/windows-alternate-data-streams/)
+  - [ionos : commandes windows](https://www.ionos.fr/digitalguide/serveur/know-how/commande-cmd/)
