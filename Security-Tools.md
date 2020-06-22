@@ -24,12 +24,19 @@ Création: 15/05/2020
 ---
 
 ## Security
-### Hacking OS distro
-- [Kali](https://www.kali.org/) : Offensive security
-- [Parrot](https://parrotlinux.org/) : All-in-one framework for Cyber Security, Software Development and Privacy Defense
-- [REMnux Distro](https://remnux.org/docs/distro/tools/) :  Forensics distro
-- [Caine](https://www.caine-live.net/) : Computer Forensics Linux Live Distro
-
+### Hacking
+- OS distro :
+  - [Kali](https://www.kali.org/) : Offensive security
+  - [Parrot](https://parrotlinux.org/) : All-in-one framework for Cyber Security, Software Development and Privacy Defense
+  - [REMnux Distro](https://remnux.org/docs/distro/tools/) :  Forensics distro
+  - [Caine](https://www.caine-live.net/) : Computer Forensics Linux Live Distro
+- Vuln box :
+  - [Metasploitable](https://github.com/rapid7/metasploitable3)
+  - [DVWA](http://www.dvwa.co.uk/)
+  - [bWAPP](https://sourceforge.net/projects/bwapp/)
+  - [Mullitidae](https://sourceforge.net/projects/mutillidae/)
+  - [vulnhub](https://www.vulnhub.com/) : Vulnerable test VM
+  - [vulnweb](http://www.vulnweb.com/) : Vulnerable test websites (for Acunetix Web Vulnerability Scanner)
 
 ### SIEM - Log analyzer
 - [Suit Elastic](https://www.elastic.co/fr/) : Opensource, mais certains composants sont payants
@@ -48,6 +55,7 @@ Création: 15/05/2020
 - [pentest-tools.com](https://pentest-tools.com/home) : Online - Pentest-Tools.com allows you to quickly discover and report vulnerabilities in websites and network infrastructures
 
 ### Pentest
+- [NMAP | NMAP NSE](https://nmap.org/) : Network exploration tool and security / port scanner
 - [Burp suite](https://portswigger.net/) : web security scanner and proxy
 - [Nikto](https://cirt.net/nikto2) : Open Source (GPL) web server scanner
 - [Vega](https://subgraph.com/vega/) : Open Source web server vulnerability scanner (XSS, SQL injcetion and more)
@@ -59,6 +67,7 @@ Création: 15/05/2020
 - [wafw00f](https://github.com/enablesecurity/wafw00f/wiki) : WAFW00F can detect a number of Web Application firewalls
 - [VScan](https://github.com/xvass/vscan) : vulnerability scanner tool is using nmap and nse scripts to find vulnerabilities
 - [Trape](https://github.com/jofpin/trape) : OSINT Tool - People tracker on the Internet: Learn to track the world, to avoid being traced
+- [Pentest box](https://pentestbox.org/fr/#features) : Open source Windows pentest framework
 
 ### Forensics
 - [Volatility](https://www.volatilityfoundation.org/) : Extraction of digital artifacts from volatile memory (RAM) samples framework
@@ -67,10 +76,12 @@ Création: 15/05/2020
 - [PDF Examiner](https://www.pdfexaminer.com/) : Online PDF Examiner
 - [GRR](https://grr-doc.readthedocs.io/en/latest/) : Rapid Response is an incident response framework focused on remote live forensics
 - [Windows Sysinternals Utilities](https://docs.microsoft.com/en-us/sysinternals/downloads/) : Windows forensics Small Utilities
+- [The Sleuth Kit®](https://www.sleuthkit.org/sleuthkit/) :  Collection of command line tools and a C library that allows you to analyze disk images and recover files from them
 - [Autopsy](https://www.sleuthkit.org/autopsy/) :  GUI-based program that allows you to efficiently analyze hard drives and smart phones.
 - [Online EMailTracer](http://www.cyberforensics.in/OnlineEmailTracer/index.aspx) : tool to track email sender’s identity.
 - [MX Toolbox](https://mxtoolbox.com/) : list MX records for a domain in priority order
 - [MailXaminer](https://www.mailxaminer.com/) : SysTools Email Examiner Software to Analyze Emails for Investigators with Speed, Accuracy & Ease
+- [Free OST Viewer Tool](https://datahelp.in/ost/viewer.html) : Open Offline Outlook Data File Free of Cost & Without Exchange Server Environment
 - [MISP](https://www.misp-project.org/tools/) : Malwares sharing plateforme
 - [TheHive](https://thehive-project.org/) : Open Source and Free Security Incident Response Platform (can be integrated with MISP)
 - [Cortex](https://github.com/TheHive-Project/CortexDocs) : Powerful Observable Analysis and Active Response Engine (from thehive-project.org )
@@ -78,8 +89,12 @@ Création: 15/05/2020
 - [DFIR ORC](https://dfir-orc.github.io/) : ANSSI DFIR ORC “Outil de Recherche de Compromission” is a modular and scalable tool to collect artefacts on Microsoft Windows systems, in a decentralized manner.
 - [EventID](http://eventid.net/) : Online  windows events Searcher
 - [Browser History Capturer](https://www.foxtonforensics.com/browser-history-capturer/) : BHC is free forensic tool to capture web browser history.
-- [Browser History Examiner](https://www.foxtonforensics.com/browser-history-examiner/) : Like BHC with more features (capturing, analysing and reporting (local and remote host)). (Free Trial)
-- [SQLite viewer software](https://www.foxtonforensics.com/sqlite-database-examiner/) : Free tool for inspecting the contents of SQLite databases.
+- [ADS Spy](https://www.bleepingcomputer.com/download/ads-spy/) : Ads Spy is a tool that can be used to search for and remove Alternate Data Streams (ADS) from NTFS file systems (like backdoors)
+- [Encase](https://www.guidancesoftware.com/encase-forensic) : The Gold Standard in Forensic Investigations – including Mobile Acquisition
+- [NirSoft utilities](https://www.nirsoft.net/) : NirSoft web site provides a unique collection of small and useful freeware utilities for forensic
+- [Forensic Toolkit (FTK)](https://accessdata.com/products-services/forensic-toolkit-ftk) : Digital Investigations Toolkit
+- [Mft2Csv](https://github.com/jschicht/Mft2Csv/wiki/Mft2Csv) : This tool is for parsing, decoding and logging information from the Master File Table ($MFT) to a csv
+
 
 ### Hardening
 - [SElinux](https://doc.fedora-fr.org/wiki/SELinux), [ApparMor](https://doc.ubuntu-fr.org/apparmor) : renforcement permissions Linux
@@ -94,6 +109,7 @@ Création: 15/05/2020
 - [Chkrootkit](http://www.chkrootkit.org/) : Check Rootkit is a common open source program or tool used for scanning rootkits, botnets, malwares, etc
 - [BotHunter]()
 - [arpwatch](https://linux.die.net/man/8/arpwatch) : ARP monitoring software
+- [Tripwire FIM](https://www.tripwire.com/solutions/file-integrity-and-change-monitoring) : File Integrity Monitoring & Change Management
 
 ### Detection
 - [Yara](https://virustotal.github.io/yara/) : Identification et détection des IOC des malwares
@@ -128,6 +144,7 @@ Création: 15/05/2020
 - [sha512.fr](https://www.sha512.fr/) : codage sha512, bcrypt, ... online
 - [Wappalyzer](https://www.wappalyzer.com/) : Identify technology on websites (Browser extension)
 - [FoxyProxy](https://getfoxyproxy.org/) : Proxy switcher (Browsers extension)
+- [hstspreload.org](https://hstspreload.org/) : Check HTST preload status and eligibilty
 
 ### Monitoring
 - [CheckMK](https://checkmk.com/) : infrastructure & application monitoring
