@@ -90,7 +90,7 @@ C'est la commande `freshclam [options]` qui permet de mettre à jour la base de 
 ```
 sudo freshclam
 ```
-Pour les opréations de scan, on utilise la commande `clamscan [options] [file/directory/-]`. Sans options, elle scanne le répertoire courant. Par exemple pour scanner les fichiers infectés des répertoires /home /root
+Pour les [opréations de scan](https://www.clamav.net/documents/scanning), on peut utiliser la commande `clamscan [options] [file/directory/-]`. Sans options, elle scanne le répertoire courant. Par exemple pour scanner les fichiers infectés des répertoires /home /root
 ```
 sudo clamscan --infected --recursive /home /root
 # et supprimer les fichiers infectés
