@@ -31,10 +31,10 @@ Création: 15/05/2020
   - [REMnux Distro](https://remnux.org/docs/distro/tools/) :  Forensics distro
   - [Caine](https://www.caine-live.net/) : Computer Forensics Linux Live Distro
 - Vuln box :
-  - [Metasploitable](https://github.com/rapid7/metasploitable3)
-  - [DVWA](http://www.dvwa.co.uk/)
-  - [bWAPP](https://sourceforge.net/projects/bwapp/)
-  - [Mullitidae](https://sourceforge.net/projects/mutillidae/)
+  - [Metasploitable](https://github.com/rapid7/metasploitable3) : Vulnerable Linux system
+  - [DVWA](http://www.dvwa.co.uk/) : PHP/MySQL vulnerable web application
+  - [bWAPP](https://sourceforge.net/projects/bwapp/) : PHP/MySQL vulnerable web application
+  - [Mullitidae](https://sourceforge.net/projects/mutillidae/) : PHP/MySQL vulnerable web application
   - [vulnhub](https://www.vulnhub.com/) : Vulnerable test VM
   - [vulnweb](http://www.vulnweb.com/) : Vulnerable test websites (for Acunetix Web Vulnerability Scanner)
 
