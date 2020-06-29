@@ -53,6 +53,7 @@ Création: 15/05/2020
 - [Intruder](https://www.intruder.io/) : powerful cloud-based vulnerability scanner to find weaknesses
 - [Detectify](https://detectify.com/) : Online - Scan your web apps for 2000+ vulnerabilities and track assets across your tech stack
 - [pentest-tools.com](https://pentest-tools.com/home) : Online - Pentest-Tools.com allows you to quickly discover and report vulnerabilities in websites and network infrastructures
+- [SearchSploit](https://www.exploit-db.com/searchsploit) : command line search tool for Exploit-DB that also allows you to take a copy of Exploit Database with you, everywhere you go
 
 ### Pentest
 - [NMAP | NMAP NSE](https://nmap.org/) : Network exploration tool and security / port scanner
@@ -68,6 +69,14 @@ Création: 15/05/2020
 - [VScan](https://github.com/xvass/vscan) : vulnerability scanner tool is using nmap and nse scripts to find vulnerabilities
 - [Trape](https://github.com/jofpin/trape) : OSINT Tool - People tracker on the Internet: Learn to track the world, to avoid being traced
 - [Pentest box](https://pentestbox.org/fr/#features) : Open source Windows pentest framework
+- [Havij](https://sourceforge.net/directory/os:windows/?q=+havij) : Advanced SQL injection tool with GUI
+- [Fiddler](https://www.telerik.com/fiddler) : The Web Debugging Proxy Tool Loved by Users
+- [Hashcat](https://hashcat.net/hashcat/) : Advanced password recovery
+- [Impacket](https://www.secureauth.com/labs/open-source-tools/impacket) : Impacket is a collection of Python classes for working with network protocols (SMB, Kerberos,...)
+- [mimikatz](https://github.com/gentilkiwi/mimikatz) : mimikatz is a tool that makes some "experiments" with Windows security. It's well-known to extract plaintexts passwords, hash, PIN code and kerberos tickets from memory
+
+### Social Ingeneering
+- [Shellphis](https://github.com/thelinuxchoice/shellphish) : Phishing Tool for Instagram, Facebook, Twitter, Snapchat, Github, Yahoo, Protonmail ...
 
 ### Forensics
 - [Volatility](https://www.volatilityfoundation.org/) : Extraction of digital artifacts from volatile memory (RAM) samples framework
@@ -94,6 +103,8 @@ Création: 15/05/2020
 - [NirSoft utilities](https://www.nirsoft.net/) : NirSoft web site provides a unique collection of small and useful freeware utilities for forensic
 - [Forensic Toolkit (FTK)](https://accessdata.com/products-services/forensic-toolkit-ftk) : Digital Investigations Toolkit
 - [Mft2Csv](https://github.com/jschicht/Mft2Csv/wiki/Mft2Csv) : This tool is for parsing, decoding and logging information from the Master File Table ($MFT) to a csv
+- [ExifTool](https://exiftool.org/) : ExifTool is a platform-independent Perl library plus a command-line application for reading, writing and editing meta information in a wide variety of files.
+- [IOC Editor](https://www.fireeye.com/services/freeware/ioc-editor.html#dismiss-lightbox) : Free tool that provides an interface for managing data and manipulating the logical structures of IOCs.
 
 
 ### Hardening
@@ -145,6 +156,8 @@ Création: 15/05/2020
 - [Wappalyzer](https://www.wappalyzer.com/) : Identify technology on websites (Browser extension)
 - [FoxyProxy](https://getfoxyproxy.org/) : Proxy switcher (Browsers extension)
 - [hstspreload.org](https://hstspreload.org/) : Check HTST preload status and eligibilty
+- [AbuseIpDB](https://www.abuseipdb.com/) : making the internet safer, one IP at a time
+
 
 ### Monitoring
 - [CheckMK](https://checkmk.com/) : infrastructure & application monitoring
@@ -164,3 +177,4 @@ Création: 15/05/2020
 - [11 Online scan website security vulnerabilities](https://geekflare.com/online-scan-website-security-vulnerabilities/)
 - [Important Tools and Resources For Security Researcher, Malware Analyst](https://gbhackers.com/most-important-tools/)
 - [100 Best Hacking Tools for Security Professionals in 2020](https://gbhackers.com/hacking-tools-list/ )
+- [Free Open Source Windows Security Software](https://sourceforge.net/directory/security-utilities/security/os:windows/)
