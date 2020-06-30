@@ -73,3 +73,5 @@ You don't have permission to access /login2.php on this server.
 - Tutoriels :
   - [tecadmin : install-modsecurity-with-apache-on-centos-rhel](https://tecadmin.net/install-modsecurity-with-apache-on-centos-rhel/)
   - [server-world.info : install modsecurity](https://www.server-world.info/en/note?os=CentOS_7&p=httpd2&f=8)
+  - [liquidweb : Modesecurity whitelist](https://www.liquidweb.com/kb/whitelisting-in-modsec/)
+  - [infosecinstitute : avoiding modsecurity false positives whitelisting](https://resources.infosecinstitute.com/avoiding-mod-security-false-positives-white-listing/)
