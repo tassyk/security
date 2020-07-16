@@ -207,6 +207,9 @@ failregex = Authentication failure for .* from <HOST>
             ROOT LOGIN REFUSED .* FROM <HOST>
             [iI](?:llegal|nvalid) user .* from <HOST>
 ```
+## Aller plus loin 
+Fail2ban peut s'interfacer avec d'autres outils comme :
+- [AbuseIpDB](https://www.abuseipdb.com/fail2ban.html) afin de reporter automatiquement les IP malveillantes sur le site [AbuseIpDB](https://www.abuseipdb.com/)
 
 ## Sources
 - Fail2ban
