@@ -67,6 +67,21 @@ Forbidden
 
 You don't have permission to access /login2.php on this server.
 ```
+> Par défaut, les log d'audit de ModSecurity sont stockés dans `/var/log/httpd/modsec_audit.log`. Vous pouvez inspecter son contenu
+> pour voir les requêtes bloquées.
+```
+$ sudo tail -f /var/log/httpd/modsec_audit.log
+--abdd0b6e-C--
+login=%3Cscript%3E%3Cb+onmouseover%3Dalert%28%27Wufff%21%27%29%3Eclick+me%21%3C%2Fb%3E%3C%2Fscript%3E&mdp=bonjour&connexion=
+--abdd0b6e-F--
+HTTP/1.1 403 Forbidden
+Content-Length: 212
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html; charset=iso-8859-1
+...
+```
+
 ## Liens
 - Documentations officielles:
   - [Site Web ModSecurity](https://modsecurity.org/)
