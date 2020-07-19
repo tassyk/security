@@ -67,8 +67,8 @@ Forbidden
 
 You don't have permission to access /login2.php on this server.
 ```
-> Par défaut, les log d'audit de ModSecurity sont stockés dans `/var/log/httpd/modsec_audit.log`. Vous pouvez inspecter son contenu
-> pour voir les requêtes bloquées.
+
+Par défaut, les log d'audit de ModSecurity sont stockés dans `/var/log/httpd/modsec_audit.log`. Vous pouvez inspecter son contenu pour voir les requêtes bloquées.
 ```
 $ sudo tail -f /var/log/httpd/modsec_audit.log
 --abdd0b6e-C--
