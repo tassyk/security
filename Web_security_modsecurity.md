@@ -42,6 +42,8 @@ L'installation de ModSecurity génère le fichier de configuration  **/etc/httpd
 ```
 
 Cependant, le plus important est **SecRuleEngine**. En mettant celui à **on**, on peut bloquer les attaques.
+> L'ensemble des paramètres de configuration se trouvent dans `/etc/httpd/modsecurity.d/modsecurity_crs_10_config.conf`
+> tandis que les règles activées se trouvent dans `/etc/httpd/modsecurity.d/activated_rules/`
 
 ## Redémarrage d'apache
 Pour prendre en charge ces modifications, il suffit de redémarrer le serveur apache
