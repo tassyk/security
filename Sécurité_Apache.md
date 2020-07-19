@@ -236,8 +236,8 @@ NSSProtocol TLSv1.2
 ```
 > Attention : ces protocoles ne doivent pas être activés dans les `virtualhost`
 
-### Activer HTTP strict - HTST
-[HTTP Strict Tranport Security](https://fr.wikipedia.org/wiki/HTTP_Strict_Transport_Security) force les naviagteurs à utiliser le HTTPS pour votre site. Cela renforce la sécurité d'un site. Il doit être activé, s'il n'existe aucune contrainte pour cela.
+### Activer HTTPS strict - HTST
+[HTTP Strict Tranport Security](https://fr.wikipedia.org/wiki/HTTP_Strict_Transport_Security) est un dispositif de sécurité par lequel un site web peut déclarer aux navigateurs qu'ils doivent communiquer avec lui en utilisant exclusivement le protocole HTTPS, au lieu du HTTP. Cela renforce la sécurité d'un site. Il doit être activé, s'il n'existe aucune contrainte pour cela.
 ```
 $ cat $Apache_dir/conf.d/ssl.conf
 Header always set Strict-Transport-Security \
@@ -248,13 +248,15 @@ Header always set Strict-Transport-Security \
 On peut protéger son serveur web contre les [attaques du top 10 d'OWASP](https://owasp.org/www-project-top-ten/) en mettant en place un WAF (Web application Firwall). Parmi les WAF Opensource, [Mod Security](https://github.com/tassyk/security/blob/master/Web_security_modsecurity.md) fait partie des incontournables.
 
 ## Test et vérification
+On générer une configuration SSL pour son site web grâce à l'outil [SSL Configuration Generator de Mozilla](https://ssl-config.mozilla.org/)
+
 On peut vérifier la robustesse de son certificat SSL/TLS  à l'aide des outils en ligne comme [Qualys SSLtest](https://www.ssllabs.com/ssltest/).
 
 On peut aussi vérifier si un protocol est activé ou non via la commande `openssl s_client -connect hostname:port -protocol`. Exemple : `openssl s_client -connect localhost:443 -ssl3`
 
 # Liens
 - Documentation :
-  - [Redhat doc](https://access.redhat.com/documentation/fr-fr/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-web_servers)
+  - [Redhat | Chapitre 12. Serveurs web](https://access.redhat.com/documentation/fr-fr/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-web_servers)
   - [Apache httpd](http://httpd.apache.org/)
   - [Apache foundation](http://www.apache.org/)
 - Tutoriels :
@@ -266,3 +268,4 @@ On peut aussi vérifier si un protocol est activé ou non via la commande `opens
   - [Microlinux | Apache SSL Centos7](https://blog.microlinux.fr/apache-ssl-centos-7/)
 - Tools :
   - [10 SSL checker](https://geekflare.com/ssl-test-certificate/)
+  - [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/)
