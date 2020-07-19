@@ -244,8 +244,12 @@ Header always set Strict-Transport-Security \
   "max-age=63072000; includeSubDomains"
 ```
 
-## Protection contre les attaques du 1O OWASP
+## Protection contre les attaques
+### Se protéger contre les vulnérabilités du 1O OWASP
 On peut protéger son serveur web contre les [attaques du top 10 d'OWASP](https://owasp.org/www-project-top-ten/) en mettant en place un WAF (Web application Firwall). Parmi les WAF Opensource, [Mod Security](https://github.com/tassyk/security/blob/master/Web_security_modsecurity.md) fait partie des incontournables.
+
+### Banir les IP malveillantes
+A défaut d'utiliser un WAF ou en complément, on peut utiliser un IDS comme [Fail2ban](https://github.com/tassyk/security/blob/master/hardening_Fail2ban.md) afin de bloquer les IP malveillantes qui consultent un site web.
 
 ## Test et vérification
 On générer une configuration SSL pour son site web grâce à l'outil [SSL Configuration Generator de Mozilla](https://ssl-config.mozilla.org/)
