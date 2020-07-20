@@ -91,8 +91,11 @@ Content-Type: text/html; charset=iso-8859-1
   - [SpiderLabs /owasp-modsecurity-crs](https://github.com/SpiderLabs/owasp-modsecurity-crs/tree/v3.1/dev/rules)
 
 - Tutoriels :
+  - [Apache / ModSecurity Tutorials](https://www.netnea.com/cms/apache-tutorials/)
+  - [NGINX / ModSecurity Tutorials](https://www.netnea.com/cms/nginx-modsecurity-tutorials/)
   - [tecadmin : install-modsecurity-with-apache-on-centos-rhel](https://tecadmin.net/install-modsecurity-with-apache-on-centos-rhel/)
   - [server-world.info : install modsecurity](https://www.server-world.info/en/note?os=CentOS_7&p=httpd2&f=8)
+- Faux positifs :
   - [Faq : Modesecurity whitelist](https://github.com/SpiderLabs/ModSecurity/wiki/ModSecurity-Frequently-Asked-Questions-%28FAQ%29#How_do_I_whitelist_an_IP_address_so_it_can_pass_through_ModSecurity)
   - [Mod_security Exceptions](https://www.modsecurity.org/CRS/Documentation/exceptions.html)
   - [Handling False Positives with the OWASP ModSecurity Core Rule Set](https://www.netnea.com/cms/apache-tutorial-8_handling-false-positives-modsecurity-core-rule-set/)
