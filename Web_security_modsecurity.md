@@ -93,16 +93,16 @@ où :
 - `SecRule` : mot clé de début de la règle
 - `REQUEST_FILENAME` : variable pour spécifier le path à considérer dans la requête (ici: `"/phpmyadmin"`)
 - `id` : ID de la règle (ici: `10000`)
-    > Valeurs possibles :
-    ```
-    # == ModSec Rule ID Namespace Definition
-    # Service-specific before Core Rule Set: 10000 -  49999
-    # Service-specific after Core Rule Set:  50000 -  79999
-    # Locally shared rules:                  80000 -  99999
-    #  - Performance:                        90000 -  90199
-    # Recommended ModSec Rules (few):       200000 - 200010
-    # OWASP Core Rule Set:                  900000 - 999999
-    ```
+    > Valeurs possibles de l'ID :
+        ```
+        # == ModSec Rule ID Namespace Definition
+        # Service-specific before Core Rule Set: 10000 -  49999
+        # Service-specific after Core Rule Set:  50000 -  79999
+        # Locally shared rules:                  80000 -  99999
+        #  - Performance:                        90000 -  90199
+        # Recommended ModSec Rules (few):       200000 - 200010
+        # OWASP Core Rule Set:                  900000 - 999999
+        ```
 - `phase` : phase de la requête (1 -> après réception des entêtes de la requête, 2 -> après réception du corps de la requête, 3 -> après réception des entêtes de la réponse, 4 -> après réception du corps de la réponse, 5 -> phase de loggin)
 - `deny` : action de blocage
 - `log` : logger l'événement
