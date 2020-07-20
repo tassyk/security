@@ -110,7 +110,7 @@ où :
 - `msg` : message à afficher
 - `tag` : étiquête pour identifier l'événement.
 
-> Pour plus d'info, voir [Step 6: Writing simple blacklist rules dans l'article "Embedding ModSecurity" de Netnea](https://www.netnea.com/cms/apache-tutorial-6_embedding-modsecurity/)
+> Pour plus d'info, voir le paragraphe `Step 6: Writing simple blacklist rules` dans l'article ["Embedding ModSecurity" de Netnea](https://www.netnea.com/cms/apache-tutorial-6_embedding-modsecurity/). Pour la définition d'un whitelist, voir la section `Step 8: Writing simple whitelist rules`
 
 ## Liens
 - Documentations officielles:
