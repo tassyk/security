@@ -149,7 +149,7 @@ Clickjacking est une vulnérabilité web très connue. Pour limiter, ajouter cec
 $ cat $Apache_dir/conf/httpd.conf
 Header always append X-Frame-Options SAMEORIGIN
 ```
-> X-Frame-Options : peut prendre d'autres valeurs
+> X-Frame-Options : [peut prendre d'autres valeurs](https://developer.mozilla.org/fr/docs/Web/HTTP/Headers/X-Frame-Options) comme `deny`
 
 ### Empêcher le Server Side Include (SSI)
 SSI permet d'injecter des scripts dans les pages HTML ou exécuter des codes à distance. Il peut entraîner aussi une surcharge du serveur web, réduisant ainsi les performances. Pour éviter cela, ajouter l'option `-Includes` comme ceci :
@@ -263,6 +263,7 @@ On peut aussi vérifier si un protocol est activé ou non via la commande `opens
   - [Redhat | Chapitre 12. Serveurs web](https://access.redhat.com/documentation/fr-fr/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-web_servers)
   - [Apache httpd](http://httpd.apache.org/)
   - [Apache foundation](http://www.apache.org/)
+  - [Mozilla HTTP Guide](https://developer.mozilla.org/fr/docs/Web/HTTP)
 - Tutoriels :
   - [GeekFlare | Apache Web Server Hardening and Security Guide](https://geekflare.com/apache-web-server-hardening-security/)
   - [GeekFlare | 10 Best Practices To Secure and Harden Your Apache Web Server](https://geekflare.com/10-best-practices-to-secure-and-harden-your-apache-web-server/)
