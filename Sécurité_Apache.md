@@ -254,7 +254,7 @@ A défaut d'utiliser un WAF ou en complément, on peut utiliser un IDS comme [Fa
 ## Test et vérification
 On générer une configuration SSL pour son site web grâce à l'outil [SSL Configuration Generator de Mozilla](https://ssl-config.mozilla.org/)
 
-On peut vérifier la robustesse de son certificat SSL/TLS  à l'aide des outils en ligne comme [Qualys SSLtest](https://www.ssllabs.com/ssltest/).
+On peut vérifier la robustesse de son certificat SSL/TLS  à l'aide des outils en ligne comme [Qualys SSLtest](https://www.ssllabs.com/ssltest/). D'autres tests peuvent aussi être réalisés grâce [GreekFlare Security Tools](https://gf.dev/toolbox).
 
 On peut aussi vérifier si un protocol est activé ou non via la commande `openssl s_client -connect hostname:port -protocol`. Exemple : `openssl s_client -connect localhost:443 -ssl3`
 
