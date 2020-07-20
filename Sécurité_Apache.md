@@ -176,6 +176,7 @@ Pour se protéger contre les attaques XSS, on peut ajouter ces configurations :
 $ cat $Apache_dir/conf/httpd.conf
 Header set X-XSS-Protection "1; mode=block"
 ```
+> `"1; mode=block"` détecte l'attaque et empêche la page. D'autres valeurs sont disponibles pour [X-XSS-Protection](https://developer.mozilla.org/fr/docs/Web/HTTP/Headers/X-XSS-Protection)
 
 ### Désactiver le protocole HTTP 1.0
 HTTP 1.0 est un protocol avec plusieurs failles de sécurité. Il doit être désactivé :
