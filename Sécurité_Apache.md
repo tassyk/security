@@ -224,7 +224,7 @@ SSLCipherSuite HIGH:!MEDIUM:!aNULL:!MD5:!RC4
 > Attention : Ne pas définir des suites de chiffrement faibles, non plus, dans les `virtualhost`
 
 ### Désactiver SSLv1, SSLv2 & SSLv3 et TLSv1.0
-Les protocols SSLv1, 2 et 3, et TLS 1.0 ne sont plus fiables et sont sujets à beaucoup d'[attaques MIM (Man-In-the-Midle)](https://korben.info/les-attaques-ssltls.html). Ils doivent être désactiver au profit de `TLSv1.2` au moins.
+Les protocols SSLv1, 2 et 3, et TLS 1.0 ne sont plus fiables et sont sujets à beaucoup [d'attaques MIM (Man-In-the-Midle)](https://korben.info/les-attaques-ssltls.html). Ils doivent être désactiver au profit de `TLSv1.2` au moins.
 ```
 # Pour ssl
 $ cat $Apache_dir/conf.d/ssl.conf
@@ -254,7 +254,7 @@ A défaut d'utiliser un WAF ou en complément, on peut utiliser un IDS comme [Fa
 ## Test et vérification
 On générer une configuration SSL pour son site web grâce à l'outil [SSL Configuration Generator de Mozilla](https://ssl-config.mozilla.org/)
 
-On peut vérifier la robustesse de son certificat SSL/TLS  à l'aide des outils en ligne comme [Qualys SSLtest](https://www.ssllabs.com/ssltest/). D'autres tests peuvent aussi être réalisés grâce [GreekFlare Security Tools](https://gf.dev/toolbox).
+On peut vérifier la robustesse de son certificat SSL/TLS  à l'aide des outils en ligne comme [Qualys SSLtest](https://www.ssllabs.com/ssltest/). D'autres tests (XSS protection, HSTS, ...) peuvent aussi être réalisés grâce [GreekFlare Security Tools](https://gf.dev/toolbox).
 
 On peut aussi vérifier si un protocol est activé ou non via la commande `openssl s_client -connect hostname:port -protocol`. Exemple : `openssl s_client -connect localhost:443 -ssl3`
 
