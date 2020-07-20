@@ -88,6 +88,8 @@ Content-Type: text/html; charset=iso-8859-1
   - [Site Web ModSecurity](https://modsecurity.org/)
   - [Documentation ModSecurity](https://github.com/SpiderLabs/ModSecurity/wiki)
   - [OWASP ModSecurity rules](https://owasp.org/www-project-modsecurity-core-rule-set/)
+  - [SpiderLabs /owasp-modsecurity-crs](https://github.com/SpiderLabs/owasp-modsecurity-crs/tree/v3.1/dev/rules)
+
 - Tutoriels :
   - [tecadmin : install-modsecurity-with-apache-on-centos-rhel](https://tecadmin.net/install-modsecurity-with-apache-on-centos-rhel/)
   - [server-world.info : install modsecurity](https://www.server-world.info/en/note?os=CentOS_7&p=httpd2&f=8)
