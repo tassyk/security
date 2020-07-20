@@ -95,4 +95,5 @@ Content-Type: text/html; charset=iso-8859-1
   - [server-world.info : install modsecurity](https://www.server-world.info/en/note?os=CentOS_7&p=httpd2&f=8)
   - [Faq : Modesecurity whitelist](https://github.com/SpiderLabs/ModSecurity/wiki/ModSecurity-Frequently-Asked-Questions-%28FAQ%29#How_do_I_whitelist_an_IP_address_so_it_can_pass_through_ModSecurity)
   - [Mod_security Exceptions](https://www.modsecurity.org/CRS/Documentation/exceptions.html)
+  - [Handling False Positives with the OWASP ModSecurity Core Rule Set](https://www.netnea.com/cms/apache-tutorial-8_handling-false-positives-modsecurity-core-rule-set/)
 
