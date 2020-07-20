@@ -41,7 +41,7 @@ L'installation de ModSecurity génère le fichier de configuration  **/etc/httpd
     ....
 ```
 
-Cependant, le plus important est [**SecRuleEngine**](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-(v2.x)). En mettant celui à **on**, on peut bloquer les attaques.
+Cependant, le plus important est **SecRuleEngine**. Les autres directives sont [référencées dans le manual](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-(v2.x)). En mettant celui à **on**, on peut bloquer les attaques.
 > L'ensemble des paramètres de configuration se trouvent dans `/etc/httpd/modsecurity.d/modsecurity_crs_10_config.conf`
 > tandis que les règles activées se trouvent dans `/etc/httpd/modsecurity.d/activated_rules/`.
 > L'ensemble des règles de base se trouvent dans `/usr/lib/modsecurity.d/base_rules`
