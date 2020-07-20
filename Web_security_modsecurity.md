@@ -103,7 +103,7 @@ où :
         # Recommended ModSec Rules (few):       200000 - 200010
         # OWASP Core Rule Set:                  900000 - 999999
     ```
-- `phase` : phase de la requête (1 -> après réception des entêtes de la requête, 2 -> après réception du corps de la requête, 3 -> après réception des entêtes de la réponse, 4 -> après réception du corps de la réponse, 5 -> phase de loggin)
+- `phase` : phase de la requête (1 -> Phase Request Headers, 2 -> Phase Request Body, 3 -> Phase Response Headers, 4 -> Phase Response Body, 5 -> Phase Logging)
 - `deny` : action de blocage
 - `log` : logger l'événement
 - `t` : transformation que doit subir l'URI (ici `lowercase`-> conversion en minuscule et `normalisePath` -> path normal, pas de malformation ou d'obfuscation)
