@@ -116,6 +116,7 @@ où :
 - Documentations officielles:
   - [Site Web ModSecurity](https://modsecurity.org/)
   - [Documentation ModSecurity](https://github.com/SpiderLabs/ModSecurity/wiki)
+  - [Reference Manual](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-(v2.x)#SecRuleEngine)
   - [OWASP ModSecurity rules](https://owasp.org/www-project-modsecurity-core-rule-set/)
   - [SpiderLabs /owasp-modsecurity-crs](https://github.com/SpiderLabs/owasp-modsecurity-crs/tree/v3.1/dev/rules)
 
