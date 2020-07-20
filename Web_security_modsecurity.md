@@ -84,7 +84,7 @@ Content-Type: text/html; charset=iso-8859-1
 ```
 
 ## Création d'une règle
-On peut être parfois amené à [créer ses propres rules](https://www.netnea.com/cms/apache-tutorial-6_embedding-modsecurity/ pour bloquer ou autoriser une requête donnée. Par exemple, on peut construire un rule pour bloquer une URI contenant `/phpmyadmin` et renvoyant une erreur 403, grâce à la règle ci-dessous :
+On peut être parfois amené à créer ses propres rules pour bloquer ou autoriser une requête donnée. Par exemple, on peut construire un rule pour bloquer une URI contenant `/phpmyadmin` et renvoyant une erreur 403, grâce à la règle ci-dessous :
 ```
 SecRule  REQUEST_FILENAME "/phpmyadmin" "id:10000,phase:1,deny,log,t:lowercase,t:normalisePath,\
   msg:'Blocking access to %{MATCHED_VAR}.',tag:'Blacklist Rules'"
@@ -99,6 +99,8 @@ où :
 - `t` : transformation que doit subir l'URI (ici `lowercase`-> conversion en minuscule et `normalisePath` -> path normal, pas de malformation ou d'obfuscation)
 - `msg` : message à afficher
 - `tag` : étiquête pour identifier l'événement.
+
+> Pour plus d'info, voir [Step 6: Writing simple blacklist rules dans l'article "Embedding ModSecurity" de Netnea](https://www.netnea.com/cms/apache-tutorial-6_embedding-modsecurity/)
 
 ## Liens
 - Documentations officielles:
