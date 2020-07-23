@@ -17,7 +17,7 @@ Création: 20/05/2020
 Les investigations dans ce cas peuvent être réalisées via des outils comme `FTK, Volatility, ...`
 
 ### Dumps mémoires, disk, logs, mail
-- `FTK imager` permet de dumper (réaliser une copie) une mémoire RAM, un disk, des registres, partition NTFS (MTF - Master File Table).... Il permet aussi d'extraire des logs
+- `FTK imager` permet de dumper (réaliser une copie) d'une mémoire RAM, un disk, des registres, partition NTFS (MTF - Master File Table).... Il permet aussi d'extraire des logs
 - calcul de condensat ou hash des dumps (intégrité) : `[sha512sum | sha256sum | md5sum ] memdump.mem`
 > Note :
 > - Les formats peuvent être RAW, MEM, DMP, les formats Forensic (AFF, SMART, EWF), ...
