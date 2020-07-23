@@ -43,6 +43,8 @@ Création: 15/05/2020
 - [LogPoint](https://www.logpoint.com/en/) : propriétaire
 - [Splunk](https://www.splunk.com/) : propriétaire
 - [GrayLog](https://www.graylog.org) : Opens source and Entreprise
+- [Apache Log Viewer](https://www.apacheviewer.com/) : With apache logs viewer you can easily filter and analyze Apache/IIS/nginx log files.
+- [GoAccess](https://goaccess.io/) : GoAccess is an open source real-time web log analyzer and interactive viewer that runs in a terminal in unix systems or through your browser.
 
 ### Vulnerability Scan
 - [outpost24 HIAB](https://outpost24.com/) : Pro Full stack security assessment platform and penetration testing
@@ -74,6 +76,8 @@ Création: 15/05/2020
 - [Hashcat](https://hashcat.net/hashcat/) : Advanced password recovery
 - [Impacket](https://www.secureauth.com/labs/open-source-tools/impacket) : Impacket is a collection of Python classes for working with network protocols (SMB, Kerberos,...)
 - [mimikatz](https://github.com/gentilkiwi/mimikatz) : mimikatz is a tool that makes some "experiments" with Windows security. It's well-known to extract plaintexts passwords, hash, PIN code and kerberos tickets from memory
+- [Ncrack](https://nmap.org/ncrack/) : Ncrack is a high-speed network authentication cracking tool. It was built to help companies secure their networks by proactively testing all their hosts and networking devices for poor passwords
+- [LightBulb](https://github.com/lightbulb-framework/lightbulb-framework) : LightBulb is an open source python framework for auditing web application firewalls and filters.
 
 ### Social Ingeneering
 - [Shellphis](https://github.com/thelinuxchoice/shellphish) : Phishing Tool for Instagram, Facebook, Twitter, Snapchat, Github, Yahoo, Protonmail ...
@@ -94,7 +98,7 @@ Création: 15/05/2020
 - [MISP](https://www.misp-project.org/tools/) : Malwares sharing plateforme
 - [TheHive](https://thehive-project.org/) : Open Source and Free Security Incident Response Platform (can be integrated with MISP)
 - [Cortex](https://github.com/TheHive-Project/CortexDocs) : Powerful Observable Analysis and Active Response Engine (from thehive-project.org )
-- [Snadfly Security](https://www.sandflysecurity.com/pricing/) : Sandfly is an agentless compromise and intrusion detection system for Linux (with UI). It automates security investigation and forensic evidence collection on Linux.
+- [Snadfly Security](https://www.sandflysecurity.com/) : Sandfly is an agentless compromise and intrusion detection system for Linux (with UI). It automates security investigation and forensic evidence collection on Linux.
 - [DFIR ORC](https://dfir-orc.github.io/) : ANSSI DFIR ORC “Outil de Recherche de Compromission” is a modular and scalable tool to collect artefacts on Microsoft Windows systems, in a decentralized manner.
 - [EventID](http://eventid.net/) : Online  windows events Searcher
 - [Browser History Capturer](https://www.foxtonforensics.com/browser-history-capturer/) : BHC is free forensic tool to capture web browser history.
@@ -105,6 +109,7 @@ Création: 15/05/2020
 - [Mft2Csv](https://github.com/jschicht/Mft2Csv/wiki/Mft2Csv) : This tool is for parsing, decoding and logging information from the Master File Table ($MFT) to a csv
 - [ExifTool](https://exiftool.org/) : ExifTool is a platform-independent Perl library plus a command-line application for reading, writing and editing meta information in a wide variety of files.
 - [IOC Editor](https://www.fireeye.com/services/freeware/ioc-editor.html#dismiss-lightbox) : Free tool that provides an interface for managing data and manipulating the logical structures of IOCs.
+- [Microsoft Project Freta](https://docs.microsoft.com/fr-fr/security/research/project-freta/) : Microsoft Project Freta is a free, cloud-based offering from the New Security Ventures (NSV) team at Microsoft Research that provides automated full-system volatile memory inspection of Linux systems.
 
 
 ### Hardening
@@ -122,6 +127,11 @@ Création: 15/05/2020
 - [BotHunter]()
 - [arpwatch](https://linux.die.net/man/8/arpwatch) : ARP monitoring software
 - [Tripwire FIM](https://www.tripwire.com/solutions/file-integrity-and-change-monitoring) : File Integrity Monitoring & Change Management
+- [CheckPoint CheckMe](http://www.cpcheckme.com/checkme/#) : CheckMe runs a serie of simulations that test if your existing security technologies can block standard and advanced attacks
+- [Microsoft Security Compliance Toolkit (SCT)](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-compliance-toolkit-10) : The Security Compliance Toolkit (SCT) is a set of tools that allows enterprise security administrators to download, analyze, test, edit, and store Microsoft-recommended security configuration baselines for Windows and other Microsoft products
+- [Microsoft WAF Bench (WB) Tool Suits](https://github.com/microsoft/wafbench) : WAF (Web Application Firewall) Bench tool suits is designed to verify the correctness and measure the performance of WAF.
+- [WAF Testing Framework](https://www.imperva.com/lg/lgw_trial.asp?pid=483) : A WAF testing tool by Imperva.
+- [owasp-crs-regressions](https://github.com/SpiderLabs/owasp-modsecurity-crs/tree/v3.1/dev/util/regression-tests) : the OWASP Core Rule Set regression testing suite. This suite is meant to test specific rules in OWASP CRS version 3
 
 ### Detection
 - [Yara](https://virustotal.github.io/yara/) : Identification et détection des IOC des malwares
@@ -132,6 +142,14 @@ Création: 15/05/2020
 - [ModSecurity](https://modsecurity.org/) : Open source Web Application Firewall (WAF)
 - [Sysdig](https://github.com/draios/sysdig/wiki) : Audit and analysis tool
 - [Snadfly Security](https://www.sandflysecurity.com/pricing/) : Sandfly is an agentless compromise and intrusion detection system for Linux (with UI). It automates security investigation and forensic evidence collection on Linux.
+- [Phishtank](https://www.phishtank.com/) : Online phising detector
+- [ISIT Phising](https://www.isitphishing.ai/) : VadeSecure Online phising detector
+- [Spamhaus](https://www.spamhaus.org/lookup/) : This lookup tool checks to see if the IP Address you enter is currently listed in the live Spamhaus IP blocklists: SBL, XBL and PBL
+- [AbuseIpDB](https://www.abuseipdb.com/) : making the internet safer, one IP at a time
+- [Bulkcheck](https://github.com/AdmiralSYN-ACKbar/bulkcheck) : This is a Bash Script (with GUI) for running bulk checks of IP addresses against `AbuseIpDB`
+- [Security Task Manager](https://www.neuber.com/taskmanager/francais/index.html?ref=fichier.net) : Security Task Manager detects viruses and Trojans that may be similar to Windows processes
+- [immuniweb](https://www.immuniweb.com/free/) : Set of Free Security Tests
+for Web, Mobile and Domain Security
 
 ### Docker security
 - [Dagda](https://github.com/eliasgranderubio/dagda) : Scan de vulnérabilités docker
@@ -147,23 +165,31 @@ Création: 15/05/2020
 - [password strength test](https://www.my1login.com/resources/password-strength-test/) : Online password checker
 - [1password password-generator](https://1password.com/fr/password-generator/) : générateur de mot de passe online
 - [haveibeenpwned](https://haveibeenpwned.com/) : vérificateur de mot de passe ou email compromis online
-- [dnschecker](https://dnschecker.org/all-tools.php) : tools help solving DNS problems
+- [DNS Checker](https://dnschecker.org/all-tools.php) : These tools help people with interest in DNS Lookups, IP Whois, Domain Whois, and Network tools to do various lookups related to internet and websites.
 - [pass](https://www.passwordstore.org/) : the standard unix password manager
 - [John the Ripper](https://www.openwall.com/john/) : fast password cracker
 - [Medusa](http://foofus.net/goons/jmk/medusa/medusa.html) : speedy, massively parallel, modular, login brute-forcer
+- [Patator](https://github.com/lanjelot/patator) : Patator was written out of frustration from using Hydra, Medusa, Ncrack, Metasploit modules and Nmap NSE scripts for password guessing attacks
+
+### Monitoring
+- [CheckMK](https://checkmk.com/) : infrastructure & application monitoring
+- [Shinken](http://www.shinken-monitoring.org/) : open source monitoring framework written in Python
+- [GLPI](https://glpi-project.org/fr/) : GLPI est un outil ITSM , puissant et tout intégré pour la gestion de votre parc et de votre centre de services
+
+### Encrytion
+- [sks-keyserver](https://github.com/SKS-Keyserver/sks-keyserver) : GnuGPG infrastructure keys
 
 ## Others
 - [sha512.fr](https://www.sha512.fr/) : codage sha512, bcrypt, ... online
 - [Wappalyzer](https://www.wappalyzer.com/) : Identify technology on websites (Browser extension)
 - [FoxyProxy](https://getfoxyproxy.org/) : Proxy switcher (Browsers extension)
 - [hstspreload.org](https://hstspreload.org/) : Check HTST preload status and eligibilty
-- [AbuseIpDB](https://www.abuseipdb.com/) : making the internet safer, one IP at a time
+- [Phising IQ Test](https://phishing-iq-test.com/) : Interactive Phising Game
+- [KeePassHttp-Connector](https://addons.mozilla.org/fr/firefox/addon/keepasshttp-connector/) : It provides secure access to your credentials stored in KeePass over HTTP
+- [RemoteProcess](https://www.fichier.net/freeware/remoteprocess.html) : Remote process Visualization
+- [CVE Mitre](http://cve.mitre.org/cve/search_cve_list.html) : Search CVE List
+- [hackertarget HTTP Header Check](https://hackertarget.com/http-header-check/) : Review the HTTP Headers from a web server with this quick check. Also, contents many other network and scan tools
 
-
-### Monitoring
-- [CheckMK](https://checkmk.com/) : infrastructure & application monitoring
-- [Shinken](http://www.shinken-monitoring.org/) : open source monitoring framework written in Python
-- [GLPI](https://glpi-project.org/fr/) : GLPI est un outil ITSM , puissant et tout intégré pour la gestion de votre parc et de votre centre de services
 
 
 ## Liens
@@ -179,3 +205,4 @@ Création: 15/05/2020
 - [Important Tools and Resources For Security Researcher, Malware Analyst](https://gbhackers.com/most-important-tools/)
 - [100 Best Hacking Tools for Security Professionals in 2020](https://gbhackers.com/hacking-tools-list/ )
 - [Free Open Source Windows Security Software](https://sourceforge.net/directory/security-utilities/security/os:windows/)
+- [6 best FIM Softwares](https://www.dnsstuff.com/file-integrity-monitoring-software)
