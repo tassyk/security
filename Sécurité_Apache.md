@@ -259,12 +259,15 @@ On peut vérifier la robustesse de son certificat SSL/TLS  à l'aide des outils 
 
 On peut aussi vérifier si un protocol est activé ou non via la commande `openssl s_client -connect hostname:port -protocol`. Exemple : `openssl s_client -connect localhost:443 -ssl3`
 
+Par ailleurs, [The OWASP Testing Project(WSTG)](https://owasp.org/www-project-web-security-testing-guide/v41/2-Introduction/) montre les méthodes et les manières de tester la sécurité d'une application web. C'est ressource inestimable pour la sécurité d'une application web.
+
 # Liens
 - Documentation :
   - [Redhat | Chapitre 12. Serveurs web](https://access.redhat.com/documentation/fr-fr/red_hat_enterprise_linux/7/html/system_administrators_guide/ch-web_servers)
   - [Apache httpd](http://httpd.apache.org/)
   - [Apache foundation](http://www.apache.org/)
   - [Mozilla HTTP Guide](https://developer.mozilla.org/fr/docs/Web/HTTP)
+  - [The OWASP Testing Project(WSTG)](https://owasp.org/www-project-web-security-testing-guide/v41/2-Introduction/)
 - Tutoriels :
   - [GeekFlare | Apache Web Server Hardening and Security Guide](https://geekflare.com/apache-web-server-hardening-security/)
   - [GeekFlare | 10 Best Practices To Secure and Harden Your Apache Web Server](https://geekflare.com/10-best-practices-to-secure-and-harden-your-apache-web-server/)
