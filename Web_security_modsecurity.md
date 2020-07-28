@@ -112,6 +112,9 @@ où :
 
 > Pour plus d'info, voir le paragraphe `Step 6: Writing simple blacklist rules` dans l'article ["Embedding ModSecurity" de Netnea](https://www.netnea.com/cms/apache-tutorial-6_embedding-modsecurity/). Pour la définition d'un whitelist, voir la section `Step 8: Writing simple whitelist rules`
 
+## Test de fonctionnement du WAF
+Pour tester le fonctionnement de son WAF ModeSecurity, on peut réaliser des [tests de regression sur le WAF](https://github.com/SpiderLabs/owasp-modsecurity-crs/tree/v3.1/dev/util/regression-tests). Pour cela, on peut se faire aider par [Framework for Testing WAFs (FTW)](https://github.com/coreruleset/ftw). C'est un framework développé dans le but d'aider à effectuer des tests de regression sur le WAF. Le lien [Writing FTW test cases for OWASP CRS](https://coreruleset.org/20170915/writing-ftw-test-cases-for-owasp-crs/) peut aider à écrire les tests (format YML)
+
 ## Liens
 - Documentations officielles:
   - [Site Web ModSecurity](https://modsecurity.org/)
