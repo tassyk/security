@@ -119,6 +119,7 @@ où :
   - [Reference Manual](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-(v2.x)#SecRuleEngine)
   - [OWASP ModSecurity rules](https://owasp.org/www-project-modsecurity-core-rule-set/)
   - [SpiderLabs /owasp-modsecurity-crs](https://github.com/SpiderLabs/owasp-modsecurity-crs/tree/v3.1/dev/rules)
+  - [Framework for Testing WAFs (FTW)](https://github.com/coreruleset/ftw)
 
 - Tutoriels :
   - [tecadmin : install-modsecurity-with-apache-on-centos-rhel](https://tecadmin.net/install-modsecurity-with-apache-on-centos-rhel/)
