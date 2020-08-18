@@ -90,6 +90,9 @@ C'est la commande `freshclam [options]` qui permet de mettre à jour la base de 
 ```
 sudo freshclam
 ```
+> Note :
+> Par défaut, la base antivirale est mise à jour 12 fois par jour, donc pas besoin de lancer cette commande manuellement. On peut modifier ce comportement en modifiant l'option `Checks` dans `freshclam.conf`. Dans ce fichier, on peut exécuter des commandes (exemple: notification par mail) à chaque réussite ou échec de mise à jour grâce aux options `OnUpdateExecute` et `OnErrorExecute`.
+
 Pour les [opréations de scan](https://www.clamav.net/documents/scanning), on peut utiliser la commande `clamscan [options] [file/directory/-]` pour effectuer un scan manuellement. Sans options, elle scanne le répertoire courant. Par exemple pour scanner les fichiers infectés des répertoires /home /root
 ```
 sudo clamscan --infected --recursive /home /root
