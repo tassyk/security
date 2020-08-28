@@ -186,7 +186,7 @@ yara malwareSearch.yar tmp/
 ## Liens
 - Documentation
   - [Yara](https://virustotal.github.io/yara/)
-  - [Yara-Rules](Yara-Rules)
+  - [Yara-Rules](https://github.com/Yara-Rules/rules)
 - Tutoriels
   - [Get Started](https://yara.readthedocs.io/en/stable/gettingstarted.html)
   - [Installing yara from source code | securitasdato](http://securitasdato.blogspot.com/2018/04/installing-yara-from-source-code-on.html)
