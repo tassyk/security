@@ -18,6 +18,10 @@ Création: 15/05/2020
   - [Hardening](#Hardening)
   - [Detection](#Detection)
   - [Docker security](#Docker-security)
+  - [Password](#Password)
+  - [Monitoring](#Monitoring)
+  - [Encrytion](#Encrytion)
+  - [CyberThreat](#CyberThreat)
   - [Others](#Others)
     - [Monitoring](#Monitoring)
 - **[Liens](#Liens)**
@@ -56,6 +60,7 @@ Création: 15/05/2020
 - [Detectify](https://detectify.com/) : Online - Scan your web apps for 2000+ vulnerabilities and track assets across your tech stack
 - [pentest-tools.com](https://pentest-tools.com/home) : Online - Pentest-Tools.com allows you to quickly discover and report vulnerabilities in websites and network infrastructures
 - [SearchSploit](https://www.exploit-db.com/searchsploit) : command line search tool for Exploit-DB that also allows you to take a copy of Exploit Database with you, everywhere you go
+- [RapidScan](https://github.com/skavngr/rapidscan) : The Multi-Tool Web Vulnerability Scanner
 
 ### Pentest
 - [NMAP | NMAP NSE](https://nmap.org/) : Network exploration tool and security / port scanner
@@ -100,6 +105,8 @@ Création: 15/05/2020
 - [Cortex](https://github.com/TheHive-Project/CortexDocs) : Powerful Observable Analysis and Active Response Engine (from thehive-project.org )
 - [Snadfly Security](https://www.sandflysecurity.com/) : Sandfly is an agentless compromise and intrusion detection system for Linux (with UI). It automates security investigation and forensic evidence collection on Linux.
 - [DFIR ORC](https://dfir-orc.github.io/) : ANSSI DFIR ORC “Outil de Recherche de Compromission” is a modular and scalable tool to collect artefacts on Microsoft Windows systems, in a decentralized manner.
+- [Polichombr](https://github.com/ANSSI-FR/polichombr) : This ANSSI FR's tool aim to provide a collaborative malware analysis framework.
+- [Velociraptor](https://github.com/Velocidex/velociraptor) : Velociraptor is a tool for collecting host based state information using Velocidex Query Language (VQL) queries
 - [EventID](http://eventid.net/) : Online  windows events Searcher
 - [Browser History Capturer](https://www.foxtonforensics.com/browser-history-capturer/) : BHC is free forensic tool to capture web browser history.
 - [ADS Spy](https://www.bleepingcomputer.com/download/ads-spy/) : Ads Spy is a tool that can be used to search for and remove Alternate Data Streams (ADS) from NTFS file systems (like backdoors)
@@ -110,6 +117,7 @@ Création: 15/05/2020
 - [ExifTool](https://exiftool.org/) : ExifTool is a platform-independent Perl library plus a command-line application for reading, writing and editing meta information in a wide variety of files.
 - [IOC Editor](https://www.fireeye.com/services/freeware/ioc-editor.html#dismiss-lightbox) : Free tool that provides an interface for managing data and manipulating the logical structures of IOCs.
 - [Microsoft Project Freta](https://docs.microsoft.com/fr-fr/security/research/project-freta/) : Microsoft Project Freta is a free, cloud-based offering from the New Security Ventures (NSV) team at Microsoft Research that provides automated full-system volatile memory inspection of Linux systems.
+- [Rshipp Awesome malware analysis](https://github.com/rshipp/awesome-malware-analysis) : Collection of malwares analysis and détection tools
 
 
 ### Hardening
@@ -132,14 +140,20 @@ Création: 15/05/2020
 - [Microsoft WAF Bench (WB) Tool Suits](https://github.com/microsoft/wafbench) : WAF (Web Application Firewall) Bench tool suits is designed to verify the correctness and measure the performance of WAF.
 - [WAF Testing Framework](https://www.imperva.com/lg/lgw_trial.asp?pid=483) : A WAF testing tool by Imperva.
 - [owasp-crs-regressions](https://github.com/SpiderLabs/owasp-modsecurity-crs/tree/v3.1/dev/util/regression-tests) : the OWASP Core Rule Set regression testing suite. This suite is meant to test specific rules in OWASP CRS version 3
+- [BMC-Tools](https://github.com/ANSSI-FR/bmc-tools) : ANSSI FR's RDP Bitmap Cache parser.
 
 ### Detection
 - [Yara](https://virustotal.github.io/yara/) : Identification et détection des IOC des malwares
 - [Clamav](https://www.clamav.net/) : Antivirus opensource
+- [Blazescan](https://github.com/Hestat/blazescan) : Blazescan is a linux webserver malware scanning and incident response tool
+- [Linux Malware Detect](https://github.com/rfxn/linux-malware-detect) : Linux Malware Detect (LMD) is a malware scanner for Linux released
 - [VirusTotal](https://virustotal.com) : Collection d'antivirus en ligne
 - [Cuckoo Sandbox](https://cuckoosandbox.org/) : Cuckoo Sandbox is free software that automated the task of analyzing any malicious file under Windows, macOS, Linux, and Android.
 - [Cuckoo CERT](https://cuckoo.cert.ee/) : Online Sandbox for malwares IoC analysis
 - [Any Run](https://any.run/) : Malware hunting with live access to the heart of an incident
+- [Inquest Labs](https://labs.inquest.net/) : The InQuest platform provides high-throughput Deep File Inspection (DFI) for threat and data leakage prevention, detection, and hunting.
+- [Rshipp Awesome malware analysis](https://github.com/rshipp/awesome-malware-analysis) : Collection of malwares analysis and détection tools
+- [Infosec CERT-PA Analyzer](https://infosec.cert-pa.it/analyze/search.html)
 - [Fail2ban](https://www.fail2ban.org/wiki/index.php/Main_Page) : détection d'intrusion et blocage d'IP malveillantes
 - [Snort](https://www.snort.org/) : open source intrusion prevention system
 - [ModSecurity](https://modsecurity.org/) : Open source Web Application Firewall (WAF)
@@ -182,6 +196,12 @@ for Web, Mobile and Domain Security
 ### Encrytion
 - [sks-keyserver](https://github.com/SKS-Keyserver/sks-keyserver) : GnuGPG infrastructure keys
 
+### CyberThreat
+- [Kaspersky Cyber Threat Map](https://cybermap.kaspersky.com/stats) : Online CYBERTHREAT REAL-TIME MAP
+- [FireEye Cyber Threat Map](https://www.fireeye.com/cyber-map/threat-map.html) : FireEye Online Cyber Threat Map
+- [Bitdefender Cyber Threat Map](https://threatmap.bitdefender.com/) : Bitdefender Online CYBERTHREAT REAL-TIME MAP
+- [Threatbutt Attack Map](https://threatbutt.com/map/) : Threatbutt Internet Hacking Attack Attribution Map
+
 ## Others
 - [sha512.fr](https://www.sha512.fr/) : codage sha512, bcrypt, ... online
 - [Wappalyzer](https://www.wappalyzer.com/) : Identify technology on websites (Browser extension)
@@ -197,8 +217,9 @@ for Web, Mobile and Domain Security
 
 ## Liens
 - [Top 125 Security Tools | sectools.org](https://sectools.org/)
-- [ Penetration Testing Tools | Kali Linux Tools Listing](https://tools.kali.org/tools-listing)
+- [Penetration Testing Tools | Kali Linux Tools Listing](https://tools.kali.org/tools-listing)
 - [Parot Linux tools list](https://github.com/ParrotSec/parrot-tools/blob/master/debian/control)
+- [Rshipp Github | awesome malware analysis](https://github.com/rshipp/awesome-malware-analysis)
 - [Vulnerability Scanning Tools | OWASP](https://owasp.org/www-community/Vulnerability_Scanning_Tools )
 - [Source Code Analysis Tools | OWASP](https://owasp.org/www-community/Source_Code_Analysis_Tools)
 - [REMnux Distro » Forensics Tools](https://remnux.org/docs/distro/tools/)
@@ -210,3 +231,7 @@ for Web, Mobile and Domain Security
 - [Free Open Source Windows Security Software](https://sourceforge.net/directory/security-utilities/security/os:windows/)
 - [6 best FIM Softwares](https://www.dnsstuff.com/file-integrity-monitoring-software)
 - [30 Online Malware Analysis Sandboxes](https://medium.com/@su13ym4n/15-online-sandboxes-for-malware-analysis-f8885ecb8a35)
+- [ANSSI FR tools](https://github.com/ANSSI-FR)
+- [Forensics courses by Udemy](https://www.udemy.com/topic/computer-forensics/)
+- [Penetration Testing, Incident Response and Forensics | Coursera](https://www.coursera.org/learn/ibm-penetration-testing-incident-response-forensics)
+- [Kali training](https://kali.training/)
