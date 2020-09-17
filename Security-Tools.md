@@ -23,7 +23,7 @@ Création: 15/05/2020
   - [Encrytion](#Encrytion)
   - [CyberThreat](#CyberThreat)
   - [Others](#Others)
-    - [Monitoring](#Monitoring)
+    - [Security Check](#Security Check)
 - **[Liens](#Liens)**
 ---
 
@@ -167,6 +167,12 @@ Création: 15/05/2020
 - [Security Task Manager](https://www.neuber.com/taskmanager/francais/index.html?ref=fichier.net) : Security Task Manager detects viruses and Trojans that may be similar to Windows processes
 - [immuniweb](https://www.immuniweb.com/free/) : Set of Free Security Tests
 for Web, Mobile and Domain Security
+- [BloodHound](https://bloodhound.readthedocs.io/en/latest/index.html) : BloodHound uses graph theory to reveal the hidden and often unintended relationships within an Active Directory environment
+- [Hybrid analysis](https://www.hybrid-analysis.com/) : This is a free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology
+- [joesandbox](https://www.joesandbox.com/) : (Online) Joe Sandbox detects and analyzes potential malicious files and URLs on Windows, Android, Mac OS, Linux, and iOS for suspicious activities
+- [FEODO Tracker](https://feodotracker.abuse.ch/) : Feodo Tracker is a project of abuse.ch with the goal of sharing botnet C&C servers associated with the Feodo malware family (Dridex, Emotet/Heodo).
+- [pestudio](https://www.winitor.com/) : The goal of pestudio is to spot suspicious artifacts within executable files in order to ease and accelerate Malware Initial Assessment.
+
 
 ### Docker security
 - [Dagda](https://github.com/eliasgranderubio/dagda) : Scan de vulnérabilités docker
@@ -187,11 +193,13 @@ for Web, Mobile and Domain Security
 - [John the Ripper](https://www.openwall.com/john/) : fast password cracker
 - [Medusa](http://foofus.net/goons/jmk/medusa/medusa.html) : speedy, massively parallel, modular, login brute-forcer
 - [Patator](https://github.com/lanjelot/patator) : Patator was written out of frustration from using Hydra, Medusa, Ncrack, Metasploit modules and Nmap NSE scripts for password guessing attacks
+- [fcrackzip](https://github.com/hyc/fcrackzip) : fcrackzip is a zip password cracker
 
 ### Monitoring
 - [CheckMK](https://checkmk.com/) : infrastructure & application monitoring
 - [Shinken](http://www.shinken-monitoring.org/) : open source monitoring framework written in Python
 - [GLPI](https://glpi-project.org/fr/) : GLPI est un outil ITSM , puissant et tout intégré pour la gestion de votre parc et de votre centre de services
+- [Apps tracker](https://sourceforge.net/projects/appstracker/) : Computer monitoring & time tracking app
 
 ### Encrytion
 - [sks-keyserver](https://github.com/SKS-Keyserver/sks-keyserver) : GnuGPG infrastructure keys
@@ -201,6 +209,7 @@ for Web, Mobile and Domain Security
 - [FireEye Cyber Threat Map](https://www.fireeye.com/cyber-map/threat-map.html) : FireEye Online Cyber Threat Map
 - [Bitdefender Cyber Threat Map](https://threatmap.bitdefender.com/) : Bitdefender Online CYBERTHREAT REAL-TIME MAP
 - [Threatbutt Attack Map](https://threatbutt.com/map/) : Threatbutt Internet Hacking Attack Attribution Map
+
 
 ## Others
 - [sha512.fr](https://www.sha512.fr/) : codage sha512, bcrypt, ... online
@@ -212,7 +221,9 @@ for Web, Mobile and Domain Security
 - [RemoteProcess](https://www.fichier.net/freeware/remoteprocess.html) : Remote process Visualization
 - [CVE Mitre](http://cve.mitre.org/cve/search_cve_list.html) : Search CVE List
 - [hackertarget HTTP Header Check](https://hackertarget.com/http-header-check/) : Review the HTTP Headers from a web server with this quick check. Also, contents many other network and scan tools
-
+### Security Check
+- [EmoCheck](https://github.com/JPCERTCC/EmoCheck) : Emotet detection tool for Windows OS.
+- [ZeroLogon testing script](https://github.com/SecuraBV/CVE-2020-1472) : A Python script that uses the Impacket library to test vulnerability for the Zerologon exploit (CVE-2020-1472)
 
 
 ## Liens
