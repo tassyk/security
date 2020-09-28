@@ -61,6 +61,7 @@ Création: 15/05/2020
 - [pentest-tools.com](https://pentest-tools.com/home) : Online - Pentest-Tools.com allows you to quickly discover and report vulnerabilities in websites and network infrastructures
 - [SearchSploit](https://www.exploit-db.com/searchsploit) : command line search tool for Exploit-DB that also allows you to take a copy of Exploit Database with you, everywhere you go
 - [RapidScan](https://github.com/skavngr/rapidscan) : The Multi-Tool Web Vulnerability Scanner
+- [Qualys VMDR](https://www.qualys.com/subscriptions/vmdr/) : All-in-One Vulnerability Management, Detection, and Response
 
 ### Pentest
 - [NMAP | NMAP NSE](https://nmap.org/) : Network exploration tool and security / port scanner
@@ -83,6 +84,7 @@ Création: 15/05/2020
 - [mimikatz](https://github.com/gentilkiwi/mimikatz) : mimikatz is a tool that makes some "experiments" with Windows security. It's well-known to extract plaintexts passwords, hash, PIN code and kerberos tickets from memory
 - [Ncrack](https://nmap.org/ncrack/) : Ncrack is a high-speed network authentication cracking tool. It was built to help companies secure their networks by proactively testing all their hosts and networking devices for poor passwords
 - [LightBulb](https://github.com/lightbulb-framework/lightbulb-framework) : LightBulb is an open source python framework for auditing web application firewalls and filters.
+- [Zenscrape](https://zenscrape.com/) : A Simple Web Scraping Solution for Penetration Testers
 
 ### Social Ingeneering
 - [Shellphis](https://github.com/thelinuxchoice/shellphish) : Phishing Tool for Instagram, Facebook, Twitter, Snapchat, Github, Yahoo, Protonmail ...
@@ -118,6 +120,11 @@ Création: 15/05/2020
 - [IOC Editor](https://www.fireeye.com/services/freeware/ioc-editor.html#dismiss-lightbox) : Free tool that provides an interface for managing data and manipulating the logical structures of IOCs.
 - [Microsoft Project Freta](https://docs.microsoft.com/fr-fr/security/research/project-freta/) : Microsoft Project Freta is a free, cloud-based offering from the New Security Ventures (NSV) team at Microsoft Research that provides automated full-system volatile memory inspection of Linux systems.
 - [Rshipp Awesome malware analysis](https://github.com/rshipp/awesome-malware-analysis) : Collection of malwares analysis and détection tools
+- [Pestudio](https://www.winitor.com/) : The goal of pestudio is to spot suspicious artifacts within executable files in order to ease and accelerate Malware Initial Assessment.
+- [ProcDot](https://www.procdot.com/) : It processes Sysinternals Process Monitor (procmon) logfiles and PCAP logs (Windump, tcpdump) to generate a graph via the GraphViz suite
+- [FakeDNS](https://github.com/Crypt0s/FakeDns) : Fake DNS Server for intercepting requests
+- [INetSim](https://www.inetsim.org/) : INetSim is a software suite for simulating common internet services in a lab environment, e.g. for analyzing the network behaviour of unknown malware samples
+- [RegistryChangesView](https://www.nirsoft.net/utils/registry_changes_view.html) :  NirSoft's tool that allows you to take a snapshot of Windows Registry and later compare it with another Registry snapshots
 
 
 ### Hardening
@@ -147,7 +154,8 @@ Création: 15/05/2020
 - [Clamav](https://www.clamav.net/) : Antivirus opensource
 - [Blazescan](https://github.com/Hestat/blazescan) : Blazescan is a linux webserver malware scanning and incident response tool
 - [Linux Malware Detect](https://github.com/rfxn/linux-malware-detect) : Linux Malware Detect (LMD) is a malware scanner for Linux released
-- [VirusTotal](https://virustotal.com) : Collection d'antivirus en ligne
+- [VirusTotal](https://virustotal.com) : Multi scan virus analysis
+- [MetaDefender](https://metadefender.opswat.com/) : Multi scan virus analysis like VirusTotal
 - [Cuckoo Sandbox](https://cuckoosandbox.org/) : Cuckoo Sandbox is free software that automated the task of analyzing any malicious file under Windows, macOS, Linux, and Android.
 - [Cuckoo CERT](https://cuckoo.cert.ee/) : Online Sandbox for malwares IoC analysis
 - [Any Run](https://any.run/) : Malware hunting with live access to the heart of an incident
@@ -171,7 +179,8 @@ for Web, Mobile and Domain Security
 - [Hybrid analysis](https://www.hybrid-analysis.com/) : This is a free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology
 - [joesandbox](https://www.joesandbox.com/) : (Online) Joe Sandbox detects and analyzes potential malicious files and URLs on Windows, Android, Mac OS, Linux, and iOS for suspicious activities
 - [FEODO Tracker](https://feodotracker.abuse.ch/) : Feodo Tracker is a project of abuse.ch with the goal of sharing botnet C&C servers associated with the Feodo malware family (Dridex, Emotet/Heodo).
-- [pestudio](https://www.winitor.com/) : The goal of pestudio is to spot suspicious artifacts within executable files in order to ease and accelerate Malware Initial Assessment.
+- [#TotalHash](https://totalhash.cymru.com/) : #totalhash provides static and dynamic analysis of Malware samples.
+- [URLVoid](https://www.urlvoid.com/) : Website Reputation Checker (This service helps you detect potentially malicious websites)
 
 
 ### Docker security
@@ -200,6 +209,7 @@ for Web, Mobile and Domain Security
 - [Shinken](http://www.shinken-monitoring.org/) : open source monitoring framework written in Python
 - [GLPI](https://glpi-project.org/fr/) : GLPI est un outil ITSM , puissant et tout intégré pour la gestion de votre parc et de votre centre de services
 - [Apps tracker](https://sourceforge.net/projects/appstracker/) : Computer monitoring & time tracking app
+- [Watchman](https://facebook.github.io/watchman/) : Watchman exists to watch files and record when they change.
 
 ### Encrytion
 - [sks-keyserver](https://github.com/SKS-Keyserver/sks-keyserver) : GnuGPG infrastructure keys
