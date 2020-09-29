@@ -125,6 +125,8 @@ Création: 15/05/2020
 - [FakeDNS](https://github.com/Crypt0s/FakeDns) : Fake DNS Server for intercepting requests
 - [INetSim](https://www.inetsim.org/) : INetSim is a software suite for simulating common internet services in a lab environment, e.g. for analyzing the network behaviour of unknown malware samples
 - [RegistryChangesView](https://www.nirsoft.net/utils/registry_changes_view.html) :  NirSoft's tool that allows you to take a snapshot of Windows Registry and later compare it with another Registry snapshots
+- [Oledump](https://blog.didierstevens.com/programs/oledump-py/) : Didier Stevens Suite that parse and anlyse OLE (.doc, .xls, .ppt, ...) files
+- [pdf-parser](https://github.com/DidierStevens/DidierStevensSuite) : Didier Stevens Suite that parse and anlyse pdf file
 
 
 ### Hardening
@@ -181,6 +183,8 @@ for Web, Mobile and Domain Security
 - [FEODO Tracker](https://feodotracker.abuse.ch/) : Feodo Tracker is a project of abuse.ch with the goal of sharing botnet C&C servers associated with the Feodo malware family (Dridex, Emotet/Heodo).
 - [#TotalHash](https://totalhash.cymru.com/) : #totalhash provides static and dynamic analysis of Malware samples.
 - [URLVoid](https://www.urlvoid.com/) : Website Reputation Checker (This service helps you detect potentially malicious websites)
+- [Packet Total](https://packettotal.com/) : PacketTotal is an engine for analyzing, categorizing, and sharing .pcap files.
+- [URLhaus](https://urlhaus.abuse.ch/) : URLhaus is a project from abuse.ch with the goal of sharing malicious URLs that are being used for malware distribution.
 
 
 ### Docker security
