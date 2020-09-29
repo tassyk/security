@@ -260,3 +260,4 @@ for Web, Mobile and Domain Security
 - [Forensics courses by Udemy](https://www.udemy.com/topic/computer-forensics/)
 - [Penetration Testing, Incident Response and Forensics | Coursera](https://www.coursera.org/learn/ibm-penetration-testing-incident-response-forensics)
 - [Kali training](https://kali.training/)
+- [Free Automated Malware Analysis Sandboxes and Services](https://zeltser.com/automated-malware-analysis/)
