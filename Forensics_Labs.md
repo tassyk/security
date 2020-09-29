@@ -1,11 +1,11 @@
 ---
-Title: Forensics Labs
+Title: Malwares analysis Labs
 Type: Doc
 Nature: Notes
 Création: 28/09/2020
 ---
 
-#  Forensics Labs
+# Labs d'analyse de malwares
 ---
 **Sommaire**
 
@@ -16,6 +16,7 @@ Création: 28/09/2020
   - [Outils d'analyse dynamique](#Outils-d'analyse-dynamique)
   - [Outils d'analyse statique](#Outils-d'analyse-statique)
   - [Outils d'analyse des indices de compromission (IoC)](#Outils-d'analyse-des-indices-de-compromission-(IoC))
+  - [Echantillons des malwares](#Echantillons-des-malwares)
 - **[Liens](#Liens)**
 ---
 ## Prerequis
@@ -59,8 +60,11 @@ Parfois, on a besoin d'analyser le code source du malware pour comprendre son fo
 - [OllyDbg](http://www.ollydbg.de/) : OllyDbg is a 32-bit assembler level analysing debugger for Microsoft Windows
 > Note : L'analyse statique d'un binaire fait appel à des compétences en Assembleur.
 
-### Outils d'analyse des indices de compromission (IoC)
+- [Oledump](https://blog.didierstevens.com/programs/oledump-py/) : Didier Stevens Suite that parse and anlyse OLE (.doc, .xls, .ppt, ...) files
+- [pdf-parser](https://github.com/DidierStevens/DidierStevensSuite) : Didier Stevens Suite that parse and anlyse pdf file
 
+### Outils d'analyse des indices de compromission (IoC)
+On peut analyser chaque indice de compromission identifié sur le malware à l'aide de certains outils :
 - [VirusTotal](https://virustotal.com) : Multi scan virus analysis
 - [MetaDefender](https://metadefender.opswat.com/) : Multi scan virus analysis like VirusTotal
 - [Any Run](https://any.run/) : Malware hunting with live access to the heart of an incident
@@ -69,10 +73,27 @@ Parfois, on a besoin d'analyser le code source du malware pour comprendre son fo
 - [URLVoid](https://www.urlvoid.com/) : Website Reputation Checker (This service helps you detect potentially malicious websites)
 - [AbuseIpDB](https://www.abuseipdb.com/) : making the internet safer, one IP at a time
 - [Yara](https://virustotal.github.io/yara/) : Identification et détection des IOC des malwares
+- [URLhaus](https://urlhaus.abuse.ch/) : URLhaus is a project from abuse.ch with the goal of sharing malicious URLs that are being used for malware distribution.
+- [Packet Total](https://packettotal.com/) : PacketTotal is an engine for analyzing, categorizing, and sharing .pcap files.
 
+> Note : L'analyse d'IoC via ces outils est possible depuis une machine ayant accès à Internet. Utilisez une VM différente pour ça dans le cas d'une analyse dynamique de malware.
+
+> Note : **Any.Run** est utilisé aussi pour effectuer une analyse automatique de malware aussi
+
+### Echantillons des malwares
+Sur Internet, il existe plusieurs sites sur lesquels on peut trouver des échantillons de malware qu'on peut tester dans son lab:
+- [MalwareBazaar Database](https://bazaar.abuse.ch/browse/) : malware samples database
+- [malware-traffic-analysis.net](https://www.malware-traffic-analysis.net/) : This blog focuses on network traffic related to malware infections. There are many pcap files of netwaork traffic
+- [fabrimagic72/malware-samples](https://github.com/fabrimagic72/malware-samples) : A collection of malware samples caught by several honeypots i handle worldwide.
+- [Free Malware Sample Sources for Researchers](https://zeltser.com/malware-sample-sources/) : Malware researchers frequently seek malware samples to analyze threat techniques and develop defenses
+- [Malware Samples for Students](https://cyberlab.pacific.edu/resources/malware-samples-for-students) : Malwares samples from a variety of large repositories
+
+> Attention : Ne pas utiliser ces échantillons sans savoir ce que vous faites et dans un environt non isolé.
 
 ## Liens
 - [How to Get and Set Up a Free Windows VM for Malware Analysis](https://zeltser.com/free-malware-analysis-windows-vm/)
 - [Introduction to Malware analysis RSA Conference 2019](https://zeltser.com/media/docs/intro-to-malware-analysis-ir.pdf)
 - [HackingTutorials | Malware analysis tutorials](https://www.hackingtutorials.org/malware-analysis-tutorials/dynamic-malware-analysis-tools/ )
 - [Windows Virtual Machines](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
+- [malware-traffic-analysis.net](https://www.malware-traffic-analysis.net/)
+- [Analyzing Malicious Documents Cheat Sheet](https://zeltser.com/analyzing-malicious-documents/)
