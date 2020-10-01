@@ -99,7 +99,9 @@ Création: 15/05/2020
 - [The Sleuth Kit®](https://www.sleuthkit.org/sleuthkit/) :  Collection of command line tools and a C library that allows you to analyze disk images and recover files from them
 - [Autopsy](https://www.sleuthkit.org/autopsy/) :  GUI-based program that allows you to efficiently analyze hard drives and smart phones.
 - [Online EMailTracer](http://www.cyberforensics.in/OnlineEmailTracer/index.aspx) : tool to track email sender’s identity.
-- [MX Toolbox](https://mxtoolbox.com/) : list MX records for a domain in priority order
+- [MX Toolbox](https://mxtoolbox.com/EmailHeaders.aspx) : This tool will make email headers human readable by parsing them according to RFC 822
+- [EmailHeaders.net](https://packagecontrol.io/packages/Email%20Header) : EmailHeaders.net brings forth the most effective solutions to investigate Email Header and forensics issues
+- [EmailHeader](https://packagecontrol.io/packages/Email%20Header) : This Sublime Text plugin will parse .eml or .msg files for email message headers
 - [MailXaminer](https://www.mailxaminer.com/) : SysTools Email Examiner Software to Analyze Emails for Investigators with Speed, Accuracy & Ease
 - [Free OST Viewer Tool](https://datahelp.in/ost/viewer.html) : Open Offline Outlook Data File Free of Cost & Without Exchange Server Environment
 - [MISP](https://www.misp-project.org/tools/) : Malwares sharing plateforme
@@ -108,7 +110,7 @@ Création: 15/05/2020
 - [Snadfly Security](https://www.sandflysecurity.com/) : Sandfly is an agentless compromise and intrusion detection system for Linux (with UI). It automates security investigation and forensic evidence collection on Linux.
 - [DFIR ORC](https://dfir-orc.github.io/) : ANSSI DFIR ORC “Outil de Recherche de Compromission” is a modular and scalable tool to collect artefacts on Microsoft Windows systems, in a decentralized manner.
 - [Polichombr](https://github.com/ANSSI-FR/polichombr) : This ANSSI FR's tool aim to provide a collaborative malware analysis framework.
-- [Velociraptor](https://github.com/Velocidex/velociraptor) : Velociraptor is a tool for collecting host based state information using Velocidex Query Language (VQL) queries
+- [Velociraptor](https://www.velocidex.com/) : Velociraptor provides the next generation in endpoint monitoring, digital forensic investigations and cyber incident response.
 - [EventID](http://eventid.net/) : Online  windows events Searcher
 - [Browser History Capturer](https://www.foxtonforensics.com/browser-history-capturer/) : BHC is free forensic tool to capture web browser history.
 - [ADS Spy](https://www.bleepingcomputer.com/download/ads-spy/) : Ads Spy is a tool that can be used to search for and remove Alternate Data Streams (ADS) from NTFS file systems (like backdoors)
@@ -150,6 +152,8 @@ Création: 15/05/2020
 - [WAF Testing Framework](https://www.imperva.com/lg/lgw_trial.asp?pid=483) : A WAF testing tool by Imperva.
 - [owasp-crs-regressions](https://github.com/SpiderLabs/owasp-modsecurity-crs/tree/v3.1/dev/util/regression-tests) : the OWASP Core Rule Set regression testing suite. This suite is meant to test specific rules in OWASP CRS version 3
 - [BMC-Tools](https://github.com/ANSSI-FR/bmc-tools) : ANSSI FR's RDP Bitmap Cache parser.
+- [Regshot](https://sourceforge.net/projects/regshot/) : Allows you to quickly take a snapshot of your registry and then compare it with a second one
+- [RegistryChangesView](https://www.nirsoft.net/utils/registry_changes_view.html) :  NirSoft's tool allows you to take a snapshot of Windows Registry and later compare it with another Registry snapshots
 
 ### Detection
 - [Yara](https://virustotal.github.io/yara/) : Identification et détection des IOC des malwares
@@ -161,6 +165,8 @@ Création: 15/05/2020
 - [Cuckoo Sandbox](https://cuckoosandbox.org/) : Cuckoo Sandbox is free software that automated the task of analyzing any malicious file under Windows, macOS, Linux, and Android.
 - [Cuckoo CERT](https://cuckoo.cert.ee/) : Online Sandbox for malwares IoC analysis
 - [Any Run](https://any.run/) : Malware hunting with live access to the heart of an incident
+- [Intezer Analyze (Community Edition)](https://analyze.intezer.com/) : Quickly analyze files and devices to immediately understand the What, Who, & How of a potential cyber incident.
+- [IRIS-H Digital Forensics](https://iris-h.services/pages/dashboard#/pages/dashboard) : IRIS-H is an online digital forensics tool that performs automated static analysis of files stored in a directory-based or strictly structured formats
 - [Inquest Labs](https://labs.inquest.net/) : The InQuest platform provides high-throughput Deep File Inspection (DFI) for threat and data leakage prevention, detection, and hunting.
 - [Rshipp Awesome malware analysis](https://github.com/rshipp/awesome-malware-analysis) : Collection of malwares analysis and détection tools
 - [Infosec CERT-PA Analyzer](https://infosec.cert-pa.it/analyze/search.html)
@@ -185,7 +191,7 @@ for Web, Mobile and Domain Security
 - [URLVoid](https://www.urlvoid.com/) : Website Reputation Checker (This service helps you detect potentially malicious websites)
 - [Packet Total](https://packettotal.com/) : PacketTotal is an engine for analyzing, categorizing, and sharing .pcap files.
 - [URLhaus](https://urlhaus.abuse.ch/) : URLhaus is a project from abuse.ch with the goal of sharing malicious URLs that are being used for malware distribution.
-
+- [TALOS](https://talosintelligence.com/) : CISCO Talos’ IP and Domain Data Center is the world’s most comprehensive real-time threat detection network.
 
 ### Docker security
 - [Dagda](https://github.com/eliasgranderubio/dagda) : Scan de vulnérabilités docker
