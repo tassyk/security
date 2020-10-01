@@ -43,7 +43,7 @@ Received-SPF: Pass (protection.outlook.com: domain of mail.n.convertkit.com
 > Note entêtes :
 > - Pour Outlook (version client lourd) :
   1. Double click sur le mail pour l'ouvrir > Aller dans fichiers > puis dans Propriétés > En-têtes Internet
-
+ - Pour les autres solutions de messagerie, voir [How to Get Email Headers](https://mxtoolbox.com/Public/Content/EmailHeaders/)
 
 ## Analyser les informations de l'entête
 Dans une entête, on peut voir des IP, des serveurs par où est passé le mail jusqu'à arriver à destination.
@@ -55,3 +55,9 @@ On peut aussi passer ces IP sur des sites comme [VirusTotal](https://www.virusto
 ### Extraction des informations de l'entête
 Pour trouver analyser une entête efficacement, il existe des sites qui simplifient cette tâche pour nous comme [mxtoolbox.com](https://mxtoolbox.com/EmailHeaders.aspx) ou [Email HEADER](https://emailheaders.net/), [Boîte à outils G Suite | En-tête message](https://toolbox.googleapps.com/apps/messageheader/). Il suffit juste de copier / coller l'entête du mail dans le champ.
 Sinon, il existe aussi des plugins pour analyser les entêtes comme [EmailHeader](https://packagecontrol.io/packages/Email%20Header), un plugin pour Sublime Text.
+
+
+## Liens
+- [How to Get Email Headers](https://mxtoolbox.com/Public/Content/EmailHeaders/)
+- [Email Headers | Forensic Email Search](https://emailheaders.net/forensic-email-search.html)
+- [Video | Email Header Analysis and Forensic Investigation](https://www.youtube.com/watch?v=nK5QpGSBR8c)
