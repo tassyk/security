@@ -53,4 +53,4 @@ On peut localiser chaque IP contenue dans une entête sur de nombreux sites spé
 On peut aussi passer ces IP sur des sites comme [VirusTotal](https://www.virustotal.com/gui/home/search) ou [AbuseIPDB](https://www.abuseipdb.com/) pour vérifier si elles ne sont pas malveillantes ou blacklistées.
 
 ### Extraction des informations de l'entête
-Pour trouver analyser une entête efficacement, il existe des sites qui simplifient cette tâche pour nous comme [mxtoolbox.com](https://mxtoolbox.com/EmailHeaders.aspx). Il suffit juste de copier / coller l'entête du mail dans le champ.
+Pour trouver analyser une entête efficacement, il existe des sites qui simplifient cette tâche pour nous comme [mxtoolbox.com](https://mxtoolbox.com/EmailHeaders.aspx) ou [Email HEADER](https://emailheaders.net/). Il suffit juste de copier / coller l'entête du mail dans le champ.
