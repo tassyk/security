@@ -54,3 +54,4 @@ On peut aussi passer ces IP sur des sites comme [VirusTotal](https://www.virusto
 
 ### Extraction des informations de l'entête
 Pour trouver analyser une entête efficacement, il existe des sites qui simplifient cette tâche pour nous comme [mxtoolbox.com](https://mxtoolbox.com/EmailHeaders.aspx) ou [Email HEADER](https://emailheaders.net/). Il suffit juste de copier / coller l'entête du mail dans le champ.
+Sinon, il existe aussi des plugins pour analyser les entêtes comme [EmailHeader](https://packagecontrol.io/packages/Email%20Header), un plugin pour Sublime Text.
