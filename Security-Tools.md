@@ -85,9 +85,13 @@ Création: 15/05/2020
 - [Ncrack](https://nmap.org/ncrack/) : Ncrack is a high-speed network authentication cracking tool. It was built to help companies secure their networks by proactively testing all their hosts and networking devices for poor passwords
 - [LightBulb](https://github.com/lightbulb-framework/lightbulb-framework) : LightBulb is an open source python framework for auditing web application firewalls and filters.
 - [Zenscrape](https://zenscrape.com/) : A Simple Web Scraping Solution for Penetration Testers
+- [CVE](https://cve.mitre.org/) : CVE is a list of entries—each containing an identification number, adescription, and at least one public reference—for publicly known cybersecurity vulnerabilities.
+- [NVD NIST](https://nvd.nist.gov/general/nvd-dashboard) : NATIONAL VULNERABILITY DATABASE
+- [SSLMap](https://github.com/iphelix/sslmap) : SSLMap is a lightweight TLS/SSL cipher suite scanner
 
 ### Social Ingeneering
 - [Shellphis](https://github.com/thelinuxchoice/shellphish) : Phishing Tool for Instagram, Facebook, Twitter, Snapchat, Github, Yahoo, Protonmail ...
+- [Fake Mailer](https://github.com/htr-tech/fake-mailer) : Fake Mailer is tool to Send Mail Anonymously from a different Email
 
 ### Forensics
 - [Volatility](https://www.volatilityfoundation.org/) : Extraction of digital artifacts from volatile memory (RAM) samples framework
@@ -129,6 +133,8 @@ Création: 15/05/2020
 - [RegistryChangesView](https://www.nirsoft.net/utils/registry_changes_view.html) :  NirSoft's tool that allows you to take a snapshot of Windows Registry and later compare it with another Registry snapshots
 - [Oledump](https://blog.didierstevens.com/programs/oledump-py/) : Didier Stevens Suite that parse and anlyse OLE (.doc, .xls, .ppt, ...) files
 - [pdf-parser](https://github.com/DidierStevens/DidierStevensSuite) : Didier Stevens Suite that parse and anlyse pdf file
+- [HashMyFiles](https://www.nirsoft.net/utils/hash_my_files.html) : HashMyFiles is small utility that allows you to calculate the MD5 and SHA1 hashes of one or more files in your system
+- [Floss](https://github.com/fireeye/flare-floss) : FireEye Labs Obfuscated String Solver uses advanced static analysis techniques to automatically deobfuscate strings from malware binaries. You can use it just like `strings utility`
 
 
 ### Hardening
@@ -140,6 +146,8 @@ Création: 15/05/2020
 - [checksec](https://github.com/slimm609/checksec.sh),
 - [winchecksec](https://github.com/trailofbits/winchecksec) et [otool]() : Vérificateurs de la présence de drapeaux de sécurité sur un logiciel
 - [SSLtest](https://www.ssllabs.com/ssltest/) : SSL verificator
+- [Mozilla Website Observatory](https://observatory.mozilla.org/) : Mozilla website scanner helps how to configure websites safely and securely by identifiant misconviguration and issues.
+- [Security Headers](https://securityheaders.com/) :  Security Headers checks issues on security headers like CSP and HSTS to a web site
 - [GreekFlare Tools](https://gf.dev/toolbox) : set of tools for security or dns checking
 - [RKhunter](http://rkhunter.sourceforge.net/) : Rootkit Hunter is a common open source program or tool used for scanning rootkits, botnets, malwares, etc
 - [Chkrootkit](http://www.chkrootkit.org/) : Check Rootkit is a common open source program or tool used for scanning rootkits, botnets, malwares, etc
@@ -154,6 +162,11 @@ Création: 15/05/2020
 - [BMC-Tools](https://github.com/ANSSI-FR/bmc-tools) : ANSSI FR's RDP Bitmap Cache parser.
 - [Regshot](https://sourceforge.net/projects/regshot/) : Allows you to quickly take a snapshot of your registry and then compare it with a second one
 - [RegistryChangesView](https://www.nirsoft.net/utils/registry_changes_view.html) :  NirSoft's tool allows you to take a snapshot of Windows Registry and later compare it with another Registry snapshots
+- [Secure Bytes Free Security Tools](http://www.secure-bytes.com/product.php) : Set of free security tools to perform security checks (Windows, Oracle, SQL, ..;)
+- [SecureAPplus](https://www.secureaplus.com/) : SecureAPlus is a cloud based antivirus that Uses up to 12 Cloud Anti-Virus Engines for higher detection rates & low false positives
+- [360 Total Security](https://www.360totalsecurity.com/en/) : Your Unified Solution For PC Security and Performance
+- [Decontamine_Linux](https://whatsecurity.org/contents/projects/decontamine_linux.php) : Decontamine_Linux is an USB devices cleaning station for Linux
+- [Firetools](https://firejailtools.wordpress.com/) : Firetools is the graphical user interface of Firejail security sandbox. Firejail is a SUID sandbox program that reduces the risk of security breaches by restricting the running environment of untrusted applications using Linux namespaces, seccomp-bpf and Linux capabilities
 
 ### Detection
 - [Yara](https://virustotal.github.io/yara/) : Identification et détection des IOC des malwares
@@ -162,6 +175,7 @@ Création: 15/05/2020
 - [Linux Malware Detect](https://github.com/rfxn/linux-malware-detect) : Linux Malware Detect (LMD) is a malware scanner for Linux released
 - [VirusTotal](https://virustotal.com) : Multi scan virus analysis
 - [MetaDefender](https://metadefender.opswat.com/) : Multi scan virus analysis like VirusTotal
+- [Threat Miner](https://www.threatminer.org/) : ThreatMiner is a threat intelligence portal designed to enable analysts to research under a single interface
 - [Cuckoo Sandbox](https://cuckoosandbox.org/) : Cuckoo Sandbox is free software that automated the task of analyzing any malicious file under Windows, macOS, Linux, and Android.
 - [Cuckoo CERT](https://cuckoo.cert.ee/) : Online Sandbox for malwares IoC analysis
 - [Any Run](https://any.run/) : Malware hunting with live access to the heart of an incident
@@ -192,6 +206,9 @@ for Web, Mobile and Domain Security
 - [Packet Total](https://packettotal.com/) : PacketTotal is an engine for analyzing, categorizing, and sharing .pcap files.
 - [URLhaus](https://urlhaus.abuse.ch/) : URLhaus is a project from abuse.ch with the goal of sharing malicious URLs that are being used for malware distribution.
 - [TALOS](https://talosintelligence.com/) : CISCO Talos’ IP and Domain Data Center is the world’s most comprehensive real-time threat detection network.
+- [multirbl](http://multirbl.valli.org/) : The complete IP check for sending Mailservers
+
+
 
 ### Docker security
 - [Dagda](https://github.com/eliasgranderubio/dagda) : Scan de vulnérabilités docker
@@ -241,6 +258,9 @@ for Web, Mobile and Domain Security
 - [RemoteProcess](https://www.fichier.net/freeware/remoteprocess.html) : Remote process Visualization
 - [CVE Mitre](http://cve.mitre.org/cve/search_cve_list.html) : Search CVE List
 - [hackertarget HTTP Header Check](https://hackertarget.com/http-header-check/) : Review the HTTP Headers from a web server with this quick check. Also, contents many other network and scan tools
+- [CyberChef](https://gchq.github.io/CyberChef/) : A simple, intuitive web app for analysing and decoding data without having to deal with complex tools or programming languages
+- [AMTSO Security Features Check Tools](https://www.amtso.org/security-features-check/) : The AMTSO Security Features Check (SFC) tools verify that your security solution is properly configured and operating as expected.
+
 ### Security Check
 - [EmoCheck](https://github.com/JPCERTCC/EmoCheck) : Emotet detection tool for Windows OS.
 - [ZeroLogon testing script](https://github.com/SecuraBV/CVE-2020-1472) : A Python script that uses the Impacket library to test vulnerability for the Zerologon exploit (CVE-2020-1472)
@@ -267,3 +287,6 @@ for Web, Mobile and Domain Security
 - [Penetration Testing, Incident Response and Forensics | Coursera](https://www.coursera.org/learn/ibm-penetration-testing-incident-response-forensics)
 - [Kali training](https://kali.training/)
 - [Free Automated Malware Analysis Sandboxes and Services](https://zeltser.com/automated-malware-analysis/)
+- [Free Online Tools for Looking up Potentially Malicious Websites](https://zeltser.com/lookup-malicious-websites/)
+- [Free Blocklists of Suspected Malicious IPs and URLs](https://zeltser.com/malicious-ip-blocklists/)
+- [Antivirus multi engines](https://www.geckoandfly.com/24224/antivirus-multi-engines/)
