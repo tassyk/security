@@ -17,7 +17,7 @@ Création: 20/05/2020
 Les investigations dans ce cas peuvent être réalisées via des outils comme `FTK, Volatility, ...`
 
 ### Dumps mémoires, disk, logs, mail
-- `FTK imager` permet de dumper (réaliser une copie) d'une mémoire RAM, un disk, des registres, partition NTFS (MTF - Master File Table).... Il permet aussi d'extraire des logs
+- `FTK imager` permet de dumper (réaliser une copie) une mémoire RAM, un disk, des registres, partition NTFS (MTF - Master File Table).... Il permet aussi d'extraire des logs
 - calcul de condensat ou hash des dumps (intégrité) : `[sha512sum | sha256sum | md5sum ] memdump.mem`
 > Note :
 > - Les formats peuvent être RAW, MEM, DMP, les formats Forensic (AFF, SMART, EWF), ...
@@ -236,6 +236,8 @@ oledump.py -s A3 -v invoice.docm # afficher le contenu d'un macro
   - Analyse: [Volatility](https://github.com/volatilityfoundation/volatility/wiki/Command-Reference), [Sysinternals](https://docs.microsoft.com/fr-fr/sysinternals/downloads/), [Encase](https://www.guidancesoftware.com/encase-forensic), [The Sleuth Kit](https://www.sleuthkit.org/sleuthkit/), [NirSoft utilities](https://www.nirsoft.net/), [Mft2Csv](https://github.com/jschicht/Mft2Csv), ADS Spy (lads), QuickStego (stégano), snow, pdf-parser, [RegRipper](https://github.com/keydet89/RegRipper2.8), [pdfid](https://github.com/Rafiot/pdfid), [oledump](https://github.com/DidierStevens/DidierStevensSuite/blob/master/oledump.py), [mxtoolbox](https://mxtoolbox.com/), [Email Dossier](https://centralops.net/co/EmailDossier.aspx), [MailXaminer](https://www.mailxaminer.com/), [www.eventid.net](www.eventid.net), [Event Log Explorer](https://eventlogxp.com)
 - Forensics resources
   - [Menez une investigation numérique Forensic | Openclassroom](https://openclassrooms.com/fr/courses/1750151-menez-une-investigation-d-incident-numerique-forensic)
+  - [Investigating Malware Using Memory Forensics - A Practical Approach](https://www.youtube.com/watch?v=BMFCdAGxVN4)
+  - [Best of computer forensics tutorials](https://www.hackingarticles.in/best-of-computer-forensics-tutorials/)
   - [Windows Internals Book 7th Edition Tools](https://github.com/zodiacon/WindowsInternals)
   - [Sysinternals Learning Resources | video and podcast](https://docs.microsoft.com/en-us/sysinternals/learn/)
   - [Volatility](https://www.volatilityfoundation.org/)
