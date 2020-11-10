@@ -236,7 +236,6 @@ oledump.py -s A3 -v invoice.docm # afficher le contenu d'un macro
   - Analyse: [Volatility](https://github.com/volatilityfoundation/volatility/wiki/Command-Reference), [Sysinternals](https://docs.microsoft.com/fr-fr/sysinternals/downloads/), [Encase](https://www.guidancesoftware.com/encase-forensic), [The Sleuth Kit](https://www.sleuthkit.org/sleuthkit/), [NirSoft utilities](https://www.nirsoft.net/), [Mft2Csv](https://github.com/jschicht/Mft2Csv), ADS Spy (lads), QuickStego (stégano), snow, pdf-parser, [RegRipper](https://github.com/keydet89/RegRipper2.8), [pdfid](https://github.com/Rafiot/pdfid), [oledump](https://github.com/DidierStevens/DidierStevensSuite/blob/master/oledump.py), [mxtoolbox](https://mxtoolbox.com/), [Email Dossier](https://centralops.net/co/EmailDossier.aspx), [MailXaminer](https://www.mailxaminer.com/), [www.eventid.net](www.eventid.net), [Event Log Explorer](https://eventlogxp.com)
 - Forensics resources
   - [Menez une investigation numérique Forensic | Openclassroom](https://openclassrooms.com/fr/courses/1750151-menez-une-investigation-d-incident-numerique-forensic)
-  - [Investigating Malware Using Memory Forensics - A Practical Approach](https://www.youtube.com/watch?v=BMFCdAGxVN4)
   - [Best of computer forensics tutorials](https://www.hackingarticles.in/best-of-computer-forensics-tutorials/)
   - [Windows Internals Book 7th Edition Tools](https://github.com/zodiacon/WindowsInternals)
   - [Sysinternals Learning Resources | video and podcast](https://docs.microsoft.com/en-us/sysinternals/learn/)
@@ -246,6 +245,8 @@ oledump.py -s A3 -v invoice.docm # afficher le contenu d'un macro
   - [Commandes Windows](https://docs.microsoft.com/fr-fr/windows-server/administration/windows-commands/windows-commands)
   - [PowerForensics](https://powerforensics.readthedocs.io/en/latest/)
 - Forensics tutorials :
+  - [Investigating Malware Using Memory Forensics - A Practical Approach (Video - Blackhat Asia 2019)](https://www.youtube.com/watch?v=BMFCdAGxVN4)
+  - [Practical Malware Analysis Essentials for Incident Responders (Video - RSAConference 2019)](https://www.youtube.com/watch?v=20xYpxe8mBg)
   - [howtogeek | sysinternals lessons](https://www.howtogeek.com/school/sysinternals-pro/)
   - [Systol | Sysinternals, outils mal connus pour Windows](https://www.scriptol.fr/logiciel/sysinternals.php)
   - [tech2tech | Nirsoft](https://www.tech2tech.fr/tag/nirsoft/)
