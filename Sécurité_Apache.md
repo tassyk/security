@@ -275,6 +275,8 @@ Par ailleurs, [The OWASP Testing Project(WSTG)](https://owasp.org/www-project-we
   - [WpBuffs | The 14-Step Apache Security Best Practices Checklist](https://wpbuffs.com/apache-security-best-practices/)
   - [Apache | Conseils sur la sécurité](https://httpd.apache.org/docs/2.4/fr/misc/security_tips.html)
   - [Microlinux | Apache SSL Centos7](https://blog.microlinux.fr/apache-ssl-centos-7/)
+  - [Tecmint | Protect Apache Against Brute Force or DDoS Attacks Using Mod_Security and Mod_evasive Modules](https://www.tecmint.com/protect-apache-using-mod_security-and-mod_evasive-on-rhel-centos-fedora/)
 - Tools :
   - [10 SSL checker](https://geekflare.com/ssl-test-certificate/)
   - [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/)
+  - [Mozilla Observatory](https://observatory.mozilla.org/)
