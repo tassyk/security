@@ -67,7 +67,7 @@ sudo grep -E -R "GET|PUT|DELETE"  /var/log/apache2/*log |  more
 # apache logs : ioc
 sudo grep -E "172.67.183.186|104.24.107.161|104.24.106.161|104.27.160.184|104.27.161.184" /var/log/apache2/*.log
 # apaches http reponse not 200
-sudo egrep -v "HTTP/1.1\" 200" /var/log/apache2/www.aviso.altimetry.fr_access.log >> aviso/logs/error.log
+sudo egrep -v "HTTP/1.1\" 200" /var/log/apache2/website_access.log >> /logs/error.log
 ```
 
 ## Process analysis
