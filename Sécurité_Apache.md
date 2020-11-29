@@ -214,6 +214,7 @@ Deny from all
 Allow from 10.20.0.0/24
 </Directory>
 ```
+> NB: On pourra aussi limiter l'accès au site à un pays. Voir l'outil [Country IP Blocks](https://www.countryipblocks.net/acl.php) pour la génération des IP.
 
 ## Confidentialité des données
 ### Activer HTTPS
