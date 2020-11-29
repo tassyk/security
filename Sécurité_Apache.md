@@ -178,6 +178,23 @@ Header set X-XSS-Protection "1; mode=block"
 ```
 > `"1; mode=block"` détecte l'attaque et empêche la page. D'autres valeurs sont disponibles pour [X-XSS-Protection](https://developer.mozilla.org/fr/docs/Web/HTTP/Headers/X-XSS-Protection)
 
+On peut renforcer la protection contre le XSS ou d'autres formes d'attaque de type injection en mettant en place une CSP (Content-security-policy) :
+```
+$ cat $Apache_dir/conf/httpd.conf
+Header add Content-Security-Policy "default-src 'self';"
+```
+> `"default-src 'self'` : signifie ici que seuls les scripts appartenant au domaine sont autorisés. On peut autoriser les [éléments d'une autre source](https://content-security-policy.com/) comme suit :
+```
+Header add Content-Security-Policy "default-src 'self' *.source-sure.example.net";
+```
+### Forcer l'utilisation de HTTPS via HTST
+[HTST (HTTP Strict-Transport-Security)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) oblige les clients web (navigateurs) à utiliser uniquement HTTPS pour se connecter au site. Voici un exemple :
+```
+Header always set Strict-Transport-Security \
+  "max-age=63072000; includeSubDomains"
+```
+> Ici HTST est fixé sur le site pour une durée de validité de 63072000s (2 ans)
+
 ### Désactiver le protocole HTTP 1.0
 HTTP 1.0 est un protocol avec plusieurs failles de sécurité. Il doit être désactivé :
 ```
