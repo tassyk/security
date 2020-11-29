@@ -187,13 +187,6 @@ Header add Content-Security-Policy "default-src 'self';"
 ```
 Header add Content-Security-Policy "default-src 'self' *.source-sure.example.net";
 ```
-### Forcer l'utilisation de HTTPS via HTST
-[HTST (HTTP Strict-Transport-Security)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) oblige les clients web (navigateurs) à utiliser uniquement HTTPS pour se connecter au site. Voici un exemple :
-```
-Header always set Strict-Transport-Security \
-  "max-age=63072000; includeSubDomains"
-```
-> Ici HTST est fixé sur le site pour une durée de validité de 63072000s (2 ans)
 
 ### Désactiver le protocole HTTP 1.0
 HTTP 1.0 est un protocol avec plusieurs failles de sécurité. Il doit être désactivé :
@@ -255,12 +248,12 @@ NSSProtocol TLSv1.2
 > Attention : ces protocoles ne doivent pas être activés dans les `virtualhost`
 
 ### Activer HTTPS strict - HTST
-[HTTP Strict Tranport Security](https://fr.wikipedia.org/wiki/HTTP_Strict_Transport_Security) est un dispositif de sécurité par lequel un site web peut déclarer aux navigateurs qu'ils doivent communiquer avec lui en utilisant exclusivement le protocole HTTPS, au lieu du HTTP. Cela renforce la sécurité d'un site. Il doit être activé, s'il n'existe aucune contrainte pour cela.
+[HTST (HTTP Strict-Transport-Security)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security) oblige les clients web (navigateurs) à utiliser uniquement HTTPS pour se connecter au site. Voici un exemple :
 ```
-$ cat $Apache_dir/conf.d/ssl.conf
 Header always set Strict-Transport-Security \
   "max-age=63072000; includeSubDomains"
 ```
+> Ici HTST est fixé sur le site pour une durée de validité de 63072000s (2 ans)
 
 ## Protection contre les attaques
 ### Se protéger contre les vulnérabilités du 1O OWASP
