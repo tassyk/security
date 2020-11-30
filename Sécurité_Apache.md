@@ -215,6 +215,17 @@ Allow from 10.20.0.0/24
 </Directory>
 ```
 > NB: On pourra aussi limiter l'accès au site à un pays. Voir l'outil [Country IP Blocks](https://www.countryipblocks.net/acl.php) pour la génération des IP.
+> Ou à l'aide du module [mod_geiop](https://www.tecmint.com/install-mod_geoip-for-apache-in-centos/), on peut restreindre l'accès certains pays ou l'interdire à d'autres. Exemple :
+```
+cat $Webroot/.htaccess 
+<IfModule mod_geoip.c>
+  GeoIPEnable On
+</IfModule>
+SetEnvIf GEOIP_COUNTRY_CODE FR BlockCountry
+SetEnvIf GEOIP_COUNTRY_CODE UK BlockCountry
+Deny from All
+Allow from env=AllowCountry
+```
 
 ## Confidentialité des données
 ### Activer HTTPS
