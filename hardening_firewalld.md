@@ -122,6 +122,8 @@ On peut aussi créer un groupe d'IP (avec ipset) pour les contrôles par la suit
 ```
 sudo firewall-cmd --permanent --new-ipset=IP_drop --type=hash:net
 ```
+> Pour supprimer l'ipset IP_drop : `sudo firewall-cmd --permanent --delete-ipset=IP_bloc --type=hash:net`
+
 - Ajouter une IP à ce groupe
 ```
 sudo firewall-cmd --permanent --ipset=IP_drop --add-entry=83.97.20.34
