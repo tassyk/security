@@ -152,6 +152,7 @@ sudo firewall-cmd --permanent --ipset=IP_drop --get-entries
 ```
 sudo firewall-cmd --permanent --zone=drop --add-source=ipset:IP_drop
 ```
+> Pour plus détails sur les ipsets, voir cette [documentation de Redhat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/security_guide/sec-setting_and_controlling_ip_sets_using_firewalld)
 
 ## Définition des règles plus complexes avec Rich Rule
 Grâce au langage Rich, Firewalld permet de définir des règles plus complexes. La syntaxe de cette règle est:
