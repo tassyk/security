@@ -124,6 +124,9 @@ SecRule REQUEST_CONTENT_TYPE ^text/xml "nolog,pass,id:106,ctl:requestBodyProcess
 # white-list the user parameter for rule #981260 when the REQUEST_URI is /index.php
 SecRule REQUEST_URI "@beginsWith /index.php" "phase:1,t:none,pass, \
   nolog,ctl:ruleRemoveTargetById=981260;ARGS:user
+
+# Allow Nikto scanner
+SecRule REQUEST_HEADERS:User-Agent "nikto" "log,allow,id:107,msg:'Allow Nikto Scanners'"
 ```
 
 ## Exclusions
@@ -184,8 +187,12 @@ SecRule REQUEST_URI "@beginsWith /drupal/index.php" \
 > On trouvera plusieurs exemples de whiteliste sur l'article [Handling False Positives with the OWASP ModSecurity Core Rule Set](https://www.netnea.com/cms/apache-tutorial-8_handling-false-positives-modsecurity-core-rule-set/#step_8_summarizing_all_rule_exclusions)
 
 ## Liens
+Docummentation :
 - [The OWASP Core Rule Set Documentation](https://coreruleset.org/documentation/)
 - [ModSecurity Reference Manual](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-%28v2.x%29#SecRule)
 - [ModSecurity ModSecurity-2-Data-Formats](https://github.com/SpiderLabs/ModSecurity/wiki/ModSecurity-2-Data-Formats)
 - [Handling False Positives with the OWASP ModSecurity Core Rule Set](https://www.netnea.com/cms/apache-tutorial-8_handling-false-positives-modsecurity-core-rule-set/#step_8_summarizing_all_rule_exclusions)
 - [Adding Exceptions and Tuning CRS](https://coreruleset.org/docs/exceptions.html)
+Tools :
+- [Framework for Testing WAFs (FTW)](https://github.com/coreruleset/ftw)
+- [ModeSecurity Audit Log Analyzer](http://reconity.com/)
