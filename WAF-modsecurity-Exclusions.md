@@ -100,11 +100,11 @@ Les [transformations](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-M
 ### Actions
 Les [actions](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-%28v2.x%29#Actions) indiquent à ModSecurity quoi faire quand il y a une correspondance (c'est à dire la transaction correspond à ce que l'on recherche). Il existe plusieurs actions : `block, allow, deny, drop, pass, pause, phase, id, append, chain, msg, tag, severity, status, xmlns, skip, ...`
 > Note : Il existe 5 catégories :
-- `Disruptive actions` - Cause ModSecurity to do something. In many cases something means block transaction, but not in all. Example: `allow, block, deny, pass, pause, redirect,  ...`
-- `Non-disruptive actions` - Do something, but that something does not and cannot affect the rule processing flow. Setting a variable, or changing its value is an example of a non-disruptive action. Non-disruptive action can appear in any rule, including each rule belonging to a chain. Example : `append, accuracy, ctl, exec, msg, tag, ver, ...`
-- `Flow actions` - These actions affect the rule flow. Example : `skip, skipAfter, chain`
-- `Meta-data actions` - Meta-data actions are used to provide more information about rules. Examples : `id, rev, severity, msg`.
-- `Data actions` - Not really actions, these are mere containers that hold data used by other actions. Example : `status, xmlns`
+- **Disruptive actions** - Cause ModSecurity to do something. In many cases something means block transaction, but not in all. Example: `allow, block, deny, pass, pause, redirect,  ...`
+- **Non-disruptive actions** - Do something, but that something does not and cannot affect the rule processing flow. Setting a variable, or changing its value is an example of a non-disruptive action. Non-disruptive action can appear in any rule, including each rule belonging to a chain. Example : `append, accuracy, ctl, exec, msg, tag, ver, ...`
+- **Flow actions** - These actions affect the rule flow. Example : `skip, skipAfter, chain`
+- **Meta-data actions** - Meta-data actions are used to provide more information about rules. Examples : `id, rev, severity, msg`.
+- **Data actions** - Not really actions, these are mere containers that hold data used by other actions. Example : `status, xmlns`
 
 > Note : l'action [ctl](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-%28v2.x%29#ctl) change un élément de configuration de ModSecurity (désactiver ruleEngine, une regle identifiée par son ID, ...).
 Exemple : `ctl:ruleRemoveTargetById=981260;ARGS:user pour ignorer le champs `user` pour la règle 981260`
