@@ -132,6 +132,9 @@ SecRule REQUEST_HEADERS:User-Agent "nikto" "log,allow,id:107,msg:'Allow Nikto Sc
 ## Exclusions
 Après avoir compris un peu la structure d'un log d'Audit de ModSecurity et d'une règle, on pourra maintenant voir comment créer les exclusions.
 Il existe deux types d'exclusions : [exceptions et whitelistes](https://coreruleset.org/docs/exceptions.html).
+> NB : ModSecurity maintient deux catégories de context : startup (démarrage) et par transaction.
+- Les règles de type `Exception` sont exécutées au startup, donc elles doivent être placées **après** les règles qu'elles suppriment (cf fichier `RESPONSE-999-EXCLUSION-RULES-AFTER-CRS.conf.example`).
+- Quand aux règles de type `Whiteliste`, elles sont executées dans un contexte de transaction. Elles doivent donc être placées avant les règles qu'elles modifient (cf fichier `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example`)
 
 ### Exceptions
 Une exception désactive complètement une règle (Remove) ou modifie son comportement (Update). Elle est créé à partir de ces [directives](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-%28v2.x%29#Configuration_Directives) ci-dessous :
@@ -160,6 +163,7 @@ SecRuleUpdateTargetById 941100 !ARGS:email
 # Ignorer l'argument email pour les règles marquées par le message "XSS Attack"
 SecRuleUpdateTargetByMsg "XSS Attack" "!ARGS:email"
 ```
+> Remarque : Ces exceptions doivent être placées après les règles SecRules qu'elles modifient (ex: dans un fihcier `RESPONSE-999-EXCLUSION-RULES-AFTER-CRS.conf`)
 
 ### Whitelistes
 Une whiteliste permet de créer une exception pour un objet donné (IP, URL, Arguments). Elle est construite via la directive **SecRule**.
@@ -183,7 +187,6 @@ SecRule REQUEST_URI "@beginsWith /drupal/index.php" \
     "phase:2,nolog,pass,id:10006,ctl:ruleRemoveTargetById=942130;ARGS:ids[],\
                                  ctl:ruleRemoveTargetById=942431;ARGS:ids[]"
 ```
-> La directive SecRule permet de créer une règle dans ModSecurity pas uniquement une whiteliste. Une whiteliste est une forme de règle d'où id:1 et id:3 pour identifier ces nouvelles règles.
 > On trouvera plusieurs exemples de whiteliste sur l'article [Handling False Positives with the OWASP ModSecurity Core Rule Set](https://www.netnea.com/cms/apache-tutorial-8_handling-false-positives-modsecurity-core-rule-set/#step_8_summarizing_all_rule_exclusions)
 
 ## Liens
