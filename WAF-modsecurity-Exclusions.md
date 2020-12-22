@@ -196,4 +196,5 @@ Docummentation :
 
 Tools :
 - [Framework for Testing WAFs (FTW)](https://github.com/coreruleset/ftw)
+- [WAF Bench (WB) Tool Suits](https://microsoft.github.io/WAFBench/)
 - [ModeSecurity Audit Log Analyzer](http://reconity.com/)
