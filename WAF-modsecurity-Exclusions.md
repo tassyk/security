@@ -20,6 +20,9 @@ Auteur: TK
 - **[Exclusions](#Exclusions)**
   - [Exceptions](#Exceptions)
   - [Whitelistes](#Whitelistes)
+- **[Test de WAF](#Test-de-WAF)**
+  - [Ecriture d'un test](#Ecriture-d'un-test)
+  - [Exécution d'un test](#Exécution-d'un-test)
 - **[Liens](#Liens)**
 ---
 ## Introduction
@@ -150,7 +153,7 @@ Une exception désactive complètement une règle (Remove) ou modifie son compor
 Comme le laisse voir le nom de ces directives, on peut supprimer ou une regèle à partir de son ID (*ById), de son message (*ByMsg) ou de son tag (*ByTag)
 > NB : Une règle peut-être identifiée soit par son ID (ex: `941100`), par son message (ex : `"XSS Attack Detected via libinjection"`) ou par son Tag (ex : `"WEB_ATTACK/XSS"`)
 
-Exemples d'exceptions :
+Exemples d'exceptions (dans RESPONSE-999-EXCLUSION-RULES-AFTER-CRS.conf) :
 ```
 # Désactiver la règle identifiée par l'ID 941100
 SecRuleRemoveById 941100
@@ -171,7 +174,7 @@ Une whiteliste permet de créer une exception pour un objet donné (IP, URL, Arg
 Syntax: SecRule VARIABLES OPERATOR [ACTIONS]
 ```
 Elle est généralement utilisée avec l'action `ctl` afin de changer le comportement de ModSecurity vis-à-vis d'un object.
-Par exemple :
+Par exemple (dans REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf) :
 ```
 #Désactiver Modsecurity pour une IP
 SecRule REMOTE_ADDR "@IPMatch 127.0.0.1" "id:1,ctl:ruleEngine=Off"
@@ -189,6 +192,91 @@ SecRule REQUEST_URI "@beginsWith /drupal/index.php" \
 ```
 > On trouvera plusieurs exemples de whiteliste sur l'article [Handling False Positives with the OWASP ModSecurity Core Rule Set](https://www.netnea.com/cms/apache-tutorial-8_handling-false-positives-modsecurity-core-rule-set/#step_8_summarizing_all_rule_exclusions)
 
+## Test de WAF
+[FTW (Framework for Testing WAFs)](https://github.com/coreruleset/ftw) est un framework qui permet de tester le bon fonctionnement du WAF. Ceci peut s'avérer très utile pour évaluer l'efficité du WAF d'un côté, et de l'autre corriger les imperfections dans lors du développement.
+> Note : FTW n'est pas le seul framework de test, il existe aussi entre autres [WAF Bench (WB) Tool Suits](https://microsoft.github.io/WAFBench/). C'est une amélioration de FTW.
+
+Les tests sont écrits au format `YAML`.
+
+### Installation de FTW
+L'installation de FTW se fait avec les commandes ci-dessous :
+```
+git clone https://github.com/coreruleset/ftw.git
+cd ftw
+virtualenv env && source ./env/bin/activate
+pip install -r requirements.txt
+```
+Après l'installation, on peut faire un premier test avec le fichier exemple qui est fournit :
+```
+sudo py.test -s -v test/test_default.py --rule=test/yaml/EXAMPLE.yaml
+```
+> Note : Il faut installer `pytest (py.test)` s'il n'est pas installé `Ubuntu : sudo apt install pytest`
+
+### Ecriture d'un test
+Comme mentionné plus haut, les tests sont écrits au format [YAML](https://github.com/coreruleset/ftw/blob/master/docs/YAMLFormat.md).
+- Un fichier de test peut contenir plusieurs tests
+- Chaque test peut contenir plusieurs `stages`
+- Chaque `stage` comprend deux grandes parties : `input` et `output`
+  - Un `input` est collection d'options de configuration correspondant une transaction HTTP
+  - Un `Output` est la réponse escomptée du WAF par rapport au input
+
+Pour plus de détails sur la création des tests, voir les exemples dans l'article ["Writing FTW test cases for OWASP CRS"](https://coreruleset.org/20170915/writing-ftw-test-cases-for-owasp-crs/) ou dans répertoire [tests](https://github.com/coreruleset/coreruleset/tree/v3.0/dev/util/regression-tests/tests) de ModSecurity (/usr/share/modsecurity-crs/tests). Et les options configuration des tests peuvent être trouvées dans le fichier [YAMLFormat.md](https://github.com/coreruleset/ftw/blob/master/docs/YAMLFormat.md).
+Dans cette note, nous allons écrire un test sur les deux rules relatives à Nikto et XSS injection :
+```
+$ test/yaml/my_test.yml
+
+---
+  meta:
+    author: "tassyk"
+    enabled: true
+    name: "tests FTW"
+    description: "Tests to trigger, or not trigger XSS and Nikto"
+  tests:
+    -
+      test_title: Nikto scanner test
+      desc: Nikto scanner test
+      stages:
+      -
+        stage:
+          input:
+            dest_addr: 127.0.0.1
+            method: GET
+            port: 80
+            uri: /
+            headers:
+              User-Agent: Nikto
+              Host: localhost
+          output:
+            no_log_contains: id "941100"
+    -
+      test_title: XSS injection test
+      desc: XSS injection test
+      stages:
+      -
+        stage:
+          input:
+            dest_addr: 127.0.0.1
+            method: GET
+            port: 80
+            uri: '/form.php?%3Cscript%3Ealert(%22xss%22)%3C/script%3E'
+          output:
+            log_contains: id "941110"
+```
+On a trois sections dans le fichier :
+1. la section `meta` contenant les métadonnées des tests (autor, description, name, enabled)
+2. La section `tests` : elle contient l'intitulé (test_title), la description, les différents stages. Chaque stage contient son input (ce que l'on cherche à tester) et son output (résultat attendu).
+
+### Exécution d'un test
+Pour exécuter le test :
+```
+sudo py.test -s -v test/test_default.py --rule=test/yaml/my_test.yml
+
+# sortie
+test/test_default.py::test_default[ruleset0-tests FTW -- Nikto scanner test] PASSED
+test/test_default.py::test_default[ruleset1-tests FTW -- XSS injection test] PASSED
+```
+
+
 ## Liens
 Docummentation :
 - [The OWASP Core Rule Set Documentation](https://coreruleset.org/documentation/)
@@ -196,6 +284,7 @@ Docummentation :
 - [ModSecurity ModSecurity-2-Data-Formats](https://github.com/SpiderLabs/ModSecurity/wiki/ModSecurity-2-Data-Formats)
 - [Handling False Positives with the OWASP ModSecurity Core Rule Set](https://www.netnea.com/cms/apache-tutorial-8_handling-false-positives-modsecurity-core-rule-set/#step_8_summarizing_all_rule_exclusions)
 - [Adding Exceptions and Tuning CRS](https://coreruleset.org/docs/exceptions.html)
+- [Writing FTW test cases for OWASP CRS](https://coreruleset.org/20170915/writing-ftw-test-cases-for-owasp-crs/)
 
 Tools :
 - [Framework for Testing WAFs (FTW)](https://github.com/coreruleset/ftw)
