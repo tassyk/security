@@ -199,18 +199,17 @@ SecRule REQUEST_URI "@beginsWith /drupal/index.php" \
 Les tests sont écrits au format `YAML`.
 
 ### Installation de FTW
-L'installation de FTW se fait avec les commandes ci-dessous :
+ModSecurity est installé avec deux types de tests (intégration et regression) qui sont disponibles dans le répertoire **tests**. Pour un test de regression, l'[installation de FTW](https://github.com/coreruleset/coreruleset/tree/v3.4/dev/tests/regression) peut se faire avec les commandes ci-dessous (pour le test de regression) :
 ```
-git clone https://github.com/coreruleset/ftw.git
-cd ftw
-virtualenv env && source ./env/bin/activate
-pip install -r requirements.txt
+sudo apt install python python-pip
+cd /usr/share/modsecurity-crs/tests/regression
+sudo pip install -r requirements.txt # install ftw et pytest
 ```
-Après l'installation, on peut faire un premier test avec le fichier exemple qui est fournit :
+Après l'installation, on peut faire un premier test en utilisant un fichier de test (ex : 941100.yaml) :
 ```
-sudo py.test -s -v test/test_default.py --rule=test/yaml/EXAMPLE.yaml
+sudo py.test -v CRS_Tests.py --rule=tests/REQUEST-941-APPLICATION-ATTACK-XSS/941100.yaml
 ```
-> Note : Il faut installer `pytest (py.test)` s'il n'est pas installé `Ubuntu : sudo apt install pytest`
+> Note : Plusieurs tests sont disponibles dans le dossier `tests`
 
 ### Ecriture d'un test
 Comme mentionné plus haut, les tests sont écrits au format [YAML](https://github.com/coreruleset/ftw/blob/master/docs/YAMLFormat.md).
@@ -262,18 +261,18 @@ $ test/yaml/my_test.yml
           output:
             log_contains: id "941110"
 ```
-On a trois sections dans le fichier :
+On a deux grandes sections dans le fichier :
 1. la section `meta` contenant les métadonnées des tests (autor, description, name, enabled)
 2. La section `tests` : elle contient l'intitulé (test_title), la description, les différents stages. Chaque stage contient son input (ce que l'on cherche à tester) et son output (résultat attendu).
 
 ### Exécution d'un test
 Pour exécuter le test :
 ```
-sudo py.test -s -v test/test_default.py --rule=test/yaml/my_test.yml
+sudo py.test -v CRS_Tests.py --rule=tests/test.yaml
 
 # sortie
-test/test_default.py::test_default[ruleset0-tests FTW -- Nikto scanner test] PASSED
-test/test_default.py::test_default[ruleset1-tests FTW -- XSS injection test] PASSED
+CRS_Tests.py::test_crs[ruleset0-tests FTW -- Nikto scanner test] PASSED
+CRS_Tests.py::test_crs[ruleset1-tests FTW -- XSS injection test] FAILED
 ```
 
 
