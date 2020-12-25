@@ -259,7 +259,7 @@ $ test/yaml/my_test.yml
             port: 80
             uri: '/form.php?%3Cscript%3Ealert(%22xss%22)%3C/script%3E'
           output:
-            log_contains: id "941110"
+            log_contains: id "941100"
 ```
 On a deux grandes sections dans le fichier :
 1. la section `meta` contenant les métadonnées des tests (autor, description, name, enabled)
