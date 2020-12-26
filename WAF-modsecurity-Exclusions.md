@@ -223,7 +223,9 @@ SecRule REQUEST_URI "@beginsWith /drupal/index.php/search/node" \
 ```
 SecRule REQUEST_URI "@beginsWith /drupal/index.php/contextual/render"\  "phase:2,nolog,pass,id:10000,ctl:ruleRemoveTargetById=942130;ARGS:ids[]"
 ```
-
+> Remarque :
+> - Ces astuces sont meiux dans un environment hors production. Dans ce cas de figure, on peut aussi jouer sur les niveaux de paranoïa pour ne laisser aucune reqête non légitime passer.
+> - Quand le WAF est mis par contre dans un environnement en production, l'objectif dans ce cas c'est ne pas bloquer les clients en aucun cas. Dans ce cas de figure, il est judicieux de laisser le niveau de paranoïa le plus bas (level 1) et en plus utiliser un seuil d'anomaly score le plus élevé. Ainsi, on pourra éliminer les faux positifs petit à petit tout en ne bloquant pas l'utilisation de l'application web par les utilisateurs.
 Pour plus de détails, je vous renvoie à ces deux articles.
 
 
