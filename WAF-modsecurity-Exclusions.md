@@ -20,6 +20,7 @@ Auteur: TK
 - **[Exclusions](#Exclusions)**
   - [Exceptions](#Exceptions)
   - [Whitelistes](#Whitelistes)
+  - [Méthodologie de traitement des exclusions](#Méthodologie-de-traitement-des-exclusions)
 - **[Test de WAF](#Test-de-WAF)**
   - [Ecriture d'un test](#Ecriture-d'un-test)
   - [Exécution d'un test](#Exécution-d'un-test)
@@ -192,6 +193,40 @@ SecRule REQUEST_URI "@beginsWith /drupal/index.php" \
 ```
 > On trouvera plusieurs exemples de whiteliste sur l'article [Handling False Positives with the OWASP ModSecurity Core Rule Set](https://www.netnea.com/cms/apache-tutorial-8_handling-false-positives-modsecurity-core-rule-set/#step_8_summarizing_all_rule_exclusions)
 
+### Méthodologie de traitement des exclusions
+Dans les deux articles ["Handling False Positives with the OWASP ModSecurity Core Rule Set"](https://www.netnea.com/cms/apache-tutorials/apache-tutorial-8_handling-false-positives-modsecurity-core-rule-set/) et ["How to tune your WAF installation to reduce false positives"](https://www.oreilly.com/content/how-to-tune-your-waf-installation-to-reduce-false-positives/), Christian Folini donne des astuces sur comment traiter efficacement les exclusions avec ModSecurity à travers des exemples à l'appui. Pour analyser les logs efficacement, il s'appuie sur des [outils]((https://www.netnea.com/cms/apache-tutorials/)), notamment le script (modsec-positive-stats.rb) et les alias shell qu'il a développés.
+Il élabore la stratégie ci-dessous pour éliminer les faux positifs :
+
+1. Toujours travailler en mode blocage
+2. Traiter les requêtes avec un score (anomaly scrore) le plus élevé : définir une valleur elévée comme seuil d'anomaly scrore (par défaut c'est 5, cf fichier `crs-setup.conf`)
+2. Travailler en plusieurs itérations : après avoir traité les premiers faux positifs, on reduit la valeur du seuil et on reitaire le traitement des requêtes avec le plus grand score.
+
+On peut éléminer les faux positifs selon les cas ci-dessous :
+1. Si une règle (rule) bloque plusieurs requêtes sur différents arguments, on peut alors décider de la désactiver. Exemple :
+```
+SecRuleRemoveById rule_id #ou SecRuleRemoveByMsg message
+```
+
+2. Si une règle bloque un ou quelques variables (ex : cookie de session), on peut alors ignorer cet argument pour cette règle. Exemple :
+```
+SecRuleUpdateTargetById rule_id "!REQUEST_COOKIES"`
+#ou SecRuleUpdateTargetById rule_id "!REQUEST_COOKIES_NAMES"
+```
+
+3. Si une même URL (URI) est bloquée par la même règle pour plusieurs arguments, on peut alors décider de désactiver complètement cette règle pour cette URL. Exemple (uri=/drupal/index.php/search/node, rule_id=942200, plusieurs arguments):
+```
+SecRule REQUEST_URI "@beginsWith /drupal/index.php/search/node" \
+              "phase:2,nolog,pass,id:10002,ctl:ruleRemoveById=942200"
+```
+
+4. Si une même URL (URI) est bloquée par la même règle pour un ou quelques arguments, alors on peut décider d'ignorer ce/ces arguments pour la règle pour cette url. Exemple (argument=`ids[]`, rule_id=942130, uri=/drupal/index.php/contextual/render) :
+```
+SecRule REQUEST_URI "@beginsWith /drupal/index.php/contextual/render"\  "phase:2,nolog,pass,id:10000,ctl:ruleRemoveTargetById=942130;ARGS:ids[]"
+```
+
+Pour plus de détails, je vous renvoie à ces deux articles.
+
+
 ## Test de WAF
 [FTW (Framework for Testing WAFs)](https://github.com/coreruleset/ftw) est un framework qui permet de tester le bon fonctionnement du WAF. Ceci peut s'avérer très utile pour évaluer l'efficité du WAF d'un côté, et de l'autre corriger les imperfections dans lors du développement.
 > Note : FTW n'est pas le seul framework de test, il existe aussi entre autres [WAF Bench (WB) Tool Suits](https://microsoft.github.io/WAFBench/). C'est une amélioration de FTW.
@@ -282,6 +317,7 @@ Docummentation :
 - [ModSecurity Reference Manual](https://github.com/SpiderLabs/ModSecurity/wiki/Reference-Manual-%28v2.x%29#SecRule)
 - [ModSecurity ModSecurity-2-Data-Formats](https://github.com/SpiderLabs/ModSecurity/wiki/ModSecurity-2-Data-Formats)
 - [Handling False Positives with the OWASP ModSecurity Core Rule Set](https://www.netnea.com/cms/apache-tutorial-8_handling-false-positives-modsecurity-core-rule-set/#step_8_summarizing_all_rule_exclusions)
+- [How to tune your WAF installation to reduce false positives](https://www.oreilly.com/content/how-to-tune-your-waf-installation-to-reduce-false-positives/)
 - [Adding Exceptions and Tuning CRS](https://coreruleset.org/docs/exceptions.html)
 - [Writing FTW test cases for OWASP CRS](https://coreruleset.org/20170915/writing-ftw-test-cases-for-owasp-crs/)
 
