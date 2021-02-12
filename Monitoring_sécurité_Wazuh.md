@@ -180,6 +180,7 @@ Pour finir, il faut relancer l'agent :
 systemctl restart wazuh-agent
 ```
 > Pour lister les agents, depuis le manager, taper la commande `/var/ossec/bin/manage_agents -l` ou aller dans Kibana `Wazuh > Agents`
+> Pour appliquer uniquement les configuration : `/var/ossec/bin/agent_control -R -a`
 
 Pour l'inscription en ligne de commande, ou les autres modes, je vous renvoie à la [documentation](https://documentation.wazuh.com/4.0/user-manual/registering/command-line-registration.html).
 En cas de problème lors de l'enregistrement, l'article [Registering Wazuh agents - Troubleshooting](https://documentation.wazuh.com/4.0/user-manual/registering/registering-agents-troubleshooting.html) peut être utile.
@@ -221,6 +222,7 @@ Comme vu dans l'introduction, Wazuh permet entre autres le monitoring d'intégri
 > Note :
 > - Pour plus de détails sur les capacités de cet outil, voir [capabilities](https://documentation.wazuh.com/4.0/user-manual/capabilities/index.html)
 > - Pour voir les informations sur chaque directive et ses options, voir le [user manual](https://documentation.wazuh.com/4.0/user-manual/overview.html)
+> - Pour la gestion centralisée (via `agent.conf`), il faut accepter au **niveau de l'agent** l'exécution de commande à distance : en mettant `wazuh_command.remote_commands=1` dans `/var/ossec/etc/local_internal_options.conf`
 
 ### Monitoring d'intégrité de fichiers
 Wazuh est capable de surveiller les systèmes de fichier et de détecter les changements/modifications et déclenche une alerte si un événement survient. C'est ce qu'on appelle [File Integrity Monitoring (FIM)](https://documentation.wazuh.com/4.0/user-manual/capabilities/file-integrity/index.html). Ce FIM est réalisé à l'aide de la directive (module) `syscheck`. Elle peut contenir plusieurs options. Par exemple :
@@ -361,7 +363,7 @@ L'agent peut collecter sur la machine des informations du système comme les pro
 ### Scan de vulnerability
 Wazuh peut scanner aussi les vulnérabilités du système grâce à [vulnerability-detector](https://documentation.wazuh.com/4.0/user-manual/capabilities/vulnerability-detection/index.html#vulnerability-detection) (sur le manager uniquement).  Pour cela :
 1. configurer l'inventaire système pour collecter au moins les informations de l'os (cf paragraphe dédié à ça).
-2. configurer la détection de vulnérabilité sur le manager
+2. configurer la détection de vulnérabilité sur le manager (`ossec.conf`)
   ```
   <vulnerability-detector>
     <enabled>yes</enabled>
@@ -394,7 +396,7 @@ Wazuh peut scanner aussi les vulnérabilités du système grâce à [vulnerabili
 Pour un audit, il faut choisir une politique (stratégie), définie à l'aide de `policy`. Chaque politique est décrite dans un fichier `.yml`. Par défaut, le manager est installé avec plusieurs politiques SCA. Par défaut, ces fichiers se trouvenent dans `/var/ossec/ruleset/sca`.
 > Note :
 > - La plupart de ces politiques sont désactivées par défaut (extension `.disabled`). Il faut les renommer avant de les utiliser en enlevant cette extension.
-> - Aussi il faut activer `sca.remote_commands` sur l'agent pour autoriser le manager à pousser ces fichiers : `echo "sca.remote_commands=1" >> /var/ossec/etc/local_internal_options.conf`
+> - Aussi il faut activer `sca.remote_commands` sur l'agent pour autoriser le manager à pousser ces fichiers : `echo "sca.remote_commands=1" >> /var/ossec/etc/local_internal_options.conf`. Attention : ne pas modifier directement dans `internal_options.conf`
 
 ```
 # in agent.conf
@@ -424,7 +426,7 @@ Cette configuration peut être idéale pour un serveur web Linux sous Apache ave
 > - à l'aide de l'attribut `enable`, on peut activer/désactiver une politique (ici, on a désactiver Mysql).
 > - Pour créer une politique d'audit personnalisée, voir [Creating custom SCA policies](https://documentation.wazuh.com/4.0/user-manual/capabilities/sec-config-assessment/creating_custom_policies.html).
 
-On peut effectuer l'audit de conformité aussi via [OpenSCAP](https://www.open-scap.org/) grâce au module [OpenSCAP wodle](https://documentation.wazuh.com/4.0/user-manual/reference/ossec-conf/wodle-openscap.html) (`<wodle name="open-scap">`). Avec `content`, on détermine le type de content (xccdf ou oval) et choisit le content (politique).
+On peut effectuer l'audit de conformité aussi via [OpenSCAP](https://www.open-scap.org/) grâce au module [OpenSCAP wodle](https://documentation.wazuh.com/4.0/user-manual/capabilities/policy-monitoring/openscap/index.html) (`<wodle name="open-scap">`). Avec `content`, on détermine le type de content (xccdf ou oval) et choisit le content (politique).
 ```
 <wodle name="open-scap">
     <timeout>1800</timeout>
