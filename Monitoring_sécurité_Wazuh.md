@@ -417,10 +417,10 @@ Pour un audit, il faut choisir une politique (stratégie), définie à l'aide de
    <skip_nfs>yes</skip_nfs>
    <!-- Policies -->
    <policies>
-     <policy>sca_unix_audit.yml</policy>
-     <policy>web_vulnerabilities.yml</policy>
-     <policy>cis_apache_24.yml</policy>
-     <policy enabled="no">cis_mysql5-6_community.yml</policy>
+     <policy>/var/ossec/ruleset/sca/sca_unix_audit.yml</policy>
+     <policy>/var/ossec/ruleset/sca/web_vulnerabilities.yml</policy>
+     <policy>/var/ossec/ruleset/sca/cis_apache_24.yml</policy>
+     <policy enabled="no">/var/ossec/ruleset/sca/cis_mysql5-6_community.yml</policy>
    </policies>
  </sca>
 
@@ -429,7 +429,9 @@ Pour un audit, il faut choisir une politique (stratégie), définie à l'aide de
 Cette configuration peut être idéale pour un serveur web Linux sous Apache avec Mysql56 installé dessus.
 
 > Note :
-> - Ces fichiers seront poussés vers l'agent et se trouveront aussi dans `/var/ossec/ruleset/sca`. Par défaut, l'agent exécute chaque fichier `.yml` présent sur ce répertoire.
+> - Par défaut, ces fichiers sont dans `/var/ossec/ruleset/sca`. S'il ne sont pas copié dans `/var/ossec/etc/shared/default/`, alors il faut spécifier le chemin complet des fichiers dans `<policy>...</policy>`
+> - Aussi, ils doivent appartenir à l'utilisateur `ossec` (à bien vérifier après l'opération de copie)
+> - Ils seront poussés vers l'agent et se trouveront aussi dans `/var/ossec/ruleset/sca`. Par défaut, l'agent exécute chaque fichier `.yml` présent sur ce répertoire.
 > - à l'aide de l'attribut `enable`, on peut activer/désactiver une politique (ici, on a désactiver Mysql).
 > - Pour créer une politique d'audit personnalisée, voir [Creating custom SCA policies](https://documentation.wazuh.com/4.0/user-manual/capabilities/sec-config-assessment/creating_custom_policies.html).
 
