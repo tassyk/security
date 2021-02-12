@@ -34,7 +34,7 @@ Si l'installation s'est correctement terminée, on peut accéder à l'interface 
 > - On peut personnaliser les configurations de Kibana (`/etc/kibana/kibana.yml`), d'Elasticsearch (`/etc/elasticsearch/elasticsearch.yml`), de Filebeat (`/etc/filebeat/filebeat.yml`) ou de Wazuh (`/var/ossec/etc/ossec.conf`).
 > - Il est aussi fortement recommandé de changer le password  par défaut d'Elasticsearch des utilisateurs dans `/usr/share/elasticsearch/plugins/opendistro_security/securityconfig/internal_users.yml`. Voir la procédure [change-elastic-pass](https://documentation.wazuh.com/4.0/user-manual/elasticsearch/elastic_tuning.html#change-elastic-pass). Sur ce lien, on peut aussi appliquer certaines options de configuration d'Elasticsearch (dans `/etc/elasticsearch/elasticsearch.yml`)
 > - Une fois que Kibana est en marche, il est nécessaire d'assigner à chaque utilisateur le rôle qui convient. Pour cela, voir [Setting up the Wazuh Kibana plugin](https://documentation.wazuh.com/4.0/user-manual/kibana-app/connect-kibana-app.html#connect-kibana-app)
-> - Le fichier `/var/ossec/etc/internal_options.conf` contient les paramètres internes (manager, agent). Il n'est pas conseiller de modifier ce fichier. Si nécessaire, ajouter l'option de configuration souhaitée dans un autre fichier (ex : `internal_options.conf`). 
+> - Le fichier `/var/ossec/etc/internal_options.conf` contient les paramètres internes (manager, agent). Il n'est pas conseiller de modifier ce fichier. Si nécessaire, ajouter l'option de configuration souhaitée dans un autre fichier (ex : `internal_options.conf`).
 > - Pour plus d'info sur l'administration du manager, voir [Wazuh server administration](https://documentation.wazuh.com/4.0/user-manual/manager/index.html)
 
 > Note :
@@ -107,6 +107,11 @@ Les agents Wazuh peuvent être configurés de différentes manières :
 - via le fichier [agent.conf](https://documentation.wazuh.com/4.0/user-manual/reference/centralized-configuration.html) depuis le manager. C'est une configuration centralisée (déployée pour un groupe d'agents). Ce fichier est localisé dans le répertoire du groupe `/var/ossec/etc/shared/group-name/agent.conf`
 > Pour plus de détails sur la configuration centralisée des agents, voir [Agent groups and centralized configuration](https://wazuh.com/blog/agent-groups-and-centralized-configuration/)
 > Pour vérifier la configuration en CLI, exécuter la commande : `/var/ossec/bin/verify-agent-conf`
+> Depuis le manager, on peut recharger la configuration d'un ou de tous les agents :
+  ```
+  /var/ossec/bin/agent_control -R -u ID_agent # un seul
+  /var/ossec/bin/agent_control -R -a # tous
+  ```
 
 - via l'interface de Kibana, à l'aide du plugin `Kibana app` intégré
 > Dans `Wazuh > Management > Configuration`
@@ -491,7 +496,6 @@ Exemple d'intégration à VirusTotal.
   <alert_format>json</alert_format>
 </integration>
 ```
-
 
 
 ## Liens
