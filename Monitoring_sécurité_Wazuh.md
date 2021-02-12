@@ -403,6 +403,7 @@ Pour un audit, il faut choisir une politique (stratégie), définie à l'aide de
 > Note :
 > - La plupart de ces politiques sont désactivées par défaut (extension `.disabled`). Il faut les renommer avant de les utiliser en enlevant cette extension.
 > - Aussi il faut activer `sca.remote_commands` sur l'agent pour autoriser le manager à pousser ces fichiers : `echo "sca.remote_commands=1" >> /var/ossec/etc/local_internal_options.conf`. Attention : ne pas modifier directement dans `internal_options.conf`
+> - Depuis Wazuh v3.9.0, c'est le module SCA qui replace Rootcheck pour monitoring des policies (policy monitoring)
 
 ```
 # in agent.conf
