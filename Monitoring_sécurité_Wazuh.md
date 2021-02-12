@@ -502,3 +502,4 @@ Exemple d'intégration à VirusTotal.
 - [Getting started](https://documentation.wazuh.com/4.0/getting-started/index.html)
 - [User manual](https://documentation.wazuh.com/4.0/user-manual/index.html)
 - [Local configuration (ossec.conf)](https://documentation.wazuh.com/4.0/user-manual/reference/ossec-conf/index.html)
+- [Learning Wazuh (some labs)](https://documentation.wazuh.com/4.0/learning-wazuh/index.html)
