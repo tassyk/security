@@ -14,7 +14,7 @@ Création: 15/05/2020
   - [SIEM - Log analyzer](#SIEM---Log-analyzer)
   - [Vulnerability Scan](#Vulnerability-Scan)
   - [Pentest](#Pentest)
-  - [Forensics](#Forensics)
+  - [Forensics and incident response](#Forensics-and-incident-response)
   - [Hardening](#Hardening)
   - [Detection](#Detection)
   - [Docker security](#Docker-security)
@@ -49,6 +49,7 @@ Création: 15/05/2020
 - [GrayLog](https://www.graylog.org) : Opens source and Entreprise
 - [Apache Log Viewer](https://www.apacheviewer.com/) : With apache logs viewer you can easily filter and analyze Apache/IIS/nginx log files.
 - [GoAccess](https://goaccess.io/) : GoAccess is an open source real-time web log analyzer and interactive viewer that runs in a terminal in unix systems or through your browser.
+- [LogScan](https://github.com/thomst/logscan) : ogscan is a command-line-tool to get time-specific access to logfiles
 
 ### Vulnerability Scan
 - [outpost24 HIAB](https://outpost24.com/) : Pro Full stack security assessment platform and penetration testing
@@ -62,6 +63,7 @@ Création: 15/05/2020
 - [SearchSploit](https://www.exploit-db.com/searchsploit) : command line search tool for Exploit-DB that also allows you to take a copy of Exploit Database with you, everywhere you go
 - [RapidScan](https://github.com/skavngr/rapidscan) : The Multi-Tool Web Vulnerability Scanner
 - [Qualys VMDR](https://www.qualys.com/subscriptions/vmdr/) : All-in-One Vulnerability Management, Detection, and Response
+- [ChopChop](https://github.com/michelin/ChopChop) : is a command-line tool for dynamic application security testing on web applications, initially written by the Michelin CERT.
 
 ### Pentest
 - [NMAP | NMAP NSE](https://nmap.org/) : Network exploration tool and security / port scanner
@@ -93,7 +95,7 @@ Création: 15/05/2020
 - [Shellphis](https://github.com/thelinuxchoice/shellphish) : Phishing Tool for Instagram, Facebook, Twitter, Snapchat, Github, Yahoo, Protonmail ...
 - [Fake Mailer](https://github.com/htr-tech/fake-mailer) : Fake Mailer is tool to Send Mail Anonymously from a different Email
 
-### Forensics
+### Forensics and incident response
 - [Volatility](https://www.volatilityfoundation.org/) : Extraction of digital artifacts from volatile memory (RAM) samples framework
 - [peepdf](https://github.com/jesparza/peepdf) : Python tool to explore PDF files in order to find out if the file can be harmful or not
 - [Sysdig](https://github.com/draios/sysdig/wiki) : Audit and analysis tool
@@ -167,6 +169,7 @@ Création: 15/05/2020
 - [360 Total Security](https://www.360totalsecurity.com/en/) : Your Unified Solution For PC Security and Performance
 - [Decontamine_Linux](https://whatsecurity.org/contents/projects/decontamine_linux.php) : Decontamine_Linux is an USB devices cleaning station for Linux
 - [Firetools](https://firejailtools.wordpress.com/) : Firetools is the graphical user interface of Firejail security sandbox. Firejail is a SUID sandbox program that reduces the risk of security breaches by restricting the running environment of untrusted applications using Linux namespaces, seccomp-bpf and Linux capabilities
+- [Wazuh](https://wazuh.com/) : Wazuh is a free, open source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
 
 ### Detection
 - [Yara](https://virustotal.github.io/yara/) : Identification et détection des IOC des malwares
@@ -207,7 +210,10 @@ for Web, Mobile and Domain Security
 - [URLhaus](https://urlhaus.abuse.ch/) : URLhaus is a project from abuse.ch with the goal of sharing malicious URLs that are being used for malware distribution.
 - [TALOS](https://talosintelligence.com/) : CISCO Talos’ IP and Domain Data Center is the world’s most comprehensive real-time threat detection network.
 - [multirbl](http://multirbl.valli.org/) : The complete IP check for sending Mailservers
-
+- [PowerDMARC](powerdmarc.com) : Stop Hackers From Sending Emails from your Domain with DMARC (Domain-based Message Authentication, Reporting and Conformance)
+- [Open CTI](https://www.opencti.io/en/) : Open threat intelligence platform
+- [GitGuardian](https://www.gitguardian.com/) : Automated secrets detection & remediation
+- [Continus](https://continus.io/) : Continus.io is an automated DevSecOps solution that brings together SAST, DAST and SCA in one tool to secure your DevOps pipelines and continuously assess the security of your source code, 3rd party components, containers and APIs
 
 
 ### Docker security
@@ -230,6 +236,9 @@ for Web, Mobile and Domain Security
 - [Medusa](http://foofus.net/goons/jmk/medusa/medusa.html) : speedy, massively parallel, modular, login brute-forcer
 - [Patator](https://github.com/lanjelot/patator) : Patator was written out of frustration from using Hydra, Medusa, Ncrack, Metasploit modules and Nmap NSE scripts for password guessing attacks
 - [fcrackzip](https://github.com/hyc/fcrackzip) : fcrackzip is a zip password cracker
+- [Specops Password Policy](https://specopssoft.com/product/specops-password-policy/) : Enforce compliance requirements, block leaked passwords, and help users create stronger passwords in Active Directory.
+- [Specops Password Auditor](https://specopssoft.com/product/specops-password-auditor/) : scans your Active Directory and identifies password-related vulnerabilities.
+- [Autofill extension](https://chrome.google.com/webstore/detail/microsoft-autofill/fiedbfgcleddlbcmgdigjgdfcggjcion) :  This Microsoft Autofill extension lets you your password safely in your account
 
 ### Monitoring
 - [CheckMK](https://checkmk.com/) : infrastructure & application monitoring
@@ -270,6 +279,7 @@ for Web, Mobile and Domain Security
 - [Top 125 Security Tools | sectools.org](https://sectools.org/)
 - [Penetration Testing Tools | Kali Linux Tools Listing](https://tools.kali.org/tools-listing)
 - [Parot Linux tools list](https://github.com/ParrotSec/parrot-tools/blob/master/debian/control)
+- [Awesome Incident Response](https://asmen.icopy.site/awesome/awesome-incident-response/)
 - [Rshipp Github | awesome malware analysis](https://github.com/rshipp/awesome-malware-analysis)
 - [Vulnerability Scanning Tools | OWASP](https://owasp.org/www-community/Vulnerability_Scanning_Tools )
 - [Source Code Analysis Tools | OWASP](https://owasp.org/www-community/Source_Code_Analysis_Tools)
