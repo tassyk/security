@@ -375,11 +375,8 @@ Puis l'exécuter comme suit :
 .\DFIR-Orc.exe /local=\Temp\testing\DFIR-Orc.xml
 ```
 
-
-
-
-
-
+## Conculsion
+DFIR-ORC es un outil très intéressant pour collecter les éléments de compromission lors d'un processus de Forensic ou de réponse à incident. Cependant, l'outl ne fait pas d'analyse. Cette tâche est restée sour la responsabilité de l'analyste.
 
 ## Ressources
 - [DFIR ORC Documentation](https://dfir-orc.github.io/)
