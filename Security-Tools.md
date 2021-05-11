@@ -24,6 +24,8 @@ Création: 15/05/2020
   - [CyberThreat](#CyberThreat)
   - [Others](#Others)
     - [Security Check](#Security Check)
+    - [Social Ingeneering](#Social-Ingeneering)
+    - [Data Leak Checker And OSINT Tool](#Data-Leak-Checker-And-OSINT-Tool)
 - **[Liens](#Liens)**
 ---
 
@@ -50,6 +52,7 @@ Création: 15/05/2020
 - [Apache Log Viewer](https://www.apacheviewer.com/) : With apache logs viewer you can easily filter and analyze Apache/IIS/nginx log files.
 - [GoAccess](https://goaccess.io/) : GoAccess is an open source real-time web log analyzer and interactive viewer that runs in a terminal in unix systems or through your browser.
 - [LogScan](https://github.com/thomst/logscan) : ogscan is a command-line-tool to get time-specific access to logfiles
+- [Log Parser](https://www.microsoft.com/en-us/download/details.aspx?id=24659) : Log parser is a powerful, versatile tool that provides universal query access to text-based data such as log files, XML files and CSV files, as well as key data sources on the Windows
 
 ### Vulnerability Scan
 - [outpost24 HIAB](https://outpost24.com/) : Pro Full stack security assessment platform and penetration testing
@@ -90,10 +93,6 @@ Création: 15/05/2020
 - [CVE](https://cve.mitre.org/) : CVE is a list of entries—each containing an identification number, adescription, and at least one public reference—for publicly known cybersecurity vulnerabilities.
 - [NVD NIST](https://nvd.nist.gov/general/nvd-dashboard) : NATIONAL VULNERABILITY DATABASE
 - [SSLMap](https://github.com/iphelix/sslmap) : SSLMap is a lightweight TLS/SSL cipher suite scanner
-
-### Social Ingeneering
-- [Shellphis](https://github.com/thelinuxchoice/shellphish) : Phishing Tool for Instagram, Facebook, Twitter, Snapchat, Github, Yahoo, Protonmail ...
-- [Fake Mailer](https://github.com/htr-tech/fake-mailer) : Fake Mailer is tool to Send Mail Anonymously from a different Email
 
 ### Forensics and incident response
 - [Volatility](https://www.volatilityfoundation.org/) : Extraction of digital artifacts from volatile memory (RAM) samples framework
@@ -137,6 +136,7 @@ Création: 15/05/2020
 - [pdf-parser](https://github.com/DidierStevens/DidierStevensSuite) : Didier Stevens Suite that parse and anlyse pdf file
 - [HashMyFiles](https://www.nirsoft.net/utils/hash_my_files.html) : HashMyFiles is small utility that allows you to calculate the MD5 and SHA1 hashes of one or more files in your system
 - [Floss](https://github.com/fireeye/flare-floss) : FireEye Labs Obfuscated String Solver uses advanced static analysis techniques to automatically deobfuscate strings from malware binaries. You can use it just like `strings utility`
+- [RegRipper](https://tools.kali.org/forensics/regripper) : Open source tool, written in Perl, for extracting/parsing information (keys, values, data) from the Registry and presenting it for analysis
 
 
 ### Hardening
@@ -157,10 +157,6 @@ Création: 15/05/2020
 - [arpwatch](https://linux.die.net/man/8/arpwatch) : ARP monitoring software
 - [Tripwire FIM](https://www.tripwire.com/solutions/file-integrity-and-change-monitoring) : File Integrity Monitoring & Change Management
 - [CheckPoint CheckMe](http://www.cpcheckme.com/checkme/#) : CheckMe runs a serie of simulations that test if your existing security technologies can block standard and advanced attacks
-- [Microsoft Security Compliance Toolkit (SCT)](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-compliance-toolkit-10) : The Security Compliance Toolkit (SCT) is a set of tools that allows enterprise security administrators to download, analyze, test, edit, and store Microsoft-recommended security configuration baselines for Windows and other Microsoft products
-- [Microsoft WAF Bench (WB) Tool Suits](https://github.com/microsoft/wafbench) : WAF (Web Application Firewall) Bench tool suits is designed to verify the correctness and measure the performance of WAF.
-- [WAF Testing Framework](https://www.imperva.com/lg/lgw_trial.asp?pid=483) : A WAF testing tool by Imperva.
-- [owasp-crs-regressions](https://github.com/SpiderLabs/owasp-modsecurity-crs/tree/v3.1/dev/util/regression-tests) : the OWASP Core Rule Set regression testing suite. This suite is meant to test specific rules in OWASP CRS version 3
 - [BMC-Tools](https://github.com/ANSSI-FR/bmc-tools) : ANSSI FR's RDP Bitmap Cache parser.
 - [Regshot](https://sourceforge.net/projects/regshot/) : Allows you to quickly take a snapshot of your registry and then compare it with a second one
 - [RegistryChangesView](https://www.nirsoft.net/utils/registry_changes_view.html) :  NirSoft's tool allows you to take a snapshot of Windows Registry and later compare it with another Registry snapshots
@@ -179,7 +175,9 @@ Création: 15/05/2020
 - [VirusTotal](https://virustotal.com) : Multi scan virus analysis
 - [MetaDefender](https://metadefender.opswat.com/) : Multi scan virus analysis like VirusTotal
 - [Threat Miner](https://www.threatminer.org/) : ThreatMiner is a threat intelligence portal designed to enable analysts to research under a single interface
+- [aWebAnalysis](https://awebanalysis.com/en/) : offers hundreds of free online tools related to cryptocurrencies, networks, programming and other Internet related topics
 - [Cuckoo Sandbox](https://cuckoosandbox.org/) : Cuckoo Sandbox is free software that automated the task of analyzing any malicious file under Windows, macOS, Linux, and Android.
+- [LISA](https://github.com/danieluhricek/LiSa) : Linux Sandbox is project providing automated Linux malware analysis on various CPU architectures
 - [Cuckoo CERT](https://cuckoo.cert.ee/) : Online Sandbox for malwares IoC analysis
 - [Any Run](https://any.run/) : Malware hunting with live access to the heart of an incident
 - [Intezer Analyze (Community Edition)](https://analyze.intezer.com/) : Quickly analyze files and devices to immediately understand the What, Who, & How of a potential cyber incident.
@@ -188,6 +186,7 @@ Création: 15/05/2020
 - [Rshipp Awesome malware analysis](https://github.com/rshipp/awesome-malware-analysis) : Collection of malwares analysis and détection tools
 - [Infosec CERT-PA Analyzer](https://infosec.cert-pa.it/analyze/search.html)
 - [Fail2ban](https://www.fail2ban.org/wiki/index.php/Main_Page) : détection d'intrusion et blocage d'IP malveillantes
+- [CrowdSec](https://crowdsec.net/) :  parses logs to assess the behavior of IP addresses coming to your apps, websites, services, etc
 - [Snort](https://www.snort.org/) : open source intrusion prevention system
 - [ModSecurity](https://modsecurity.org/) : Open source Web Application Firewall (WAF)
 - [Sysdig](https://github.com/draios/sysdig/wiki) : Audit and analysis tool
@@ -214,6 +213,10 @@ for Web, Mobile and Domain Security
 - [Open CTI](https://www.opencti.io/en/) : Open threat intelligence platform
 - [GitGuardian](https://www.gitguardian.com/) : Automated secrets detection & remediation
 - [Continus](https://continus.io/) : Continus.io is an automated DevSecOps solution that brings together SAST, DAST and SCA in one tool to secure your DevOps pipelines and continuously assess the security of your source code, 3rd party components, containers and APIs
+- [Automater](https://tools.kali.org/information-gathering/automater) : Automater is a URL/Domain, IP Address, and Md5 Hash OSINT tool aimed at making the analysis process easier for intrusion Analysts
+- [MalPedia](https://malpedia.caad.fkie.fraunhofer.de/) : The primary goal of Malpedia is to provide a resource for rapid identification and actionable context when investigating malware
+- [Malwoverview](https://github.com/alexandreborges/malwoverview) : Malwoverview.py is a first response tool for threat hunting, which performs an initial and quick triage of malware samples, URLs, IP addresses, domains, malware families, IOCs and hashes.
+- [VirusTotal Tools](https://blog.didierstevens.com/programs/virustotal-tools/) : Didier Steven's Python programs to search VirusTotal for hashes or to submit files.
 
 
 ### Docker security
@@ -273,7 +276,36 @@ for Web, Mobile and Domain Security
 ### Security Check
 - [EmoCheck](https://github.com/JPCERTCC/EmoCheck) : Emotet detection tool for Windows OS.
 - [ZeroLogon testing script](https://github.com/SecuraBV/CVE-2020-1472) : A Python script that uses the Impacket library to test vulnerability for the Zerologon exploit (CVE-2020-1472)
+- [Atomic Red Team](https://atomicredteam.io/) : Atomic Red Team allows every security team to test their controls by executing simple "atomic tests" that exercise the same techniques used by adversaries (all mapped to Mitre's ATT&CK).
+- [Cladera](https://caldera.readthedocs.io/en/latest/) : Mittre Att&ck testing tool like Atomic red team
+- [APT Simulator](https://github.com/NextronSystems/APTSimulator) : APT Simulator is a Windows Batch script that uses a set of tools and output files to make a system look as if it was compromised.
+- [RedHunt Linux Distribution](https://github.com/redhuntlabs/RedHunt-OS) : Virtual Machine for Adversary Emulation and Threat Hunting by RedHunt Labs
+- [BT3](https://www.bt3.no/features/) : Blue Team Training Toolkit (BT3) is software for defensive security training, which will bring your network analysis training sessions, incident response drills and red team engagements to a new level.
+- [RTA](https://github.com/endgameinc/RTA) : Red Team Automation (RTA) : RTA provides a framework of scripts designed to allow blue teams to test their detection capabilities against malicious tradecraft, modeled after MITRE ATT&CK.
+- [Microsoft Security Compliance Toolkit (SCT)](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-compliance-toolkit-10) : The Security Compliance Toolkit (SCT) is a set of tools that allows enterprise security administrators to download, analyze, test, edit, and store Microsoft-recommended security configuration baselines for Windows and other Microsoft products
+- [Microsoft WAF Bench (WB) Tool Suits](https://github.com/microsoft/wafbench) : WAF (Web Application Firewall) Bench tool suits is designed to verify the correctness and measure the performance of WAF.
+- [WAF Testing Framework](https://www.imperva.com/lg/lgw_trial.asp?pid=483) : A WAF testing tool by Imperva.
+- [owasp-crs-regressions](https://github.com/SpiderLabs/owasp-modsecurity-crs/tree/v3.1/dev/util/regression-tests) : the OWASP Core Rule Set regression testing suite. This suite is meant to test specific rules in OWASP CRS version 3
+- [knowbe4 Free IT Security Tools](https://www.knowbe4.com/free-it-security-tools) : Free security tools for many testing purposes (ransomware test, email, malware, ...)
 
+
+### Social Ingeneering
+- [Shellphis](https://github.com/thelinuxchoice/shellphish) : Phishing Tool for Instagram, Facebook, Twitter, Snapchat, Github, Yahoo, Protonmail ...
+- [Fake Mailer](https://github.com/htr-tech/fake-mailer) : Fake Mailer is tool to Send Mail Anonymously from a different Email
+
+### Data Leak Checker And OSINT Tool
+- [OSINT Framework](https://osintframework.com/) : OSINT framework focused on gathering information from free tools or resources. The intention is to help people find free OSINT resources
+- [Firefox Monitor](https://monitor.firefox.com/) : can help you to check if your email address has been found in leaks
+- [SolarWinds Identity Monitor](https://www.solarwinds.com/identity-monitor) : can help you to check if your email address has been found in leaks
+- [CheckUserNames](https://checkusernames.com/) : Check the use of your brand or username on 160 Social Networks
+- [HaveIbeenPwned](https://haveibeenpwned.com) :  can help you to check if your account has been compromised in the past
+- [Dehashed](https://dehashed.com/) : can help you to check if your account has been found in leaks
+- [Censys](https://censys.io/) : is a wonderful search engine used to get the latest and most accurate information about any device connected to the internet
+- [Shodan](https://www.shodan.io/) :  is a network security monitor and search engine focused on the deep web & the internet of things.
+- [Oblivion](https://kalilinuxtutorials.com/oblivion/) : is a tool focused in real time monitoring of new data leaks, notifying if the credentials of the user has been leak out
+- [HTTPCS Cyber Vigilance](https://www.httpcs.com/en/data-leakage-detection-darkweb-crawl-tool) :  watches continuously the web, deep web and dark web to collect information (documents, data leakage, sensitive information, security flaws…) which relates to your company and alerts your teams in real time.
+- [Avast Hack Check](https://www.avast.com/hackcheck) : can help you to check if your email address has been found in leaks
+- [F-Secure Identity Theft Checker](https://www.f-secure.com/en/home/free-tools/identity-theft-checker) : can help you to check if your email address has been found in leaks
 
 ## Liens
 - [Top 125 Security Tools | sectools.org](https://sectools.org/)
@@ -300,3 +332,5 @@ for Web, Mobile and Domain Security
 - [Free Online Tools for Looking up Potentially Malicious Websites](https://zeltser.com/lookup-malicious-websites/)
 - [Free Blocklists of Suspected Malicious IPs and URLs](https://zeltser.com/malicious-ip-blocklists/)
 - [Antivirus multi engines](https://www.geckoandfly.com/24224/antivirus-multi-engines/)
+- [Top 25 OSINT Tools for Penetration Testing](https://securitytrails.com/blog/osint-tools )
+- [List of Adversary Emulation Tools](https://pentestit.com/adversary-emulation-tools-list/ )
