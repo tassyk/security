@@ -10,7 +10,7 @@ Création: 10/05/2021
 
 > CALDERA™ is a cyber security framework designed to easily automate adversary emulation, assist manual red-teams, and automate incident response. It is built on the [MITRE ATT&CK framework](https://attack.mitre.org/) and is an active research project at MITRE
 
-Caldera fonctionne en mode client/server (agent/server). Il peut être utilisé soit pour les opérations offensives(red) ou défensives (blue) et de [différentes manières](https://caldera.readthedocs.io/en/latest/Getting-started.html)(autonomous red-engagements, autonomous incident-response, …).
+Caldera fonctionne en mode client/server (agent/server). Il peut être utilisé soit pour les opérations offensives(red) ou défensives (blue) et de [différentes manières ](https://caldera.readthedocs.io/en/latest/Getting-started.html)(autonomous red-engagements, autonomous incident-response, …).
 
 Dans cette note, nous allons voir le mode "autonomous red-engagements" afin de lancer les attaques sur une cible pour tester, entre autres, les solutions de défense installées sur la machine comme le XDR, l'EPP, l'antivirus, ….
 
