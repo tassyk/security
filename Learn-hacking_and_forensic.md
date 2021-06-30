@@ -6,7 +6,7 @@ Création: 15/12/2020
 ---
 
 # Learn hacking & forensic
-## Web sites
+## Blogs
 [Ired.team](https://www.ired.team/): Red Teaming Experiments GitBook
 
 [Hacking articles](https://www.hackingarticles.in/): Pentest & Hacking articles (Raj Chandel's Blog)
