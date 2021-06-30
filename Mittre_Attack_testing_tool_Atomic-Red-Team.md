@@ -9,12 +9,12 @@ Création: 10/05/2021
 
 ## Introduction
 
-> Atomic Red Team allows every security team to test their controls by executing simple "atomic tests" that exercise the same techniques used by adversaries (all mapped to [Mitre's](https://attack.mitre.org/)[ ](https://attack.mitre.org/)[ATT&CK](https://attack.mitre.org/)).
+> Atomic Red Team allows every security team to test their controls by executing simple "atomic tests" that exercise the same techniques used by adversaries (all mapped to [Mitre's ATT&CK](https://attack.mitre.org/)).
 
 ## Prerequis
 Disposer de powershell sur les machines : voir comment installer [Powershell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell?view=powershell-7.1&viewFallbackFrom=powershell-7)
 
-Activer / configurer [Powershell Over SSH](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7)[ ](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7) si les machines locale et distante ne sont pas Windows. Pour cela :
+Activer / configurer [Powershell Over SSH](https://docs.microsoft.com/en-us/powershell/scripting/learn/remoting/ssh-remoting-in-powershell-core?view=powershell-7) si les machines locale et distante ne sont pas Windows. Pour cela :
 - Installer openssh-client et openssh-server (si ssh n'est pas installé sur la machine)
 - Ajouter ces configurations dans /etc/ssh/sshd_config :
 ```
@@ -52,7 +52,7 @@ PS /home/kali> Invoke-AtomicTest T1003 -ShowDetails
 PS /home/kali> Invoke-AtomicTest T1003 -CheckPrereqs
 PS /home/kali> Invoke-AtomicTest T1003 -TestName "Windows Credential Editor" -CheckPrereqs
 ```
-- Remote test : test à distance (il faut activer d'abord le remote powershell sur la machine, [cf wiki](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-\(Remote\))ou prerequis)
+- Remote test : test à distance (il faut activer d'abord le remote powershell sur la machine, [cf wiki](https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-\(Remote\)) ou prerequis)
   - Créer une session powershell sur la machine attaquante/locale (Kali)
 ```
 /home/kali> $sess = New-PSSession -HostName 192.168.1.4 -Username my_user
