@@ -68,8 +68,6 @@ Mise à jour : 18/08/2021
 
 </table>
 
-<script type="text/javascript">if (window.showTocToggle) { var tocShowText = "afficher"; var tocHideText = "masquer"; showTocToggle(); }</script>
-
 <a name="Introduction"></a>
 
 ## Introduction
