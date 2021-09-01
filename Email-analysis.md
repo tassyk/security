@@ -72,3 +72,4 @@ Dans un mail, plusieurs éléments peuvent être vérifiés afin de déterminer 
 **Autres** : <br>
 - [REMnux Documents Analyzer](https://docs.remnux.org/discover-the-tools/analyze+documents) : REMnux's tools for documents analysis
 - [Freeviwer](https://www.freeviewer.org/email-forensics/free-tools.html) : Top Free Email Forensics Tools For Investigating Different Email Clients and Extensions
+- [Signal-spam](https://www.signal-spam.fr/) : Pour signaler un spam.
