@@ -7,7 +7,7 @@ Création: 01/10/2020
 
 # Analyse de mails
 ## Introduction
-L'analyse d'un mail permet de déterminer sa nature. Cela permet de reconnaître un mail de [Phising](https://www.vadesecure.com/fr/phishing)(Hameçonnage), de [Spear Phising](https://www.vadesecure.com/fr/spear-phishing), de [Spam](https://fr.wikipedia.org/wiki/Spam) ou de tout courriel indésirable.
+L'analyse d'un mail permet de déterminer sa nature. Cela permet de reconnaître un mail de [Phising](https://www.vadesecure.com/fr/phishing)(Hameçonnage), de [Spear Phising](https://www.vadesecure.com/fr/spear-phishing), de [Spam](https://fr.wikipedia.org/wiki/Spam) ou de tout autres courriels indésirables.
 
 ## Termes à savoir
 - **SPF (Sender Policy Framework)** : Defines a mechanism by which an organization can specify server(s) that are allowed to send email on behalf of that domain. If an email fails an SPF check, it can be an easy mechanism we can use to detect spam
@@ -68,3 +68,7 @@ Dans un mail, plusieurs éléments peuvent être vérifiés afin de déterminer 
 - nslookup : interroger le DNS
 - file : déterminer le type d'un fichier (l'extension)
 - strings : afficher les chaines de caractère d'un fichier
+
+**Autres** : <br>
+- [REMnux Documents Analyzer](https://docs.remnux.org/discover-the-tools/analyze+documents) : REMnux's tools for documents analysis
+- [Freeviwer](https://www.freeviewer.org/email-forensics/free-tools.html) : Top Free Email Forensics Tools For Investigating Different Email Clients and Extensions
