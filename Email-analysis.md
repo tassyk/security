@@ -7,7 +7,7 @@ Création: 01/10/2020
 
 # Analyse de mails
 ## Introduction
-L'analyse d'un mail permet de déterminer sa nature. Cela permet de reconnaître un mail de [Phising](https://www.vadesecure.com/fr/phishing)(Hameçonnage), de [Spear Phising](https://www.vadesecure.com/fr/spear-phishing), [Spam](https://fr.wikipedia.org/wiki/Spam) ou de tout courriel indésirable.
+L'analyse d'un mail permet de déterminer sa nature. Cela permet de reconnaître un mail de [Phising](https://www.vadesecure.com/fr/phishing)(Hameçonnage), de [Spear Phising](https://www.vadesecure.com/fr/spear-phishing), de [Spam](https://fr.wikipedia.org/wiki/Spam) ou de tout courriel indésirable.
 
 ## Termes à savoir
 - **SPF (Sender Policy Framework)** : Defines a mechanism by which an organization can specify server(s) that are allowed to send email on behalf of that domain. If an email fails an SPF check, it can be an easy mechanism we can use to detect spam
