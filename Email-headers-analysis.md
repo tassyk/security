@@ -61,3 +61,5 @@ Sinon, il existe aussi des plugins pour analyser les entêtes comme [EmailHeader
 - [How to Get Email Headers](https://mxtoolbox.com/Public/Content/EmailHeaders/)
 - [Email Headers | Forensic Email Search](https://emailheaders.net/forensic-email-search.html)
 - [Video | Email Header Analysis and Forensic Investigation](https://www.youtube.com/watch?v=nK5QpGSBR8c)
+- [Video | 12 Days of Defense - Day 4: How to Analyze Email Headers and How Spoofed Email Works](https://www.youtube.com/watch?v=reRzWHUwI80)
+
