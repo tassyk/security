@@ -291,6 +291,7 @@ Dans cette note, on a souhaité explorer les différents outils, mais il est vra
     - [Lenny Zeltser/How to Extract Flash Objects from Malicious PDF Files](https://www.sans.org/blog/how-to-extract-flash-objects-from-malicious-pdf-files/)
     - [fareedfauzi/Create malicious PDF - Metasploit](https://fareedfauzi.github.io/blog-post/Create-malicious-pdf/#)
     - [Blog VadeSecure/analyse d'un email malveillant](https://www.vadesecure.com/fr/blog/analyse-dun-email-malveillant)
+    - [12 Days of Defense - Day 1: PDF and Office Doc Malware IOC Extraction](https://www.youtube.com/watch?v=3rh82pG7MME)(vidéo)
 
 - *Tools* :<br>
     - [Didier Stevens PDF Tools](https://blog.didierstevens.com/programs/pdf-tools/)
