@@ -149,6 +149,7 @@ Création: 15/05/2020
 - [X-Ways](https://www.x-ways.net/forensics/) : X-Ways Forensics is an advanced work environment for computer forensic examiners and our flagship product.
 - [Awesome Incident Response](https://asmen.icopy.site/awesome/awesome-incident-response/) : A curated list of tools and resources for security incident response, aimed to help security analysts and DFIR teams.
 - [oletools](https://github.com/decalage2/oletools) : python tools to analyze MS OLE2 files (Structured Storage, Compound File Binary Format) and MS Office documents, for malware analysis, forensics and debugging.
+- [OfficeDissector](https://www.officedissector.com/) : Python toolkit to analyze Microsoft Office Open XML (OOXML) files and documents—the format.
 
 
 
