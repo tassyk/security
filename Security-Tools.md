@@ -26,6 +26,7 @@ Création: 15/05/2020
     - [Security Check](#Security Check)
     - [Social Ingeneering](#Social-Ingeneering)
     - [Data Leak Checker And OSINT Tool](#Data-Leak-Checker-And-OSINT-Tool)
+    - [Anonymity and privacy](#Anonymity-and-privacy)
 - **[Liens](#Liens)**
 ---
 
@@ -43,16 +44,19 @@ Création: 15/05/2020
   - [Mullitidae](https://sourceforge.net/projects/mutillidae/) : PHP/MySQL vulnerable web application
   - [vulnhub](https://www.vulnhub.com/) : Vulnerable test VM
   - [vulnweb](http://www.vulnweb.com/) : Vulnerable test websites (for Acunetix Web Vulnerability Scanner)
+  - [vulnarable-AD](https://github.com/WazeHell/vulnerable-AD) : Create a vulnerable active directory that's allowing you to test most of active directory attacks in local lab
 
 ### SIEM - Log analyzer
 - [Suit Elastic](https://www.elastic.co/fr/) : Opensource, mais certains composants sont payants
 - [LogPoint](https://www.logpoint.com/en/) : propriétaire
 - [Splunk](https://www.splunk.com/) : propriétaire
 - [GrayLog](https://www.graylog.org) : Opens source and Entreprise
+- [Security Onion](https://securityonionsolutions.com/) : is a free and open platform for threat hunting, network security monitoring, and log management. Security Onion includes best-of-breed free and open tools including Suricata, Zeek, Wazuh, the Elastic Stack and many others.
 - [Apache Log Viewer](https://www.apacheviewer.com/) : With apache logs viewer you can easily filter and analyze Apache/IIS/nginx log files.
 - [GoAccess](https://goaccess.io/) : GoAccess is an open source real-time web log analyzer and interactive viewer that runs in a terminal in unix systems or through your browser.
 - [LogScan](https://github.com/thomst/logscan) : ogscan is a command-line-tool to get time-specific access to logfiles
 - [Log Parser](https://www.microsoft.com/en-us/download/details.aspx?id=24659) : Log parser is a powerful, versatile tool that provides universal query access to text-based data such as log files, XML files and CSV files, as well as key data sources on the Windows
+- [Praeco](https://opensourcelibs.com/lib/praeco) : Praeco is an alerting tool for Elasticsearch – a GUI for ElastAlert, using the ElastAlert API is a fork.
 
 ### Vulnerability Scan
 - [outpost24 HIAB](https://outpost24.com/) : Pro Full stack security assessment platform and penetration testing
@@ -67,6 +71,7 @@ Création: 15/05/2020
 - [RapidScan](https://github.com/skavngr/rapidscan) : The Multi-Tool Web Vulnerability Scanner
 - [Qualys VMDR](https://www.qualys.com/subscriptions/vmdr/) : All-in-One Vulnerability Management, Detection, and Response
 - [ChopChop](https://github.com/michelin/ChopChop) : is a command-line tool for dynamic application security testing on web applications, initially written by the Michelin CERT.
+- [Vulners](https://vulners.com/) : Online vulnerability assessment platform (vulnerabilities and exploits database, network scanner, linux scanner)
 
 ### Pentest
 - [NMAP | NMAP NSE](https://nmap.org/) : Network exploration tool and security / port scanner
@@ -96,6 +101,7 @@ Création: 15/05/2020
 
 ### Forensics and incident response
 - [Volatility](https://www.volatilityfoundation.org/) : Extraction of digital artifacts from volatile memory (RAM) samples framework
+- [Volatility Workbecnh](https://www.osforensics.com/tools/volatility-workbench.html) : Volatility Workbench is a graphical user interface (GUI) for the Volatility tool
 - [peepdf](https://github.com/jesparza/peepdf) : Python tool to explore PDF files in order to find out if the file can be harmful or not
 - [Sysdig](https://github.com/draios/sysdig/wiki) : Audit and analysis tool
 - [PDF Examiner](https://www.pdfexaminer.com/) : Online PDF Examiner
@@ -103,6 +109,7 @@ Création: 15/05/2020
 - [Windows Sysinternals Utilities](https://docs.microsoft.com/en-us/sysinternals/downloads/) : Windows forensics Small Utilities
 - [The Sleuth Kit®](https://www.sleuthkit.org/sleuthkit/) :  Collection of command line tools and a C library that allows you to analyze disk images and recover files from them
 - [Autopsy](https://www.sleuthkit.org/autopsy/) :  GUI-based program that allows you to efficiently analyze hard drives and smart phones.
+- [Belkasoft](https://belkasoft.com/ram-capturer) : Belkasoft Live RAM Capturer is a tiny free forensic tool that allows to reliably extract the entire contents of computer’s volatile memory
 - [Online EMailTracer](http://www.cyberforensics.in/OnlineEmailTracer/index.aspx) : tool to track email sender’s identity.
 - [MX Toolbox](https://mxtoolbox.com/EmailHeaders.aspx) : This tool will make email headers human readable by parsing them according to RFC 822
 - [EmailHeaders.net](https://packagecontrol.io/packages/Email%20Header) : EmailHeaders.net brings forth the most effective solutions to investigate Email Header and forensics issues
@@ -137,6 +144,12 @@ Création: 15/05/2020
 - [HashMyFiles](https://www.nirsoft.net/utils/hash_my_files.html) : HashMyFiles is small utility that allows you to calculate the MD5 and SHA1 hashes of one or more files in your system
 - [Floss](https://github.com/fireeye/flare-floss) : FireEye Labs Obfuscated String Solver uses advanced static analysis techniques to automatically deobfuscate strings from malware binaries. You can use it just like `strings utility`
 - [RegRipper](https://tools.kali.org/forensics/regripper) : Open source tool, written in Perl, for extracting/parsing information (keys, values, data) from the Registry and presenting it for analysis
+- [Eric Zimmerman's tools](https://ericzimmerman.github.io/#!index.md) : Forensics toolkits (MFTECmd, Registry Explorer, Hasher, Timeline Explorer, ...)
+- [ADTimeLine](https://github.com/ANSSI-FR/ADTimeline)(ANSSI) : The ADTimeline script generates a timeline based on Active Directory replication metadata for objects considered of interest.
+- [X-Ways](https://www.x-ways.net/forensics/) : X-Ways Forensics is an advanced work environment for computer forensic examiners and our flagship product.
+- [Awesome Incident Response](https://asmen.icopy.site/awesome/awesome-incident-response/) : A curated list of tools and resources for security incident response, aimed to help security analysts and DFIR teams.
+- [oletools](https://github.com/decalage2/oletools) : python tools to analyze MS OLE2 files (Structured Storage, Compound File Binary Format) and MS Office documents, for malware analysis, forensics and debugging.
+
 
 
 ### Hardening
@@ -166,9 +179,11 @@ Création: 15/05/2020
 - [Decontamine_Linux](https://whatsecurity.org/contents/projects/decontamine_linux.php) : Decontamine_Linux is an USB devices cleaning station for Linux
 - [Firetools](https://firejailtools.wordpress.com/) : Firetools is the graphical user interface of Firejail security sandbox. Firejail is a SUID sandbox program that reduces the risk of security breaches by restricting the running environment of untrusted applications using Linux namespaces, seccomp-bpf and Linux capabilities
 - [Wazuh](https://wazuh.com/) : Wazuh is a free, open source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
+- [Chef InSpec](https://docs.chef.io/inspec/) : is an open-source framework for testing and auditing your applications and infrastructure
 
 ### Detection
 - [Yara](https://virustotal.github.io/yara/) : Identification et détection des IOC des malwares
+- [Sigma](https://github.com/SigmaHQ/sigma) : Generic Signature Format for SIEM Systems. Sigma is for log files what Snort is for network traffic and YARA is for files.
 - [Clamav](https://www.clamav.net/) : Antivirus opensource
 - [Blazescan](https://github.com/Hestat/blazescan) : Blazescan is a linux webserver malware scanning and incident response tool
 - [Linux Malware Detect](https://github.com/rfxn/linux-malware-detect) : Linux Malware Detect (LMD) is a malware scanner for Linux released
@@ -202,6 +217,7 @@ for Web, Mobile and Domain Security
 - [BloodHound](https://bloodhound.readthedocs.io/en/latest/index.html) : BloodHound uses graph theory to reveal the hidden and often unintended relationships within an Active Directory environment
 - [Hybrid analysis](https://www.hybrid-analysis.com/) : This is a free malware analysis service for the community that detects and analyzes unknown threats using a unique Hybrid Analysis technology
 - [joesandbox](https://www.joesandbox.com/) : (Online) Joe Sandbox detects and analyzes potential malicious files and URLs on Windows, Android, Mac OS, Linux, and iOS for suspicious activities
+- [Cape Sandbox](https://capesandbox.com/) : CAPE ('Config And Payload Extraction') is a malware sandbox. It was derived from Cuckoo with the goal of adding automated malware unpacking and config extraction.. 
 - [FEODO Tracker](https://feodotracker.abuse.ch/) : Feodo Tracker is a project of abuse.ch with the goal of sharing botnet C&C servers associated with the Feodo malware family (Dridex, Emotet/Heodo).
 - [#TotalHash](https://totalhash.cymru.com/) : #totalhash provides static and dynamic analysis of Malware samples.
 - [URLVoid](https://www.urlvoid.com/) : Website Reputation Checker (This service helps you detect potentially malicious websites)
@@ -217,6 +233,8 @@ for Web, Mobile and Domain Security
 - [MalPedia](https://malpedia.caad.fkie.fraunhofer.de/) : The primary goal of Malpedia is to provide a resource for rapid identification and actionable context when investigating malware
 - [Malwoverview](https://github.com/alexandreborges/malwoverview) : Malwoverview.py is a first response tool for threat hunting, which performs an initial and quick triage of malware samples, URLs, IP addresses, domains, malware families, IOCs and hashes.
 - [VirusTotal Tools](https://blog.didierstevens.com/programs/virustotal-tools/) : Didier Steven's Python programs to search VirusTotal for hashes or to submit files.
+- [Online IDE Search](https://redhuntlabs.com/online-ide-search) : Custom Search Tool by @RedHuntLabs Team looks for keywords/strings in following Online IDEs, Paste(s) sites and Code Sharing Platforms. See other free tools [here](https://redhuntlabs.com/open-source-free-tools).
+- [vuldb](https://vuldb.com/fr/?) : Vulnerabilities database
 
 
 ### Docker security
@@ -252,6 +270,7 @@ for Web, Mobile and Domain Security
 
 ### Encrytion
 - [sks-keyserver](https://github.com/SKS-Keyserver/sks-keyserver) : GnuGPG infrastructure keys
+- [tbs certifcats generator](https://www.tbs-internet.com/php/HTML/pages/aideCreatCSR.php) : This too helps to genrate OpenSSL certificat.
 
 ### CyberThreat
 - [Kaspersky Cyber Threat Map](https://cybermap.kaspersky.com/stats) : Online CYBERTHREAT REAL-TIME MAP
@@ -272,6 +291,7 @@ for Web, Mobile and Domain Security
 - [hackertarget HTTP Header Check](https://hackertarget.com/http-header-check/) : Review the HTTP Headers from a web server with this quick check. Also, contents many other network and scan tools
 - [CyberChef](https://gchq.github.io/CyberChef/) : A simple, intuitive web app for analysing and decoding data without having to deal with complex tools or programming languages
 - [AMTSO Security Features Check Tools](https://www.amtso.org/security-features-check/) : The AMTSO Security Features Check (SFC) tools verify that your security solution is properly configured and operating as expected.
+- [SQLitBrowser](https://sqlitebrowser.org/) : open source tool to create, design, and edit database files compatible with SQLite
 
 ### Security Check
 - [EmoCheck](https://github.com/JPCERTCC/EmoCheck) : Emotet detection tool for Windows OS.
@@ -306,6 +326,13 @@ for Web, Mobile and Domain Security
 - [HTTPCS Cyber Vigilance](https://www.httpcs.com/en/data-leakage-detection-darkweb-crawl-tool) :  watches continuously the web, deep web and dark web to collect information (documents, data leakage, sensitive information, security flaws…) which relates to your company and alerts your teams in real time.
 - [Avast Hack Check](https://www.avast.com/hackcheck) : can help you to check if your email address has been found in leaks
 - [F-Secure Identity Theft Checker](https://www.f-secure.com/en/home/free-tools/identity-theft-checker) : can help you to check if your email address has been found in leaks
+
+### Anonymity and privacy
+- [TOR Browser](https://www.torproject.org/download/) : Browser which keeps your anonymity and privacy in the internet.
+- [TAILS](https://tails.boum.org/index.fr.html) : OS for anonymity and privacy using TOR for any activity.
+- [ZSVPN](https://zsvpn.com/) : VPN connecting safely in the Internet.
+- [PrivacyTools](https://www.privacytools.io/) : PrivacyTools provides services, tools and knowledge to protect your privacy against global mass surveillance
+
 
 ## Liens
 - [Top 125 Security Tools | sectools.org](https://sectools.org/)
