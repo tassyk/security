@@ -9,20 +9,16 @@ Auteur: TK
 
 # Mise en place de MISP
 ---
-### Sommaire (A modifier)
+### Sommaire
 
 - **[Introduction](#Introduction)**
 - **[Mise en place de MISP](#Mise-en-place-de-MSIP)**
-  - [Approche générale pour l'analyse d'un document](#Approche-générale-pour-l\'analyse-d'un-document)
-  - [Objets PDF à risque](#Objets-PDF-à-risque)
-  - [Environnement d'analyse](#Environnement-d'analyse)
-- **[Analyse du pdf à l'aide des outils](#Analyse-du-pdf-à-l\'aide-des-outils)**
-  - [Installation des outils](#Installation-des-outils)
-  - [Analyse via PDFid](#Analyse-via-PDFid)
-  - [Analyse via PDF-parser](#Analyse-via-PDF-parser)
-  - [Analyse via Peepdf](#Analyse-via-Peepdf)
-  - [Analyse via PDF Stream Dumper](#Analyse-via-PDF-Stream-Dumper)
-- **[Analyse manuelle du pdf](#Analyse-manuelle-du-pdf)**
+  - [Prerequis](#Prerequis)
+  - [Installation de MISP](#Installation de MISP)
+- **[Gestion des events MISP](#Gestion des events MISP)**
+  - [Ajouter un nouveau event](#Ajouter un nouveau event)
+  - [Activer un feed](#Activer un feed)
+  - [ Activer une source d'enrichissement](#Activer une source d'enrichissement)
 - **[Conclusion](#Conclusion)**
 - **[Liens](#Liens)**
 ---
