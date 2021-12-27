@@ -150,8 +150,10 @@ Création: 15/05/2020
 - [Awesome Incident Response](https://asmen.icopy.site/awesome/awesome-incident-response/) : A curated list of tools and resources for security incident response, aimed to help security analysts and DFIR teams.
 - [oletools](https://github.com/decalage2/oletools) : python tools to analyze MS OLE2 files (Structured Storage, Compound File Binary Format) and MS Office documents, for malware analysis, forensics and debugging.
 - [OfficeDissector](https://www.officedissector.com/) : Python toolkit to analyze Microsoft Office Open XML (OOXML) files and documents—the format.
-
-
+- [KStrike](https://github.com/brimorlabs/KStrike) : Stand-alone parser for User Access Logging from Server 2012 and newer systems (like ericzimmerman [SumECmd](https://ericzimmerman.github.io/#!index.md))
+- [PowerForensics](https://powerforensics.readthedocs.io/en/latest/) : The purpose of PowerForensics is to provide an all inclusive framework for hard drive forensic analysis. 
+- [hashlookup](https://circl.lu/services/hashlookup/) : CIRCL hash lookup is a public API to lookup hash values against known database of files. NSRL RDS database is included and many others are also included.
+- [hashlookup-forensic-analyser](https://github.com/hashlookup/hashlookup-forensic-analyser) : Can analyse a forensic target (such as a directory) to find and report files found and not found from CIRCL hashlookup public service or the bloom filter from CIRCL hashlookup.
 
 ### Hardening
 - [SElinux](https://doc.fedora-fr.org/wiki/SELinux), [ApparMor](https://doc.ubuntu-fr.org/apparmor) : renforcement permissions Linux
@@ -236,6 +238,8 @@ for Web, Mobile and Domain Security
 - [VirusTotal Tools](https://blog.didierstevens.com/programs/virustotal-tools/) : Didier Steven's Python programs to search VirusTotal for hashes or to submit files.
 - [Online IDE Search](https://redhuntlabs.com/online-ide-search) : Custom Search Tool by @RedHuntLabs Team looks for keywords/strings in following Online IDEs, Paste(s) sites and Code Sharing Platforms. See other free tools [here](https://redhuntlabs.com/open-source-free-tools).
 - [vuldb](https://vuldb.com/fr/?) : Vulnerabilities database
+- [Munin](https://github.com/Neo23x0/munin) : Munin is a online hash checker utility that retrieves valuable information from various online sources (VirusTotal, Hybrid-analysis, Any.run, Valhala, Hashlookup, ...)
+
 
 
 ### Docker security
@@ -308,6 +312,8 @@ for Web, Mobile and Domain Security
 - [WAF Testing Framework](https://www.imperva.com/lg/lgw_trial.asp?pid=483) : A WAF testing tool by Imperva.
 - [owasp-crs-regressions](https://github.com/SpiderLabs/owasp-modsecurity-crs/tree/v3.1/dev/util/regression-tests) : the OWASP Core Rule Set regression testing suite. This suite is meant to test specific rules in OWASP CRS version 3
 - [knowbe4 Free IT Security Tools](https://www.knowbe4.com/free-it-security-tools) : Free security tools for many testing purposes (ransomware test, email, malware, ...)
+- [MITRE ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/) : Web-based tool for annotating and exploring ATT&CK matrices.
+- [DeTT&CT](https://github.com/rabobank-cdc/DeTTECT) :Detect Tactics, Techniques & Combat Threats
 
 
 ### Social Ingeneering
